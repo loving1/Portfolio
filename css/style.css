@@ -1,0 +1,131 @@
+body, div, h1, h2, h3, h4, h5, h6, p,  {
+	margin: 0;  padding: 0; border: 0;
+}
+
+body {
+	text-align: center;  
+}
+
+header {
+	height: 100px;
+	background: #dbdbdb;
+		/*	background: cover; /* If doing a specific background not just a color */  /**/
+	width: 100;
+	z-index: 10;
+	position: fixed;
+	opacity: .5; 
+}
+
+h1 {
+	text-align: left;
+}
+
+#banner {
+	width: 100%;
+	height: 300px;
+	position: fixed; 
+	top: 100px;
+	/* for solid color background 
+	background: #707070; /*
+	/* for an image */
+	/*background: url('http://t.wallpaperweb.org/wallpaper/nature/t490/triple-horizontal-mountains-clouds_53383.jpg'); */
+	background: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRgwKTq8kO-ZC_sD9lcJfjqiJznirH7eSmCr7pMezInlPNPvIIKhx0WVwEB');
+	/*background-size: cover;
+	*/
+	background-size: 1500px;
+	opacity: .5;
+}
+
+#content {
+	width: 100%;
+	position: relative; 
+	top: 400px;
+	background: #ebebeb;
+	heigh: 1500px;
+}
+
+img {
+	height: auto; 
+	width: 100px; 
+	padding: 0em; 
+	border: .1px solid #000;   
+	margin-right: 0.5em; */
+	background-color: #EE0; 
+
+}
+
+.kenyaPhotos {
+	height: auto; 
+	width: 100px; 
+	padding: 0em; 
+	border: .1px solid #022; 
+	margin-right: 0.5em; */
+	background-color: #EE0; 
+}
+
+#container {
+	width: 100%;
+	max-width: 1200px; 
+	min-width: 600px; 
+	margin: 2em auto; /*<!--// stays aligned in windwon no matter how big or small browser gets  */
+	
+	}
+
+	body.large .article {
+	font-size: 150%; 
+}
+
+.selected {
+	font-weight: bold; 
+	font-style: italic; 
+	font-color: purple; 
+	}
+
+#textController {
+	width: 200px;
+	padding: 20px; 
+	border: 1px solid #000; 
+	 ; 
+}
+#textController button {
+	cursor: pointer ; 
+}
+
+/* Lesson 07 */
+.hover {
+	cursor: pointer; 
+	background-color: #666;
+	color: #EFEFEF; 
+	width: 200px; 
+}
+
+#colorlist li {
+	display: inline;
+	padding-right: 20px;
+}
+
+div.fadehover {
+	position: relative;
+	}
+
+	
+
+#squarewrapper {
+	width:500px;
+	border: 1px solid black;
+}
+
+#firstsq {
+	width: 300px;
+	border: 1px solid red;
+}
+ 
+ #secondsq {
+ 	width: 100px;
+ 	border: 1px solid green;
+ }
+
+
+
+
+

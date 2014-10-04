@@ -1,0 +1,123 @@
+<!doctype html> 
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<title> Rose's Portfolio | Web Design & Development | San Francisco Bay Area | Washington D.C. | Maryland </title> 
+
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+	<div id="container">
+	<header > 
+		<h1> Portfolio de Rosi</h1>
+		<p> About | Services | Example Work </p>
+
+	</header>
+
+	<div id="banner">
+		<h2> This is the banner </h2> 
+
+	</div>
+
+	<div id="content"> 
+		<p> Content goes here </br>
+
+
+
+			<h1>Click and Hover  </h1>
+
+<p> Choose one color below to light it up! Or hover over to have it   <ul id="colorlist" style="list-style-type:none"> 
+	<li id="yd1"> Products   </li>
+	<li id="yd2"> Web</li>
+	<li id="yd3"> SEO +/- Marketing  </li>
+	<li id="yd4"> Programs </li>
+	<li id="yd5"> Strategic Planning  </li>
+	<li id="yd6"> Wellness </li> 
+	<li id="yd7"> Play </li> </ul>
+</p> </br>
+	<img class="fadeInD" id="Da" src="images/p1.jpg"/>
+	<img class="fadeInD" id="Db" src="images/p2.jpg"/>
+	<img class="fadeInD" id="Dc" src="images/p12.jpg"/>
+	<img class="fadeInD" id="Dd" src="images/p4.jpg"/>
+	<img class="fadeInD" id="De" src="images/p5.jpg"/>
+	<img class="fadeInD" id="Df" src="images/p6.jpg"/>
+	<img class="fadeInD" id="Dg" src="images/p7.jpg"/>
+	<img class="fadeInD" id="Dh" src="images/p8.jpg"/> 
+	<img class="fadeInD" id="Di" src="images/p9.jpg"/> 
+	<img class="fadeInD" id="Dj" src="images/p10.jpg"/>
+	<img class="fadeInD" id="Dk" src="images/p11.jpg"/>
+	<img class="fadeInD" id="Dl" src="images/p3.jpg"/> 
+	<img class="fadeInD" id="Dm" src="images/p13.jpg"/>
+	<img class="fadeInD" id="Dn" src="images/p14.jpg"/>     </br>
+</p>
+
+<script type='text/javascript'>
+	$(function() {       
+        $("img.fadeInD").css("opacity","1.0");  
+		$('img.fadeInD').hover(function() {
+			$(this).stop().animate({'opacity': 1});
+		}, function(){ 
+			$(this).stop().animate({'opacity': .4}); 
+		
+		}); 
+
+        $("img.fadeInD").hover(function() {
+                var myID = $(this).attr("id");        
+                $("img.fadeInD:not(#"+myID+")").stop().animate({'opacity': 0.2});
+        },           
+        function() {       
+                $("img.fadeInD").stop().animate({'opacity': 1.0});        
+        });    
+    });
+/* Products */
+	$("#yd1").click(function() { 
+				$("#Da, #Db, #Df, #Dg, #Dj, #Dk, #Dl").stop().animate({'opacity': 1});
+				$("#Dc,#Dd,#De,#Dh,#Di,#Dm, #Dn").stop().animate({'opacity': .2});
+			}); 
+	/* Web */
+
+	$("#yd2").click(function() {
+				$("#Da,#Dd,#De,#Dg,#Di,#Dk,#Dl").stop().animate({'opacity': 1});
+				$("#Db,#Dc,#Df,#Dh,#Dj,#Df,#Dm, #Dn").stop().animate({'opacity': .2});
+			});
+	/*SEO and Marketing */ 
+	$("#yd3").click(function() {
+				$("#Da,#Db,#Dc,#Dd,#De,#Dh,#Dl,#Dm, #Dn").stop().animate({'opacity': 1});
+				$("#Df,#Dg,#Di,#Dj,#Dk").stop().animate({'opacity': .2});
+			}); 
+	/* Program Development */
+	$("#yd4").click(function() {
+				$("#Dd, #Dg, #Dh, #Dl, #Dm, #Dn").stop().animate({'opacity': 1});
+				$("#Da,#Db,#Dc,#De,#Df, #Di, #Dj,#Dk").stop().animate({'opacity': .2});
+			}); 
+	/*Strategic Planning */
+	$("#yd5").click(function() {
+				$("#Da,#De, #Dn").stop().animate({'opacity': 1});
+				$("#Db,#Dc,#Dd,#Da,#Df").stop().animate({'opacity': .2});
+			}); 
+/*Wellness */
+	$("#yd6").click(function() {
+				$("#Dl,#Dm, #Dn").stop().animate({'opacity': 1});
+				$("#Db,#Dc,#Dd,#De,#Da").stop().animate({'opacity': .2});
+			}); 
+
+		
+
+
+</script> 
+
+		
+  </p>
+
+
+	</div>
+
+
+
+	</div>
+</body>
+	</html> 
