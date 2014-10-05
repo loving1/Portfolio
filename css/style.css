@@ -22,15 +22,15 @@ h1 {
 
 #banner {
 	width: 100%;
-	max-width: 1200px; 
-	height: 300px;
+	max-width: 1500px; 
+	height: 900px;
 	position: fixed; 
-	top: 100px;
+	top: 0px;
 	/* for solid color background 
 	background: #707070; /*
 	/* for an image */
 	/*background: url('http://t.wallpaperweb.org/wallpaper/nature/t490/triple-horizontal-mountains-clouds_53383.jpg'); */
-	background: url('http://loving1.github.io/Portfolio/images/dandi2.jpg');
+	background: url('http://loving1.github.io/Portfolio/images/dandi3.jpg');
 	/*background-size: cover;
 	*/
 	background-size: 1500px;
@@ -40,9 +40,9 @@ h1 {
 #content {
 	width: 100%;
 	position: relative; 
-	top: 300px;
+	top: 800px;
 	background: #ebebeb;
-	heigh: 1500px;
+	height: 1000px;
 }
 
 img {
@@ -64,7 +64,7 @@ img {
 	background-color: #EE0; 
 }
 
-#container {
+#containbot {
 	width: 100%;
 	max-width: 1200px; 
 	min-width: 600px; 
