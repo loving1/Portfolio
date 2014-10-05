@@ -19,8 +19,46 @@ h1 {
 	text-align: left;
 }
 
+img {
+	height: auto; 
+	width: 100px; 
+	padding: 0em; 
+	border: .1px solid #000;   
+	margin-right: 0.5em; 
+	background-color: #EE0; 
+
+}
+
 #background {
     background: #000000 url("http://loving1.github.io/Portfolio/images/dandi3.jpg") no-repeat bottom left;
     background-size: 100% 100%;
     min-height:100%;
 }
+
+#containbot {
+	width: 100%;
+	max-width: 1200px; 
+	min-width: 600px; 
+	margin: 2em auto; /*<!--// stays aligned in windwon no matter how big or small browser gets  */
+	
+	}
+
+	body.large .article {
+	font-size: 150%; 
+}
+
+#colorlist li {
+	display: inline;
+	padding-right: 20px;
+}
+
+.hover {
+	cursor: pointer; 
+	background-color: #666;
+	color: #EFEFEF; 
+	width: 200px; 
+}
+
+div.fadehover {
+	position: relative;
+	}
