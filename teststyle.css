@@ -1,11 +1,26 @@
-html, body {
+html, body, p {
     margin:0;
     padding:0;
     border: 0;
     height: 100%;
 }
+
+header {
+	height: 100px;
+	background: #dbdbdb;
+		/*	background: cover; /* If doing a specific background not just a color */  /**/
+	width: 100;
+	z-index: 10;
+	position: fixed;
+	opacity: .5; 
+}
+
+h1 {
+	text-align: left;
+}
+
 #background {
-    background: #000000 url("http://pascocountyflattorney.com/wp-content/uploads/2012/07/tokyo-blue-background-4547.jpg") no-repeat bottom left;
+    background: #000000 url("http://loving1.github.io/Portfolio/images/dandi3.jpg") no-repeat bottom left;
     background-size: 100% 100%;
     min-height:100%;
 }
