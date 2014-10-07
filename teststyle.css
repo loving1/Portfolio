@@ -1,3 +1,6 @@
+/*@import url("font-awesome.min.css");*/
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
 html, body, p {
     margin:0;
     padding:0;
@@ -29,6 +32,138 @@ img {
 
 }
 
+table, th, td {
+   border: none;
+   table-layout: fixed;
+}
+
+table {
+    width: 1000px;
+    
+}
+
+#tbltxt th {
+    height: 50px;
+    text-align: left;
+
+}
+
+#facon th {
+
+}
+
+td.tbltxt {
+	 text-align: left;
+    height: 50px;
+    vertical-align: top;
+    width: 350px;
+
+}
+
+td.facon  {
+	width: 50px; 
+	text-align: right;
+
+}
+
+
+
+/*i.fa {
+	color: black;
+	font-size:x-large;
+} */
+
+i a i:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+a.search i:before {
+	content:"\f002";
+}
+
+a.book i:before {
+	content:"\f002";
+}
+
+li a.search i:before {
+    content:"\f002";
+}
+
+a.archive i:before {
+	content:"\f187";
+}
+li a.archive i:before {
+    content:"\f187";
+}
+
+a.pencil i:before {
+	content:"\f040";
+}
+
+li a.pencil i:before {
+    content:"\f040";
+}
+
+a.contact i:before {
+	content:"\f003";
+}
+li a.contact i:before {
+    content:"\f003";
+}
+
+a.about i:before {
+	content:"\f007";
+}
+li a.about i:before {
+    content:"\f007";
+}
+a.home i:before {
+	content:"\f039";
+}
+li a.home i:before {
+    content:"\f039";
+}
+
+
+
+	ul.icons {
+		cursor: default;
+	}
+
+		ul.icons li {
+			display: inline-block;
+			font-size: 1.25em;
+			line-height: 1em;
+			padding-left: 0.5em;
+		}
+
+			ul.icons li:first-child {
+				padding-left: 0;
+			}
+
+			ul.icons li a, ul.icons li span {
+				-moz-transition: background-color 0.2s ease-in-out;
+				-webkit-transition: background-color 0.2s ease-in-out;
+				-o-transition: background-color 0.2s ease-in-out;
+				-ms-transition: background-color 0.2s ease-in-out;
+				transition: background-color 0.2s ease-in-out;
+				border-radius: 100%;
+				border: solid 1px rgba(224, 224, 224, 0.75);
+				display: inline-block;
+				height: 2em;
+				line-height: 2em;
+				text-align: center;
+				width: 2em;
+			}
+
+				ul.icons li a:hover, ul.icons li span:hover {
+					background: rgba(224, 224, 224, 0.15);
+				}
+
 #background {
     background: #000000 url("http://loving1.github.io/Portfolio/images/dandi3.jpg") no-repeat bottom left;
     background-size: 100% 100%;
@@ -51,6 +186,15 @@ img {
 	display: inline;
 	padding-right: 20px;
 }
+
+#services div {
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
+
+
 
 .hover {
 	cursor: pointer; 
