@@ -51,6 +51,11 @@ img {
     text-decoration: none;
 }
 
+.hidden {
+	opacity: 0;
+	color: black;
+}
+
 a.link {
 	color: #FF0000;
 }

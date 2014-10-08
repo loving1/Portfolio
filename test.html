@@ -184,9 +184,43 @@
 		 
 		<section class="module parallax parallax-1">
 		  <div class="midcontainer">
-		    <p></br></br></br> designed with the world in mind.  </p>
+		    <div class="hidden"></br></br></br> design with the world in mind.  </div>
 		  </div>
 		</section>
+		<script >
+
+		$(document).ready(function() {
+		    
+		    /* Every time the window is scrolled ... */
+		    $(window).scroll( function(){
+		    
+		        /* Check the location of each desired element */
+		        $('.hidden').each( function(i){
+		            
+		            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+		            var bottom_of_window = $(window).scrollTop() + $(window).height();
+		            
+		            /* If the object is completely visible in the window, fade it it */
+		            if( bottom_of_window > bottom_of_object ){
+		           
+		                
+		                $(this).animate({
+		                    //left: '250px',
+		                    opacity: 1,
+		                },1000);
+		                //$("#container").animate({
+		                //    opacity:0.5,
+		                //},1000);
+		            }
+		            
+		        }); 
+		    
+		    });
+		    });
+		
+
+
+		</script>
 	
 <!--
 		<section class="module content">
