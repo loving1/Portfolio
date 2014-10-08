@@ -31,11 +31,12 @@ section.module.content {
 }
 section.module.parallax {
   height: 600px;
-  background-position: 50% 50%;
+  background-position: 75% 75%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
+
 section.module.parallax h1 {
   color: rgba(255, 255, 255, 0.8);
   font-size: 48px;

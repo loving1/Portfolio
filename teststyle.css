@@ -1,18 +1,24 @@
 /*@import url("font-awesome.min.css");*/
 @import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+@import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
+@import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
 html, body, p {
+	font-family: 'Montserrat Alternates', sans-serif;
     margin:0;
     padding:0;
     border: 0;
     height: 100%;
+    font-size: 100%;
 }
 
+
+
 header {
-	height: 100px;
+	height: 60px;
 	background: #dbdbdb;
 		/*	background: cover; /* If doing a specific background not just a color */  /**/
-	width: 100;
+	width: 100%;
 	z-index: 10;
 	position: fixed;
 	/*background-color: rgba(0,0,0,0.5);*/
@@ -20,7 +26,11 @@ header {
 }
 
 h1 {
+	font-family: 'Montserrat Alternates', sans-serif;
 	text-align: left;
+	font-size: 100%; 
+	margin: 0;
+    padding: 0;
 }
 
 img {
@@ -32,6 +42,63 @@ img {
 	background-color: #EE0; 
 
 }
+
+ul.listtop {
+	display: inline;
+	float: right;
+	margin: 0;
+	padding:0;
+}
+
+li {
+	display: inline;
+}
+
+
+#ulheader {
+	display: inline;
+	list-style-type: none; 
+	text-align: right;
+	position: relative;
+	padding: 0;
+	margin: 0; 
+	top: -35px;
+}
+
+
+
+a.s11{
+	font-family: 'Homemade Apple', cursive;
+	top: -500px; 
+	position: relative;
+	text-align: left;
+	padding: 0;
+	margin: 0; 
+	font-size: 100px;
+
+}
+a.s12 {
+	font-family: 'Homemade Apple', cursive;
+	top: -400px; 
+	position: relative;
+	text-align: right;
+	padding: 0;
+	margin: 0; 
+	font-size: 100px;
+
+}
+
+a.s13 {
+	font-family: 'Homemade Apple', cursive;
+	top: -400px; 
+	position: relative;
+	text-align: right;
+	padding: 0;
+	margin: 0; 
+	font-size: 20px;
+
+}
+
 
 table, th, td {
    border: none;
@@ -46,11 +113,16 @@ table {
 #tbltxt th {
     height: 50px;
     text-align: left;
+    float: left;
 
 }
 
-#facon th {
+#atitle {
+	text-align: left;
+	font-size: 35px; 
+}
 
+#facon th {
 }
 
 #tbltxt {
@@ -82,106 +154,40 @@ i a i:before {
   text-decoration: inherit;
 }
 
-a.search i:before {
-	content:"\f002";
+
+section.module.parallax {
+  height: 600px;
+  background-position: 75% 75%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-a.book i:before {
-	content:"\f002";
-}
-
-li a.search i:before {
-    content:"\f002";
-}
-
-a.archive i:before {
-	content:"\f187";
-}
-li a.archive i:before {
-    content:"\f187";
-}
-
-a.pencil i:before {
-	content:"\f040";
-}
-
-li a.pencil i:before {
-    content:"\f040";
-}
-
-a.contact i:before {
-	content:"\f003";
-}
-li a.contact i:before {
-    content:"\f003";
-}
-
-a.about i:before {
-	content:"\f007";
-}
-li a.about i:before {
-    content:"\f007";
-}
-a.home i:before {
-	content:"\f039";
-}
-li a.home i:before {
-    content:"\f039";
-}
-
-
-
-	ul.icons {
-		cursor: default;
-	}
-
-		ul.icons li {
-			display: inline-block;
-			font-size: 1.25em;
-			line-height: 1em;
-			padding-left: 0.5em;
-		}
-
-			ul.icons li:first-child {
-				padding-left: 0;
-			}
-
-			ul.icons li a, ul.icons li span {
-				-moz-transition: background-color 0.2s ease-in-out;
-				-webkit-transition: background-color 0.2s ease-in-out;
-				-o-transition: background-color 0.2s ease-in-out;
-				-ms-transition: background-color 0.2s ease-in-out;
-				transition: background-color 0.2s ease-in-out;
-				border-radius: 100%;
-				border: solid 1px rgba(224, 224, 224, 0.75);
-				display: inline-block;
-				height: 2em;
-				line-height: 2em;
-				text-align: center;
-				width: 2em;
-			}
-
-				ul.icons li a:hover, ul.icons li span:hover {
-					background: rgba(224, 224, 224, 0.15);
-				}
-
-#background {
-    background: #000000 url("http://loving1.github.io/Portfolio/images/dandi3.jpg") no-repeat bottom left;
-    background-size: 100% 100%;
+/*section.module.parallax-0 {
+	height: 1600px; 
+	
+    background: #000000 url("http://loving1.github.io/Portfolio/images/dandi3.jpg") no-repeat bottom;
+    /*height: 1600px; 
+  	background-position: 10% 10%;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+    background: #000000 url("http://loving1.github.io/Portfolio/images/dandi3.jpg") no-repeat bottom left; */
+    /*background-size: 100% 100%;
     min-height: 100%; 
-    /*position: relative;*/
-    
+    /*position: absolute; *//*
 }
+
 
 #section2 {
 	height: 300px; 
-	background: #000000 url("http://loving1.github.io/Portfolio/images/sunsetgirl-1600x600..jpg") no-repeat bottom left;
+	background: #000000 url("http://loving1.github.io/Portfolio/images/girlfieldsunset.jpg") no-repeat bottom left;
     background-size: 100% 100%;
     background-position: 50% 50%;
     min-height: 100%; 
     top: 800px; 
     background-attachment: fixed;
-}
+} *//**/
 
 }
 
@@ -205,6 +211,55 @@ li a.home i:before {
 section.module.content {
   padding: 40px 0;
 }
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 40px 0;
+}
+
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section.module.parallax-1 {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("http://loving1.github.io/Portfolio/images/sunsetgirl-1600x600.jpg");
+}
+
+section.module.parallax-4 {
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("http://loving1.github.io/Portfolio/images/dandi3.jpg");
+}
+
 
 #colorlist li {
 	display: inline;
@@ -230,3 +285,20 @@ section.module.content {
 div.fadehover {
 	position: relative;
 	}
+
+	@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
+}
