@@ -1,0 +1,52 @@
+.posts-timeline {
+  min-height: 600px;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.posts {
+  width: 12px;
+  height: 100%;
+  left: 50%;
+  margin-left: -6px;
+  background: #999999;
+  position: absolute;
+  top: 0px;
+}
+
+.event {
+  position: relative;
+  opacity: 0;
+  left: 50%;
+  width: 210px;
+  z-index: 100;
+  min-height: 100px;
+}
+
+.left { margin: 200px -270px; text-align: right; }
+
+.right { margin: 0 60px; text-align: left; }
+
+.connector {
+  width: 30px;
+  height: 6px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  background: #999999;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.leftside {
+  margin-top: -45px;
+  margin-left: 135px;
+}
+
+.rightside {
+  margin-top: -35px;
+  margin-left: -165px;
+}

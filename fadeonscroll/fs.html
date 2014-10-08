@@ -1,0 +1,65 @@
+<!doctype html> 
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- for the Font Awesome-->
+	<link href="fs.css" rel="stylesheet" type="text/css">
+	<title> Fade in on scroll </title> 
+
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="animate.min.css">
+</head>
+
+<body>
+
+<article class="posts-timeline">
+	<div class="posts">
+	    <div class="event left">
+		    <div class="event-icon"><img src="../images/timeline/icon-devices.png" height="70px"></div>
+			    <h4>Lead designer for The Escape Committee's 
+                    <a href="http://www.linkedin.com/profile/view?id=205362825&trk=tab_pro">
+                        responsive website</a></h4>
+					    <div class="connector leftside"></div>
+							</div>
+						<div class="event right">
+						     <div class="connector rightside"></div>
+							    <div class="event-icon"><img src="../images/timeline/icon-devices.png" height="70px"></div>
+								<h4>Lead designer for Spook Studio's new <a href="http://www.linkedin.com/profile/view?id=205362825&trk=tab_pro">responsive website</a></h4>
+							</div>
+						
+							<div id="hideme" class="event left">
+								<div class="event-icon"><img src="../images/timeline/icon-devices.png" height="70px"></div>
+								<h4>Lead designer for the branding and identity of <a href="http://www.linkedin.com/profile/view?id=205362825&trk=tab_pro">Hatch</a></h4>
+							    <div class="connector leftside"></div>
+							</div>
+							<div class="event right">
+							    <div class="connector rightside"></div>
+								<div class="event-icon"><img src="../images/timeline/icon-globe.png" height="70px"></div>
+								<h4>Volunteer at the <a href="http://www.linkedin.com/profile/view?id=205362825&trk=tab_pro">UX London</a> design conference</h4>
+							</div>
+						</div>
+					</article>
+
+					<script > 
+					    /* Every time the window is scrolled ... */
+					    $(window).scroll( function(){
+					        /* Check the location of each desired element */
+					        $('.event').each( function(i){
+					            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+					            var bottom_of_window = $(window).scrollTop() + $(window).height();
+					            /* If the object is completely visible in the window, fade it it */
+					            if( bottom_of_window > bottom_of_object ){
+					                $(this).animate({'opacity':'1'},500);        
+					            }
+					        }); 
+					    });
+					</script>
+
+					</body>

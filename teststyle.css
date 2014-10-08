@@ -37,8 +37,8 @@ img {
 	height: auto; 
 	width: 100px; 
 	padding: 0em; 
-	border: .1px solid #000;   
-	margin-right: 0.5em; 
+	border: .01px solid #000;   
+	margin-right: 0.1em; 
 	background-color: #EE0; 
 
 }
@@ -48,6 +48,7 @@ img {
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 a.link {
@@ -67,6 +68,9 @@ a.active {
 }
 
 a.mennav.active {
+}
+
+.active {
 	color: #0000FF;
 }
 
@@ -80,10 +84,12 @@ ul.listtop {
 	float: right;
 	margin: 0;
 	padding:0;
+	text-decoration: none;
 }
 
 li {
 	display: inline;
+	text-decoration: none;
 }
 
 
@@ -225,7 +231,6 @@ section.module.parallax {
 section.divabout {
 	max-height: 1px; 
 	max-width: 960px; 
-
 }
 
 #containbot {
@@ -266,7 +271,6 @@ section.module p:last-child {
   margin-bottom: 0;
 }
 
-
 section.module.parallax h1 {
   color: rgba(255, 255, 255, 0.8);
   font-size: 48px;
@@ -278,8 +282,8 @@ section.module.parallax h1 {
 }
 
 section.module.parallax-1 {
-  top: -100px; 
-  height: 450px;
+  top: -400px; 
+  height: 100%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -297,7 +301,13 @@ section.module.parallax-4 {
 }
 
 section.midpics {
+	top: -10px;
 	max-height: 20px; 
+	text-align: center;
+	/*max-width: 960px;*/
+}
+div.about {
+	max-height: 1px; 
 }
 
 #p1 {
@@ -308,6 +318,7 @@ section.midpics {
 #colorlist li {
 	display: inline;
 	padding-right: 20px;
+	text-align: center; 
 }
 
 #services div {
