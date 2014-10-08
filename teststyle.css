@@ -43,6 +43,38 @@ img {
 
 }
 
+.menu {
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+a.link {
+	color: #FF0000;
+}
+
+a.visited {
+	color: #00FF00;
+}
+
+a.hover {
+	color: #FF00FF;
+}
+
+a.active {
+    color: #0000FF;
+}
+
+a.mennav.active {
+	color: #0000FF;
+}
+
+
+#about {
+	max-height: 1px; 
+}
+
 ul.listtop {
 	display: inline;
 	float: right;
@@ -246,6 +278,7 @@ section.module.parallax h1 {
 }
 
 section.module.parallax-1 {
+  top: -100px; 
   height: 450px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -263,6 +296,14 @@ section.module.parallax-4 {
   background-image: url("http://loving1.github.io/Portfolio/images/dandi3.jpg");
 }
 
+section.midpics {
+	max-height: 20px; 
+}
+
+#p1 {
+	background-color: #111339; 
+	color: #d8c6cb;
+}
 
 #colorlist li {
 	display: inline;

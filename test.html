@@ -33,7 +33,7 @@
 					<li>
 						<a > 	
 						</a>
-						<a class="active" href="#home">
+						<a class="mennav active" href="#home" id="menuH">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 			  				<i class="fa fa-home fa-stack-1x fa-inverse"></i>
@@ -41,7 +41,7 @@
 			  				 Home</a> 
 					</li>
 					<li>
-						<a  href="#about"> 
+						<a  class="mennav" href="#about"> 
 								<span class="fa-stack fa-lg">
 									<i class="fa fa-circle fa-stack-2x"></i>
 					  				<i class="fa fa-heart-o fa-stack-1x fa-inverse"></i>
@@ -49,7 +49,7 @@
 			  				About</a>
 					</li>
 					<li>
-						<a href="#portfolio">
+						<a class="mennav" href="#portfolio">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 			  				<i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
@@ -57,7 +57,7 @@
 		  				 Portfolio </a> 
 					</li>
 					<li>
-						<a href="#contact">
+						<a class="mennav" href="#contact">
 							<span class="fa-stack fa-lg">
 								<i class="fa fa-circle fa-stack-2x"></i>
 				  				<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
@@ -65,6 +65,49 @@
 		  				Contact </a>  <a>&nbsp; &nbsp; &nbsp;  </a>
 					</li>
 				</ul>
+
+				<script>
+						$(document).ready(function () {
+					    $(document).on("scroll", onScroll);
+					    
+					    //smoothscroll
+					    $("a.mennav[href^="#"]").on('click', function (e) {
+					        e.preventDefault();
+					        $(document).off("scroll");
+					        
+					        $("a.mennav").each(function () {
+					            $(this).removeClass("mennav active");
+					        })
+					        $(this).addClass("mennav active");
+					      
+					        var target = this.hash,
+					            menu = target;
+					        $target = $(target);
+					        $('html, body').stop().animate({
+					            'scrollTop': $target.offset().top+2
+					        }, 500, 'swing', function () {
+					            window.location.hash = target;
+					            $(document).on("scroll", onScroll);
+					        });
+					    });
+					});
+
+					function onScroll(event){
+					    var scrollPos = $(document).scrollTop();
+					    $("#menu-center a.mennav").each(function () {
+					        var currLink = $(this);
+					        var refElement = $(currLink.attr("href"));
+					        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+					            $("#menu-center ul li a.mennav").removeClass("mennav active");
+					            currLink.addClass("mennav active");
+					        }
+					        else{
+					            currLink.removeClass("mennav active");
+					        }
+					    });
+					}
+
+				</script>
 				</div>
 			</div>
 
@@ -81,7 +124,7 @@
 
 			<section  class="ontopofhome"> 
 				<a class="s11" id="ht1"> Design  </a>
-				<a class="s12" id="ht2"> For Your World. </br>  </a>
+				<a class="s12" id="ht2">&nbsp;&nbsp; For Your World. </br>  </a>
 				<a class="s13" id="ht3" align="right"> raconcilio.com  </a>
 
 
@@ -136,15 +179,15 @@
 		  </div>
 		</section>
 	-->
-
-		<div id="about">
+		<section class="midpics" id="p1">Just like you: Responsive, Annimated, Dynamic, Publishable, Market Ready, Focused, SEO Optimized, Unique, Publishable, and more!  </section>
+		<div id="about"></div>
 		</br> </br> </br> </br> </br> 
 		<section class="module parallax parallax-1">
 		  <div class="midcontainer">
-		    <p>About Rose </p>
+		    <p></br></br></br> designed with the world in mind.  </p>
 		  </div>
 		</section>
-	</div>
+	
 <!--
 		<section class="module content">
 		  <div class="midcontainer">
@@ -327,18 +370,18 @@
 
 </script> 
 </section>
-
+<!--
 <p>
-	<!--
+	
 		content </br> content </br> content </br> content </br> content </br> 
 		content </br> content </br> content </br> content </br> content </br>
 		content </br> content </br> content </br> content </br> content </br> 
 		content </br> content </br> content </br> content </br> content </br> 
 
-	-->
-
+	
 		
-  </p>
+  </p>-->
+
 
   	</div>
 		<div id="contact"></div>
