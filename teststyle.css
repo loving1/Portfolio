@@ -169,9 +169,7 @@ a.s13 {
 	padding-top: 50px; 
 	top:0px;
     right:0px;
-    background-color: rgba(216,78,80,.5); 
-    
-    
+    background-color: rgba(216,78,80,0.1); 
 }
 
 .portfoliobox3 {
@@ -391,6 +389,7 @@ div.about {
 
 .wrappara2_2 {
 	padding-top: 150px; 
+
 }
 
 #para2_2 {
@@ -399,6 +398,19 @@ div.about {
 	background-color: #111339;
 	color:  #d8c6cb;
 	font-size: 15px; 
+}
+
+.wrappara3_2 {
+	padding-top: 300px;
+	margin: 0 auto;
+}
+
+#para3_2 {
+	background-color: rgba(19,13,34,1);
+	color: #d8c6cb;
+	width: 1200px;
+	height: 600px; 
+	border-radius: 25px; 
 }
 
 .FixedHeightContainer
