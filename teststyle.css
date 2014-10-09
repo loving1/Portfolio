@@ -296,6 +296,12 @@ section.divabout {
   margin: 0 auto;
 }
 
+.midcontainer3 {
+  max-width: 100%;
+  margin-left: auto;
+    margin-right: auto;
+}
+
 section.module.content {
   padding: 40px 0;
 }
@@ -406,6 +412,9 @@ div.about {
 	margin-right: auto;
 	width: 80%;
 	position: relative;
+	opacity: 0; 
+	bottom: 00px; 
+	height: 1px;
 }
 
 .wrappara3_2_pt2 {
@@ -416,11 +425,13 @@ div.about {
 	border-radius: 25px;
 	margin-left: auto;
 	margin-right: auto;
-	position: relative;  
+	position: relative; 
+	
 }
 
 #para3_2 {
-	 margin-top: 20px; 
+	 margin-top: 40px; 
+	 margin-left: 50px; 
 }
 
 
