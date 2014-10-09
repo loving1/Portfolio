@@ -393,10 +393,13 @@ div.about {
 
 #para2_1, #para2_2  {
 	position: absolute;
+
 }
 
 .wrappara2_2 {
 	padding-top: 150px; 
+	margin-left: auto; 
+	margin-right: auto;
 
 }
 
