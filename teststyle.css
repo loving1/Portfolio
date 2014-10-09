@@ -199,6 +199,8 @@ table {
 	height: 100%;
 	width: 100%;
 	background-size: cover;
+	background-color: rgba(19,13,34,1);
+	color: #d8c6cb;
 }
 
 #atitle {
@@ -433,6 +435,7 @@ div.about {
 	 margin-top: 40px; 
 	 margin-left: 50px; 
 }
+
 
 
 
