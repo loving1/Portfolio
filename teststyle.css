@@ -296,6 +296,8 @@ section.module.parallax-1 {
   background-image: url("http://loving1.github.io/Portfolio/images/sunsetgirl-1600x600.jpg");
 }
 
+
+
 section.module.parallax-3 {
   top: -400px; 
   height: 100%;
@@ -327,6 +329,26 @@ div.about {
 
 #p1 {
 	background-color: #111339; 
+	color: #d8c6cb;
+	
+}
+
+#para2_1, #para2_2  {
+	position: absolute;
+
+}
+
+#para2_2 {
+	max-width: 1000px;
+	background-color: #111339;
+	color:  #d8c6cb;
+	
+}
+
+#para3_1 {
+	position: absolute;
+	font-family: 'Homemade Apple', cursive;
+	font-size: 16px; 
 	color: #d8c6cb;
 }
 
