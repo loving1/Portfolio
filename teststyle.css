@@ -444,12 +444,12 @@ div.about {
   float:right;
   height: 500px;
   width:125px; 
-  padding:3px; 
+  padding:50px; 
     /*background:#f00;*/
 }
 .ContentImgs
 {
-  height:475px;
+  height:625px;
    overflow:hidden;
    
    /* background:#fff; */
