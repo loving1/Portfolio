@@ -153,8 +153,8 @@ a.s13 {
     width: 1200px ;
     margin: 0 auto; 
     left: 0;
-    position: absolute; 
-     
+    position: absolute;
+    /*position: absolute;  */
 }
 
 .portfoliobox1 {
@@ -162,19 +162,22 @@ a.s13 {
 	top:0px;
     right:0px;
     background-color: #111339; 
+    
 }
 
 .portfoliobox2 {
 	padding-top: 50px; 
 	top:0px;
     right:0px;
-    background-color: #d8c6cb; 
-    opacity: .5;
+    background-color: rgba(216,78,80,.5); 
+    
+    
 }
 
 .portfoliobox3 {
 	opacity: 1;
 	z-index: 15;
+	
 }
 
 table, th, td {
@@ -384,7 +387,6 @@ div.about {
 
 #para2_1, #para2_2  {
 	position: absolute;
-
 }
 
 .wrappara2_2 {
@@ -460,8 +462,6 @@ div.mousescroll:hover {
 section.divportfolio {
 	height: 100%;
 	width: 100%;
-
-	max-width: 1200px; 
 	margin: 0 auto;
 	height: 100%;
 	background-size: cover;
