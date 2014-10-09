@@ -401,20 +401,29 @@ div.about {
 }
 
 .wrappara3_2 {
-	padding-top: 175px;
+	padding-top: 225px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 100%;
+	width: 80%;
+	position: relative;
+}
+
+.wrappara3_2_pt2 {
+	background-color: rgba(19,13,34,1);
+	color: #d8c6cb;
+	width: 1500px;
+	height: 800px; 
+	border-radius: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;  
 }
 
 #para3_2 {
-	background-color: rgba(19,13,34,1);
-	color: #d8c6cb;
-	width: 1200px;
-	height: 500px; 
-	border-radius: 25px;
-	margin: 0 auto; 
+	 margin-top: 200px; 
 }
+
+
 
 .FixedHeightContainer
 {
