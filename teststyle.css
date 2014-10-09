@@ -430,7 +430,7 @@ div.about {
 	background-color: rgba(19,13,34,1);
 	color: #d8c6cb;
 	width: 1500px;
-	height: 700px; 
+	height: 750px; 
 	border-radius: 25px;
 	margin-left: auto;
 	margin-right: auto;
@@ -450,8 +450,8 @@ div.about {
 {
   float:right;
   height: 500px;
-  width:125px; 
-  padding:50px; 
+  width: 150px; 
+  padding: 25px; 
     /*background:#f00;*/
 }
 .ContentImgs
