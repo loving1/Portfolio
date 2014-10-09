@@ -141,11 +141,41 @@ a.s13 {
 	font-size: 20px;
 
 }
+.portfoliobox {
+	padding: 200px; 
+	top:0px;
+    right:0px;
+    width: 1200px ;
+    margin: 0 auto; 
+    left: 0;
+    position: absolute; 
+     
+}
 
+.portfoliobox1 {
+	padding: 15px; 
+	top:0px;
+    right:0px;
+    background-color: #111339; 
+}
+
+.portfoliobox2 {
+	padding-top: 50px; 
+	top:0px;
+    right:0px;
+    background-color: #d8c6cb; 
+    opacity: .5;
+}
+
+.portfoliobox3 {
+	opacity: 1;
+	z-index: 15;
+}
 
 table, th, td {
    border: none;
    table-layout: fixed;
+   text-align: left;
 }
 
 table {
@@ -157,7 +187,12 @@ table {
     height: 50px;
     text-align: left;
     float: left;
+}
 
+.contactbox {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
 }
 
 #atitle {
@@ -307,6 +342,15 @@ section.module.parallax-3 {
   background-size: cover;
   background-image: url("http://loving1.github.io/Portfolio/images/para3.jpg");
 }
+section.module.parallax-4 {
+  top: -400px; 
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("http://loving1.github.io/Portfolio/images/para3.jpg");
+}
 
 section.module.parallax-4 {
   height: 110%;
@@ -338,11 +382,51 @@ div.about {
 
 }
 
+.wrappara2_2 {
+	padding-top: 150px; 
+}
+
 #para2_2 {
+	width: 600px;
 	max-width: 1000px;
 	background-color: #111339;
 	color:  #d8c6cb;
-	
+	font-size: 15px; 
+}
+
+.FixedHeightContainer
+{
+  float:right;
+  height: 500px;
+  width:125px; 
+  padding:3px; 
+    /*background:#f00;*/
+}
+.ContentImgs
+{
+  height:475px;
+   overflow:hidden;
+   
+   /* background:#fff; */
+}
+
+div.mousescroll:hover {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(79, 62, 95, 0.2);
+    border: solid whiteSmoke 4px;
+    width: 5px; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(79, 62, 95, 0.3);
+    width: 10px; 
 }
 
 #para3_1 {
@@ -355,9 +439,11 @@ div.about {
 #colorlist li {
 	/*display: inline; */
 	padding-right: 20px;
-	text-align: left; 
+	text-align: left;  
+}
+#portmenubox {
 	background-color: #111339;
-	color:  #d8c6cb; 
+	color:  #d8c6cb;
 }
 
 #services div {
@@ -367,10 +453,14 @@ div.about {
 }
 
 section.divportfolio {
+	height: 100%;
+	width: 100%;
+
 	max-width: 1200px; 
 	margin: 0 auto;
 	height: 100%;
 	background-size: cover;
+
 }
 
 section.ontopofhome {
