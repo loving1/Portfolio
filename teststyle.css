@@ -142,6 +142,11 @@ a.s13 {
 
 }
 .portfoliobox {
+	background-size: cover;  
+     
+}
+
+.portfoliobox0 {
 	padding: 200px; 
 	top:0px;
     right:0px;
