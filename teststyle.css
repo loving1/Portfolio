@@ -401,16 +401,19 @@ div.about {
 }
 
 .wrappara3_2 {
-	padding-top: 300px;
-	margin: 0 auto;
+	padding-top: 175px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
 
 #para3_2 {
 	background-color: rgba(19,13,34,1);
 	color: #d8c6cb;
 	width: 1200px;
-	height: 600px; 
-	border-radius: 25px; 
+	height: 500px; 
+	border-radius: 25px;
+	margin: 0 auto; 
 }
 
 .FixedHeightContainer
