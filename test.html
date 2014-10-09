@@ -251,6 +251,7 @@
 
 		</script>
 <!-- section 3 -->
+<div id="portfolio"> </div>
 
 <section class="module parallax parallax-3">
 		  <div class="midcontainer3">
@@ -354,7 +355,60 @@
 		    });
 		    });
 		</script>
+<script type='text/javascript'>
+	$(function() {       
+        $("img.fadeInD").css("opacity","1.0");  
+		$('img.fadeInD').hover(function() {
+			$(this).stop().animate({'opacity': 1});
+		}, function(){ 
+			$(this).stop().animate({'opacity': .4}); 
+		
+		}); 
 
+        $("img.fadeInD").hover(function() {
+                var myID = $(this).attr("id");        
+                $("img.fadeInD:not(#"+myID+")").stop().animate({'opacity': 0.2});
+        },           
+        function() {       
+                $("img.fadeInD").stop().animate({'opacity': 1.0});        
+        });    
+    });
+/* Products */
+	$("#yd1").click(function() { 
+				$("#Da, #Db, #Df, #Dg, #Dj, #Dk, #Dl").stop().animate({'opacity': 1});
+				$("#Dc,#Dd,#De,#Dh,#Di,#Dm, #Dn").stop().animate({'opacity': .2});
+			}); 
+	/* Web */
+
+	$("#yd2").click(function() {
+				$("#Da,#Dd,#De,#Dg,#Di,#Dk,#Dl").stop().animate({'opacity': 1});
+				$("#Db,#Dc,#Df,#Dh,#Dj,#Df,#Dm, #Dn").stop().animate({'opacity': .2});
+			});
+	/*SEO and Marketing */ 
+	$("#yd3").click(function() {
+				$("#Da,#Db,#Dc,#Dd,#De,#Dh,#Dl,#Dm, #Dn").stop().animate({'opacity': 1});
+				$("#Df,#Dg,#Di,#Dj,#Dk").stop().animate({'opacity': .2});
+			}); 
+	/* Program Development */
+	$("#yd4").click(function() {
+				$("#Dd, #Dg, #Dh, #Dl, #Dm, #Dn").stop().animate({'opacity': 1});
+				$("#Da,#Db,#Dc,#De,#Df, #Di, #Dj,#Dk").stop().animate({'opacity': .2});
+			}); 
+	/*Strategic Planning */
+	$("#yd5").click(function() {
+				$("#Da,#De, #Dn").stop().animate({'opacity': 1});
+				$("#Db,#Dc,#Dd,#Da,#Df").stop().animate({'opacity': .2});
+			}); 
+/*Wellness */
+	$("#yd6").click(function() {
+				$("#Db,#Dl,#Dm, #Dn").stop().animate({'opacity': 1});
+				$(",#Dc,#Dd,#De,#Da").stop().animate({'opacity': .2});
+			}); 
+
+		
+
+
+</script> 
 
 	
 <!--
@@ -448,9 +502,9 @@
 		<i class="fa fa-spinner fa-spin"></i>
 
 	-->
-		<div id="portfolio"> </br> </br> </br></br></br></div>
+		
 
-		<section class="divportfolio"> 
+		
 			<!--
 			<section class="portfoliobox">
 				<section class="portfoliobox0">
@@ -545,61 +599,8 @@
 	<img class="fadeInD" id="Du" src="images/p21.jpg"/> </br>
 </p>--> 
 
-<script type='text/javascript'>
-	$(function() {       
-        $("img.fadeInD").css("opacity","1.0");  
-		$('img.fadeInD').hover(function() {
-			$(this).stop().animate({'opacity': 1});
-		}, function(){ 
-			$(this).stop().animate({'opacity': .4}); 
-		
-		}); 
-
-        $("img.fadeInD").hover(function() {
-                var myID = $(this).attr("id");        
-                $("img.fadeInD:not(#"+myID+")").stop().animate({'opacity': 0.2});
-        },           
-        function() {       
-                $("img.fadeInD").stop().animate({'opacity': 1.0});        
-        });    
-    });
-/* Products */
-	$("#yd1").click(function() { 
-				$("#Da, #Db, #Df, #Dg, #Dj, #Dk, #Dl").stop().animate({'opacity': 1});
-				$("#Dc,#Dd,#De,#Dh,#Di,#Dm, #Dn").stop().animate({'opacity': .2});
-			}); 
-	/* Web */
-
-	$("#yd2").click(function() {
-				$("#Da,#Dd,#De,#Dg,#Di,#Dk,#Dl").stop().animate({'opacity': 1});
-				$("#Db,#Dc,#Df,#Dh,#Dj,#Df,#Dm, #Dn").stop().animate({'opacity': .2});
-			});
-	/*SEO and Marketing */ 
-	$("#yd3").click(function() {
-				$("#Da,#Db,#Dc,#Dd,#De,#Dh,#Dl,#Dm, #Dn").stop().animate({'opacity': 1});
-				$("#Df,#Dg,#Di,#Dj,#Dk").stop().animate({'opacity': .2});
-			}); 
-	/* Program Development */
-	$("#yd4").click(function() {
-				$("#Dd, #Dg, #Dh, #Dl, #Dm, #Dn").stop().animate({'opacity': 1});
-				$("#Da,#Db,#Dc,#De,#Df, #Di, #Dj,#Dk").stop().animate({'opacity': .2});
-			}); 
-	/*Strategic Planning */
-	$("#yd5").click(function() {
-				$("#Da,#De, #Dn").stop().animate({'opacity': 1});
-				$("#Db,#Dc,#Dd,#Da,#Df").stop().animate({'opacity': .2});
-			}); 
-/*Wellness */
-	$("#yd6").click(function() {
-				$("#Db,#Dl,#Dm, #Dn").stop().animate({'opacity': 1});
-				$(",#Dc,#Dd,#De,#Da").stop().animate({'opacity': .2});
-			}); 
-
-		
 
 
-</script> 
-</section>
 <!--
 <p>
 	
