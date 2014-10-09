@@ -353,9 +353,11 @@ div.about {
 }
 
 #colorlist li {
-	display: inline;
+	/*display: inline; */
 	padding-right: 20px;
-	text-align: center; 
+	text-align: left; 
+	background-color: #111339;
+	color:  #d8c6cb; 
 }
 
 #services div {
@@ -365,8 +367,10 @@ div.about {
 }
 
 section.divportfolio {
-	max-width: 960px; 
+	max-width: 1200px; 
 	margin: 0 auto;
+	height: 100%;
+	background-size: cover;
 }
 
 section.ontopofhome {
