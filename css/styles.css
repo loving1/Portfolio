@@ -3,11 +3,23 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
 @import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
+@media screen and (min-width: 1px) and (max-width: 440px) {
+	.listtop, #ulheader, #menu-center, #menuH {
+		font-size: .9em;
+	}
+	a.s11, #ht1  {
+		color: blue;
+	}
+}
 
 @media screen and (min-width: 1px) and (max-width: 640px) {
 	.listtop, #ulheader, #menu-center, #menuH {
 		font-size: .95em;
 	}
+	a.s11, #ht1  {
+		color: red;
+	}
+
 }
 
 @media screen and (min-width: 1px) and (max-width: 740px) {
