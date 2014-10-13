@@ -16,7 +16,7 @@
 	}
 }
 
-@media screen and (min-width: 1px) and (max-width: 640px) {
+@media screen and (min-width: 440px) and (max-width: 640px) {
 	.listtop, #ulheader, #menu-center, #menuH {
 		font-size: .95em;
 	}
