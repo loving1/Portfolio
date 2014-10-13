@@ -4,7 +4,7 @@
 @import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
 
-@media screen and  (max-width: 890px ) {
+@media screen and  (max-width: 470px ) {
 	a.s11, #ht1  {
 		font-size: 1.25em; 
 		top: -400px;
@@ -17,46 +17,46 @@
 
 }
 
-@media screen and (min-width: 890px) and (max-width: 1090px ) {
+@media screen and (min-width: 740px) and (max-width: 940px ) {
 	a.s11, #ht1  {
-		font-size: 2.25em; 
+		font-size: 3.25em; 
 		top: -400px;
 		color: red;
 	}
 	 a.s12, #ht2 {
-		font-size: 2.25em; 
+		font-size: 3.25em; 
 		top: -350px;
 	}
 
 }
 
 
-@media screen and (min-width: 1090px) and (max-width: 1290px ) {
+@media screen and (min-width: 940px) and (max-width: 1140px ) {
 	a.s11, #ht1  {
-		font-size: 2.25em; 
+		font-size: 3.75em; 
 		top: -400px;
 		color: red;
 	}
 	 a.s12, #ht2 {
-		font-size: 2.25em; 
+		font-size: 3.75em; 
 		top: -350px;
 	}
 
 }
 
-@media screen and (min-width: 1290px) and (max-width: 1490px) {
+@media screen and (min-width: 1140px) and (max-width: 1340px) {
 
 	header {
 		font-size: .9em; 
 	}
 
 	a.s11, #ht1  {
-		font-size: 3.25em; 
+		font-size: 4.25em; 
 		top: -400px;
 		color: green;
 	}
 	 a.s12, #ht2 {
-		font-size: 3.25em; 
+		font-size: 4.25em; 
 		top: -350px;
 	}
 
@@ -73,21 +73,21 @@
 	}
 }
 
-@media screen and (min-width: 1490px) and (max-width: 1690px ) {
+@media screen and (min-width: 1340px) and (max-width: 1540px ) {
 	a.s11, #ht1  {
-		font-size: 4.25em; 
+		font-size: 4.75em; 
 		top: -400px;
 		color: purple;
 	}
 	 a.s12, #ht2 {
-		font-size: 4.25em; 
+		font-size: 4.75em; 
 		top: -350px;
 	}
 
 }
 
 
-@media screen and (min-width: 1690px) and (max-width: 1890px ) {
+@media screen and (min-width: 1540px) and (max-width: 1740px ) {
 	a.s11, #ht1  {
 		font-size: 5.25em; 
 		top: -400px;
