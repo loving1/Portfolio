@@ -15,7 +15,7 @@
 		top: -350px;
 	}
 	.midpics {
-		font-size: .8em; 
+		font-size: .9em; 
 		max-height: 150px; 
 	}
 
@@ -32,9 +32,9 @@
 		top: -350px;
 	}
 
-	.midpics {
-		font-size: .8em; 
-		max-height: 150px; 
+	.midpics, #p1  {
+		font-size: .9em; 
+		max-height: 10%; 
 	}
 
 }
@@ -51,9 +51,9 @@
 		top: -350px;
 	}
 
-	.midpics {
-		font-size: .8em; 
-		max-height: 100px; 
+	.midpics, #p1  {
+		font-size: .9em; 
+		max-height: 10%; 
 	}
 
 }
@@ -78,14 +78,12 @@
 		font-size: 1em; 
 	}
 
-	#p1 {
-		font-size: .8em; 
-	}
+	
 
 	.hidden {
 		right: 350px;
 	}
-	.midpics {
+	.midpics, #p1 {
 		font-size: .8em; 
 	}
 }
@@ -100,7 +98,7 @@
 		font-size: 4.75em; 
 		top: -350px;
 	}
-	.midpics {
+	.midpics, #p1  {
 		font-size: .9em; 
 	}
 
