@@ -7,12 +7,12 @@
 
 @media screen and (min-width: 1090px) and (max-width: 1290px ) {
 	a.s11, #ht1  {
-		font-size: 3.25em; 
+		font-size: 2.25em; 
 		top: -400px;
 		color: red;
 	}
 	 a.s12, #ht2 {
-		font-size: 3.25em; 
+		font-size: 2.25em; 
 		top: -350px;
 	}
 
@@ -25,12 +25,12 @@
 	}
 
 	a.s11, #ht1  {
-		font-size: 4.25em; 
-		top: -500px;
+		font-size: 3.25em; 
+		top: -400px;
 		color: green;
 	}
 	 a.s12, #ht2 {
-		font-size: 4.25em; 
+		font-size: 3.25em; 
 		top: -350px;
 	}
 
@@ -49,12 +49,12 @@
 
 @media screen and (min-width: 1490px) and (max-width: 1690px ) {
 	a.s11, #ht1  {
-		font-size: 5.25em; 
+		font-size: 4.25em; 
 		top: -400px;
 		color: purple;
 	}
 	 a.s12, #ht2 {
-		font-size: 5.25em; 
+		font-size: 4.25em; 
 		top: -350px;
 	}
 
@@ -63,12 +63,12 @@
 
 @media screen and (min-width: 1690px) and (max-width: 1890px ) {
 	a.s11, #ht1  {
-		font-size: 5.5em; 
+		font-size: 5.25em; 
 		top: -400px;
 		color: yellow;
 	}
 	 a.s12, #ht2 {
-		font-size: 5.5em; 
+		font-size: 5.25em; 
 		top: -350px;
 	}
 
