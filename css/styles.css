@@ -11,7 +11,7 @@
 	a.s11, #ht1  {
 		font-size: 2.0em; 
 		top: -400px;
-		color: green;
+		color: yellow;
 	}
 	a.s12, #ht2 {
 		font-size: 2.0em; 
@@ -24,7 +24,7 @@
 	}
 
 	#atitle {
-		font-size: 25px; 
+		font-size: 15px; 
 	}
 }
 
