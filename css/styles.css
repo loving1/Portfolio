@@ -19,6 +19,11 @@
 		max-height: 15%; 
 	}
 
+	a.s13, #ht3 {
+		 
+		top: -250px;
+	}
+
 }
 
 @media screen and (min-width: 740px) and (max-width: 940px) {
