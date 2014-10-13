@@ -3,6 +3,34 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
 @import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
+@media screen and (min-width: 1136px) and (max-width: 1490px) {
+
+	header {
+		font-size: .9em; 
+	}
+
+	a.s11, #ht1  {
+		font-size: 5em; 
+		top: -400px;
+	}
+	 a.s12, #ht2 {
+		font-size: 5em; 
+		top: -350px;
+	}
+
+	a.s13 {
+		font-size: 1em; 
+	}
+
+	#p1 {
+		font-size: .9em; 
+	}
+
+	.hidden {
+		right: 350px;
+	}
+}
+
 html, body, p {
 	font-family: 'Montserrat Alternates', sans-serif;
     margin:0;
