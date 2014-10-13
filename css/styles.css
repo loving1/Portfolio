@@ -4,6 +4,12 @@
 @import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
 
+@media screen and (min-width: 1px) and (max-width: 640px) {
+	.listtop, #ulheader {
+		font-size: .8em;
+	}
+}
+
 @media screen and (min-width: 1px) and (max-width: 740px) {
 	a.s11, #ht1  {
 		font-size: 2.0em; 
