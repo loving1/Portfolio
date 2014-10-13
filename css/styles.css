@@ -4,7 +4,7 @@
 @import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
 
-@media screen and (min-width: 1px) and (max-width: 740px ) {
+@media screen and (min-width: 1px) and (max-width: 740px) {
 	a.s11, #ht1  {
 		font-size: 1.25em; 
 		top: -400px;
@@ -17,7 +17,7 @@
 
 }
 
-@media screen and (min-width: 740px) and (max-width: 940px ) {
+@media screen and (min-width: 740px) and (max-width: 940px) {
 	a.s11, #ht1  {
 		font-size: 2.25em; 
 		top: -400px;
