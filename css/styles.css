@@ -15,8 +15,8 @@
 		top: -350px;
 	}
 	.midpics {
-		font-size: .9em; 
-		max-height: 150px; 
+		font-size: .8em; 
+		max-height: 10%; 
 	}
 
 }
@@ -33,7 +33,7 @@
 	}
 
 	.midpics, #p1  {
-		font-size: .9em; 
+		font-size: .8em; 
 		max-height: 10%; 
 	}
 
@@ -52,7 +52,7 @@
 	}
 
 	.midpics, #p1  {
-		font-size: .9em; 
+		font-size: .85em; 
 		max-height: 10%; 
 	}
 
@@ -84,7 +84,7 @@
 		right: 350px;
 	}
 	.midpics, #p1 {
-		font-size: .8em; 
+		font-size: .85em; 
 	}
 }
 
