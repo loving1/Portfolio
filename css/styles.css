@@ -16,6 +16,10 @@
 		font-size: 2.0em; 
 		top: -350px;
 	}
+	.midpics, #p1 {
+		font-size: .8em; 
+		max-height: 15%; 
+	}
 
 	#atitle {
 		font-size: 25px; 
@@ -34,6 +38,10 @@
 	a.s12, #ht2 {
 		font-size: 2.0em; 
 		top: -350px;
+	}
+	.midpics, #p1 {
+		font-size: .8em; 
+		max-height: 15%; 
 	}
 
 	#atitle {
