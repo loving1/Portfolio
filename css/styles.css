@@ -21,7 +21,13 @@
 		font-size: .95em;
 	}
 	a.s11, #ht1  {
+		font-size: 2.0em; 
+		top: -400px;
 		color: red;
+	}
+	a.s12, #ht2 {
+		font-size: 2.0em; 
+		top: -350px;
 	}
 
 	#atitle {
@@ -30,7 +36,7 @@
 
 }
 
-@media screen and (min-width: 1px) and (max-width: 740px) {
+@media screen and (min-width: 640px) and (max-width: 740px) {
 	a.s11, #ht1  {
 		font-size: 2.0em; 
 		top: -400px;
