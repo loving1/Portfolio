@@ -3,19 +3,96 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
 @import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
+@media screen and (min-width: 1136px) and (max-width: 1490px) {
+
+header {
+	font-size: .9em; 
+}
+
+a.s11, #ht1  {
+	font-size: 5em; 
+	top: -400px;
+}
+ a.s12, #ht2 {
+	font-size: 5em; 
+	top: -350px;
+}
+
+a.s13 {
+	font-size: 1em; 
+}
+
+#p1 {
+	font-size: .9em; 
+}
+
+.hidden {
+	right: 350px;
+}
+
+
+/*#wrapper,#header,#footer,#navigation {
+	width: 80%; /*768px;*/
+/*	margin: 0px;
+}
+#logo {
+	text-align:center;
+}
+#navigation {
+	text-align: center;
+	background-image: none;
+	border-top-color: #bfbfbf;
+	border-top-style: double;
+	border-top-width: 4px;
+	padding-top: 20px;
+}
+#navigation ul li a {
+	background-color: #dedede;
+	line-height: 60px;
+	font-size: 40px;
+}
+#content, #sidebar {
+	margin-top: 20px;
+	padding-right: 10px;
+	padding-left: 10px;
+	width: 75.83333333%; /*728px; */
+/*}
+.oscarMain {
+	margin-right: 30px;
+	margin-top: 0px;
+	width: 15.625%; /*150px;*/
+/*	height: 394px;
+}
+#sidebar {
+	border-right: none;
+	border-top: 2px solid #e8e8e8;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+.sideBlock {
+	width: 46%;
+	float: left;
+}
+.overHyped {
+	margin-top: 0px;
+	margin-left: 50px;
+} */
+}
+
+
 html, body, p {
 	font-family: 'Montserrat Alternates', sans-serif;
     margin:0;
     padding:0;
     border: 0;
     height: 100%;
-    font-size: 100%;
+    font-size: 16px;
 }
 
 
 
 header {
-	height: 60px;
+	height: 7%;  /*Changed from 60px RD Convert*/
 	background: #dbdbdb;
 		/*	background: cover; /* If doing a specific background not just a color */  /**/
 	width: 100%;
@@ -28,14 +105,14 @@ header {
 h1 {
 	font-family: 'Montserrat Alternates', sans-serif;
 	text-align: left;
-	font-size: 100%; 
+	font-size: 100%;   
 	margin: 0;
     padding: 0;
 }
 
 img {
 	height: auto; 
-	width: 100px; 
+	width: ;  /*Changed from 100px RD Convert*/
 	padding: 0em; 
 	border: .01px solid #000;   
 	margin-right: 0.1em; 
@@ -112,22 +189,22 @@ li {
 
 a.s11{
 	font-family: 'Homemade Apple', cursive;
-	top: -500px; 
+	top: -200%;  /*Changed from -500px RD Convert*/
 	position: relative;
 	text-align: left;
 	padding: 0;
 	margin: 0; 
-	font-size: 100px;
+	font-size: 6.25em;  /*Changed from 100px RD Convert*/
 
 }
 a.s12 {
 	font-family: 'Homemade Apple', cursive;
-	top: -400px; 
+	top: -44%;  /*Changed from -400px RD Convert*/
 	position: relative;
 	text-align: right;
 	padding: 0;
 	margin: 0; 
-	font-size: 100px;
+	font-size: 6.25em; /*Changed from 100px RD Convert*/
 
 }
 
@@ -147,10 +224,10 @@ a.s13 {
 }
 
 .portfoliobox0 {
-	padding: 200px; 
+	padding: 10.5%; /*Changed from 200px RD Convert*/
 	top:0px;
     right:0px;
-    width: 1200px ;
+    width: 63%;  /*Changed from 1200px RD Convert*/
     margin: 0 auto; 
     left: 0;
     position: absolute;
@@ -209,7 +286,7 @@ table {
 
 #atitle {
 	text-align: left;
-	font-size: 35px; 
+	font-size: 35px; /*Changed from 35px RD Convert*/
 }
 
 #facon th {
@@ -522,7 +599,7 @@ section.ontopofhome {
 	cursor: pointer; 
 	background-color: #666;
 	color: #EFEFEF; 
-	width: 200px; 
+	width: 80%;  /*Changed from 200 px - RDConvert*/ 
 }
 
 div.fadehover {
@@ -542,6 +619,6 @@ div.fadehover {
 }
 @media all and (min-width: 960px) {
   section.module.parallax h1 {
-    font-size: 160px;
+    font-size: 10%;  /*Changed from 160px RDCOnvert*/
   }
 }
