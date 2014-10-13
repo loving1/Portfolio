@@ -8,7 +8,11 @@
 		font-size: .9em;
 	}
 	a.s11, #ht1  {
-		color: blue;
+		color: green;
+	}
+
+	#atitle {
+		font-size: 25px; 
 	}
 }
 
@@ -18,6 +22,10 @@
 	}
 	a.s11, #ht1  {
 		color: red;
+	}
+
+	#atitle {
+		font-size: 30px; 
 	}
 
 }
