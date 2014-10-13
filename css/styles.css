@@ -398,7 +398,7 @@ i a i:before {
 
 
 section.module.parallax {
-  height: 600px;
+  height: 100%;
   background-position: 75% 75%;
   background-repeat: no-repeat;
   background-attachment: fixed;
