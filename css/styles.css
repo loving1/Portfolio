@@ -3,7 +3,7 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
 @import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
-@media screen and (min-width: 1px) and (max-width: 540px) {
+@media screen and (min-width: 1px) and (max-width: 590px) {
 	.listtop, #ulheader, #menu-center, #menuH {
 		font-size: .9em;
 	}
@@ -18,7 +18,8 @@
 		top: -350px;
 	}
 	.midpics, #p1 {
-		font-size: .8em; 
+		padding-top: 10px; 
+		font-size: .75em; 
 		max-height: 15%; 
 	}
 
@@ -27,7 +28,7 @@
 	}
 }
 
-@media screen and (min-width: 540px) and (max-width: 640px) {
+@media screen and (min-width: 590px) and (max-width: 640px) {
 	.listtop, #ulheader, #menu-center, #menuH {
 		font-size: .95em;
 	}
