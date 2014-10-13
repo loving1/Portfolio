@@ -22,7 +22,7 @@
 		max-height: 15%; 
 	}
 
-	#atitle {
+	#atitle, .headerderosi {
 		font-size: 15px; 
 	}
 
@@ -51,8 +51,8 @@
 		max-height: 15%; 
 	}
 
-	#atitle {
-		font-size: 30px; 
+	#atitle, .headerderosi {
+		font-size: 20px; 
 	}
 
 	a.s13, #ht3 {
@@ -79,6 +79,10 @@
 
 	a.s13, #ht3 {
 		top: -250px;
+	}
+
+	#atitle, .headerderosi {
+		font-size: 25px; 
 	}
 
 }
