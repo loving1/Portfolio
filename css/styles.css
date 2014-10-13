@@ -5,7 +5,7 @@
 
 
 @media screen and (min-width: 1px) and (max-width: 640px) {
-	.listtop, #ulheader {
+	.listtop, #ulheader, #menu-center, #menuH {
 		font-size: .8em;
 	}
 }
