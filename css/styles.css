@@ -11,7 +11,7 @@
 	a.s11, #ht1  {
 		font-size: 2.0em; 
 		top: -400px;
-		color: purple;
+		color: #F0FFFF;
 	}
 	a.s12, #ht2 {
 		font-size: 2.0em; 
@@ -23,7 +23,7 @@
 	}
 
 	#atitle, .headerderosi {
-		font-size: 15px; 
+		font-size: 5px; 
 	}
 
 	a.s13, #ht3 {
@@ -126,15 +126,12 @@
 
 @media screen and (min-width: 1140px) and (max-width: 1340px) {
 
-	header {
-		font-size: .9em; 
-	}
-
 	a.s11, #ht1  {
 		font-size: 3.75em; 
 		top: -425px;
 		color: green;
 	}
+
 	 a.s12, #ht2 {
 		font-size: 3.75em; 
 		top: -350px;
@@ -143,8 +140,6 @@
 	a.s13 {
 		font-size: 1em; 
 	}
-
-	
 
 	.hidden {
 		right: 350px;
@@ -167,7 +162,6 @@
 	.midpics, #p1  {
 		font-size: .9em; 
 	}
-
 }
 
 
