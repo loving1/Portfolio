@@ -32,6 +32,9 @@
 	a.s13, #ht3 {
 		top: -250px;
 	}
+	.hidden {
+		right: 150px;
+	}
 
 
 	/*	#atitle, a.headerderosi, #headerh1, a.h1header {
@@ -67,6 +70,9 @@
 	a.s13, #ht3 {
 		top: -250px;
 	}
+	.hidden {
+		right: 150px;
+	}
 
 
 }
@@ -93,6 +99,9 @@
 	#atitle, .headerderosi {
 		font-size: 25px; 
 	}
+	.hidden {
+		right: 150px;
+	}
 
 }
 
@@ -110,6 +119,10 @@
 	.midpics, #p1  {
 		font-size: .8em; 
 		max-height: 10%; 
+	}
+
+	.hidden {
+		right: 250px;
 	}
 
 }
