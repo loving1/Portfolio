@@ -495,7 +495,8 @@ body.large .article {
 }
 
 .midcontainer {
-  max-width: 83.333333333%;
+	width: 83.3333333333%; 
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -635,7 +636,7 @@ div.about {
 
 #para2_2 {
 	width: 93.333333333%;
-	max-width: 1800px;
+	max-width: 1200px;
 	background-color: #111339;
 	color:  #d8c6cb;
 	font-size: 15px; 
