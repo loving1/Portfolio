@@ -624,6 +624,7 @@ div.about {
 
 #para2_1, #para2_2  {
 	position: absolute;
+	width: 100%; 
 
 }
 
@@ -631,7 +632,7 @@ div.about {
 	padding-top: 150px; 
 	margin-left: auto; 
 	margin-right: auto;
-	width: 100%; 
+	width: 95%; 
 
 }
 
