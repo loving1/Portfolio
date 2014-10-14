@@ -24,7 +24,9 @@
 	}
 
 	#atitle, .hdr, .h1header, #headerh1 {
-		font-size: 10px; 
+		font-family: 'Montserrat Alternates', sans-serif;
+		font-size: .5em; 
+		color: #B8860B;
 	}
 
 	a.s13, #ht3 {
@@ -215,7 +217,7 @@ header {
 h1 {
 	font-family: 'Montserrat Alternates', sans-serif;
 	text-align: left;
-	font-size: 100%; 
+	font-size: 1em; 
 	margin: 0;
     padding: 0;
 }
