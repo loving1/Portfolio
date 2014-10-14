@@ -22,8 +22,9 @@
 		max-height: 15%; 
 	}
 
-	#atitle, .headerderosi, #headerh1, h1.h1header {
-		font-size: 5px; 
+	#atitle, a.headerderosi, #headerh1, h1.h1header {
+		font-size: 5em;
+		color: #F0FFFF;  
 	}
 
 	a.s13, #ht3 {
