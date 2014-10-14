@@ -494,7 +494,7 @@ body.large .article {
 	font-size: 150%; 
 }
 
-.midcontainer {
+.midcontainer, #para2 {
 	width: 83.3333333333%; 
   max-width: 1600px;
   margin: 0 auto;
@@ -619,19 +619,16 @@ div.about {
 #p1 {
 	background-color: #111339; 
 	color: #d8c6cb;
-	
 }
 
 #para2_1, #para2_2  {
 	position: absolute;
 	width: 100%; 
-
 }
 
 .wrappara2 {
 	width: 85%;
 	max-width: 1200px;
-
 }
 
 .wrappara2_2 {
