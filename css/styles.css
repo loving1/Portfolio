@@ -628,6 +628,12 @@ div.about {
 
 }
 
+.wrappara2 {
+	width: 85%
+	max-width: 1200px;
+
+}
+
 .wrappara2_2 {
 	padding-top: 150px; 
 	margin-left: auto; 
