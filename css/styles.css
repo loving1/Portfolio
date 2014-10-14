@@ -6,13 +6,13 @@
 @media screen and (min-width: 1px) and (max-width: 590px) {
 
 	.listtop, #ulheader, #menu-center, #menuH {
-		font-size: .9em;
+		font-size: .875em;
 	}
 
 	a.s11, #ht1  {
 		font-size: 2.0em; 
 		top: -400px;
-		color: purple;
+		color: #B8860B;
 	}
 	a.s12, #ht2 {
 		font-size: 2.0em; 
@@ -23,8 +23,8 @@
 		max-height: 15%; 
 	}
 
-	#atitle, .headerderosi {
-		font-size: 20px; 
+	#atitle, .headerderosi, .h1header, #headerh1 {
+		font-size: 10px; 
 	}
 
 	a.s13, #ht3 {
