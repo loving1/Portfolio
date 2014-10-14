@@ -8,6 +8,11 @@
 		font-size: .9em;
 	}
 
+	#atitle, a.headerderosi, #headerh1, a.h1header {
+		font-size: 5em;
+		color: purple;  
+	}
+
 	a.s11, #ht1  {
 		font-size: 2.0em; 
 		top: -400px;
@@ -22,10 +27,7 @@
 		max-height: 15%; 
 	}
 
-	#atitle, a.headerderosi, #headerh1, h1.h1header {
-		font-size: 5em;
-		color: #F0FFFF;  
-	}
+
 
 	a.s13, #ht3 {
 		top: -250px;
