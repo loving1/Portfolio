@@ -211,11 +211,6 @@
 
 }
 
-
-
-
-
-
 html, body, p {
 	font-family: 'Montserrat Alternates', sans-serif;
     margin:0;
@@ -224,8 +219,6 @@ html, body, p {
     height: 100%;
     font-size: 100%;
 }
-
-
 
 header {
 	height: 60px;
@@ -322,8 +315,6 @@ li {
 	top: -35px;
 }
 
-
-
 a.s11{
 	font-family: 'Homemade Apple', cursive;
 	top: -500px; 
@@ -388,8 +379,7 @@ a.s13 {
 
 .portfoliobox3 {
 	opacity: 1;
-	z-index: 15;
-	
+	z-index: 15;	
 }
 
 table, th, td {
@@ -400,7 +390,6 @@ table, th, td {
 
 table {
     width: 1000px;
-    
 }
 
 #tbltxt th {
@@ -430,20 +419,16 @@ table {
 }
 
 #tbltxt {
-	 text-align: left;
+	text-align: left;
     height: 50px;
     vertical-align: top;
     width: 350px;
-
 }
 
 #facon  {
 	width: 50px; 
 	text-align: right;
-
 }
-
-
 
 /*i.fa {
 	color: black;
@@ -493,7 +478,6 @@ section.module.parallax {
     background-attachment: fixed;
 } *//**/
 
-}
 section.divabout {
 	max-height: 1px; 
 	max-width: 960px; 
@@ -503,11 +487,10 @@ section.divabout {
 	width: 100%;
 	max-width: 1200px; 
 	min-width: 600px; 
-	margin: 2em auto; /*<!--// stays aligned in windwon no matter how big or small browser gets  */
-	
-	}
+	margin: 2em auto; /*<!--// stays aligned in windwon no matter how big or small browser gets  */	
+}
 
-	body.large .article {
+body.large .article {
 	font-size: 150%; 
 }
 
@@ -521,6 +504,35 @@ section.divabout {
   margin-left: auto;
     margin-right: auto;
 }
+
+.wrappara3_2 {
+	padding-top: 225px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	position: relative;
+	opacity: 0; 
+	bottom: 00px; 
+	height: 1px;
+}
+
+.wrappara3_2_pt2 {
+	background-color: rgba(19,13,34,1);
+	color: #d8c6cb;
+	width: 1500px;
+	height: 750px; 
+	border-radius: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative; 
+	
+}
+
+#para3_2 {
+	 margin-top: 40px; 
+	 margin-left: 50px; 
+}
+
 
 section.module.content {
   padding: 40px 0;
@@ -628,36 +640,6 @@ div.about {
 	color:  #d8c6cb;
 	font-size: 15px; 
 }
-
-.wrappara3_2 {
-	padding-top: 225px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 80%;
-	position: relative;
-	opacity: 0; 
-	bottom: 00px; 
-	height: 1px;
-}
-
-.wrappara3_2_pt2 {
-	background-color: rgba(19,13,34,1);
-	color: #d8c6cb;
-	width: 1500px;
-	height: 750px; 
-	border-radius: 25px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative; 
-	
-}
-
-#para3_2 {
-	 margin-top: 40px; 
-	 margin-left: 50px; 
-}
-
-
 
 
 .FixedHeightContainer
