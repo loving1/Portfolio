@@ -506,7 +506,7 @@ body.large .article {
 }
 
 .wrappara3_2 {
-	padding-top: 225px;
+	padding-top: 25px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 95%;
@@ -521,7 +521,7 @@ body.large .article {
 	color: #d8c6cb;
 	width: 95%;
 	height: 95%; 
-	border-radius: 25px;
+	border-radius: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative; 
