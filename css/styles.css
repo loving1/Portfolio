@@ -23,10 +23,10 @@
 		max-height: 15%; 
 	}
 
-	#atitle, .hdr, .h1header, #headerh1 {
+	a#atitle, a.hdr, a.h1header, a#headerh1 {
 		font-family: 'Montserrat Alternates', sans-serif;
-		font-size: .5em; 
-		color: #B8860B;
+		font-size: .2em; 
+		color: #FF7F50; /*#B8860B; */
 	}
 
 	a.s13, #ht3 {
