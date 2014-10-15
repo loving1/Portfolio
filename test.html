@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- for the Font Awesome-->
-	<link href="teststyle.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	<title> Raconcilio.com | Rose's Portfolio | Web Design & Development | San Francisco Bay Area | Washington D.C. | Maryland </title> 
 
 	<script src="js/jquery.min.js" type="text/javascript"></script>
@@ -24,15 +24,14 @@
     	 
 
     	<header> 
-			<h1>&nbsp; &nbsp; <a id="atitle"> de Rosi </a> </h1>
+			<a id="headerh1" class="h1header">&nbsp; &nbsp; <a id="atitle" class="hdr"> de Rosi </a> </a>
 
 			<div class="m1 menu">
 			<div id="menu-center"> 
 				
 				<ul class="listtop" id="ulheader"> 
 					<li>
-						<a > 	
-						</a>
+						
 						<a class="active" href="#home" id="menuH">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
@@ -123,9 +122,12 @@
  		
 
 			<section  class="ontopofhome"> 
-				<a class="s11" id="ht1">&nbsp; Design  </a>
-				<a class="s12" id="ht2">&nbsp; For Your World. </br>  </a>
-				<a class="s13" id="ht3" align="right"> raconcilio.com  </a>
+
+				<div class="wrapontopofhome"> 
+					<a class="s11" id="ht1">&nbsp; Design  </a>
+					<a class="s12" id="ht2"> For Your World. </br>  </a>
+					<a class="s13" id="ht3" align="right"> raconcilio.com  </a>
+				</div>
 
 
 			</section> 
@@ -210,16 +212,19 @@
 		<div id="about"></div>
 		 
 		<section class="module parallax parallax-1">
-		  <div class="midcontainer">
-		    <div class="hidden" id="para2_1"></br></br></br> design with the world in mind. 
+		  <div class="midcontainer" id="para2">
+		  	<div class="wrappara2">
+		    	<div class="hidden" id="para2_1"></br></br></br> 
+		    		design with the world in mind. 
+		    	</div>
 		    	<div class="wrappara2_2">
-		    	<div class="hidden" id="para2_2"> 
-
-		    		Webdesign meets marketing training and business development.  Together we can create a user experience that keeps people wowed and coming back.  Check out some of the projects and companies below! 
+			    	<div class="hidden" id="para2_2"> 
+			    		Webdesign meets marketing training and business development.  Together we can create a user experience that keeps people wowed and coming back.  Check out some of the projects and companies below! 
+		    		</div>
 		    	</div>
-		    	</div>
+	    	</div>
 
-		     </div>
+		     
 		  </div>
 		</section>
 		<script >
@@ -239,7 +244,7 @@
 		            if( bottom_of_window > bottom_of_object ){
 		                $(this).stop().animate({
 		                    //left: '250px',
-		                    right:'33%',
+		                    //right:'35%',
 		                    opacity: 1,
 		                },2000);
 		            }
@@ -304,7 +309,7 @@
 								</div>
             					</div>
 							</th>
-				<th width: 5%;> </th>
+				<th style="width: 5%;"> </th>
 				<th style="width: 60%;"></th>
 
 			    		
