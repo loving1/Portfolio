@@ -1,0 +1,648 @@
+<!doctype html> 
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- for the Font Awesome-->
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<title> Raconcilio.com | Rose's Portfolio | Web Design & Development | San Francisco Bay Area | Washington D.C. | Maryland </title> 
+
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="animate.min.css">
+	
+</head>
+
+<body>
+	
+    <div id="home">
+    	 
+
+    	<header> 
+			<a id="headerh1" class="h1header">&nbsp; &nbsp; <a id="atitle" class="hdr"> de Rosi </a> </a>
+
+			<div class="m1 menu">
+			<div id="menu-center"> 
+				
+				<ul class="listtop" id="ulheader"> 
+					<li>
+						
+						<a class="active" href="#home" id="menuH">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+			  				<i class="fa fa-home fa-stack-1x fa-inverse"></i>
+			  				</span> 
+			  				 Home</a> 
+					</li>
+					<li>
+						<a href="#about"> 
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+					  				<i class="fa fa-heart-o fa-stack-1x fa-inverse"></i>
+				  				</span> 
+			  				About</a>
+					</li>
+					<li>
+						<a href="#portfolio">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+			  				<i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
+		  				</span> 
+		  				 Portfolio </a> 
+					</li>
+					<li>
+						<a  href="#contact">
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+				  				<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+			  				</span> 
+		  				Contact </a>  <a>&nbsp; &nbsp; &nbsp;  </a>
+					</li>
+				</ul>
+
+				<script>
+						$(document).ready(function () {
+					    $(document).on("scroll", onScroll);
+					    
+					    //smoothscroll
+					    $("a[href^="#"]").on('click', function (e) {
+					        e.preventDefault();
+					        $(document).off("scroll");
+					        
+					        $("a").each(function () {
+					            $(this).removeClass("active");
+					        })
+					        $(this).addClass("active");
+					      
+					        var target = this.hash,
+					            menu = target;
+					        $target = $(target);
+					        $('html, body').stop().animate({
+					            'scrollTop': $target.offset().top+2
+					        }, 500, 'swing', function () {
+					            window.location.hash = target;
+					            $(document).on("scroll", onScroll);
+					        });
+					    });
+					});
+
+					function onScroll(event){
+					    var scrollPos = $(document).scrollTop();
+					    $("#menu-center a").each(function () {
+					        var currLink = $(this);
+					        var refElement = $(currLink.attr("href"));
+					        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+					            $("#menu-center ul li a").removeClass("active");
+					            currLink.addClass("active");
+					        }
+					        else{
+					            currLink.removeClass("active");
+					        }
+					    });
+					}
+
+				</script>
+				</div>
+			</div>
+
+ 			</header>
+
+ 		</div>
+
+ 			<section class="module parallax parallax-4">
+				<div class="midcontainer">
+			    	<h1>&nbsp;</h1>
+			  	</div> <!-- -->
+			</section>
+ 		
+
+			<section  class="ontopofhome"> 
+
+				<div class="wrapontopofhome"> 
+					<a class="s11" id="ht1">&nbsp; Design  </a>
+					<a class="s12" id="ht2"> For Your World. </br>  </a>
+					<a class="s13" id="ht3" align="right"> raconcilio.com  </a>
+				</div>
+
+
+			</section> 
+
+			<script >
+
+				$(document).ready(function() {
+				    
+				    /* Every time the window is scrolled ... */
+				    $(window).scroll( function(){
+				    
+				        /* Check the location of each desired element */
+				        $('.hidden').each( function(i){
+				            
+				            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+				            var bottom_of_window = $(window).scrollTop() + $(window).height();
+				            
+				            /* If the object is completely visible in the window, fade it it */
+				            if( bottom_of_window > bottom_of_object ){
+				                $(this).stop().animate({
+				                    //left: '250px',
+				                    right:'800px',
+				                    opacity: 1,
+				                },2000);
+				            }
+				    });
+				    }); 
+				    });
+
+		</script>
+
+			
+				
+			<!-- 
+			</h1> -->
+
+			<!--
+			<ul>
+				<a class="search" > <i class="fa"></i> </a>
+				<a class="pencil" > <i class="fa"></i> </a>
+				<a class="about" > <i class="fa"></i> </a>
+				<a class="archive" > <i class="fa"></i> </a>
+				<a class="contact" > <i class="fa"></i> </a>
+			    <li title="search"><a href="#" class="search"><i class="fa"></i> search</a>
+			    </li>
+			    <li title="pencil"><a href="#" class="pencil"><i class="fa"></i> pencil</a>
+			    </li>
+			    <li title="about"><a href="#" class="active about"><i class="fa"></i> about</a>
+			    </li>
+			    <li title="archive"><a href="#" class="archive"><i class="fa"></i> archive</a>
+			    </li>
+			    <li title="contact"><a href="#" class="contact"><i class="fa"></i> contact</a>
+			    </li>
+			</ul>
+
+		-->
+
+			<!--<li title="search">
+			     <a href="#" class="search">
+			          <i class="fa"></i>
+			          <i class="fa fa-camera-retro"></i> fa-camera-retro
+						<i class="fa fa-camera-retro fa-5x"></i> fa-5x 
+			          search
+			     </a>
+			</li>
+			<i class="fa fa-camera-retro"></i> fa-camera-retro
+			<i class="fa fa-camera-retro fa-5x"></i> fa-5x -->
+
+		
+		
+<!--
+		
+
+		<section class="module content">
+		  <div class="midcontainer">
+		    <h2>About Rose</h2>
+		    <p>Rose loves creative design and bringing together different fields to create great products, websites and customer   </br></br></br></br> </p>
+		  </div>
+		</section>
+	-->
+		<section class="midpics" id="p1">Just like you: Responsive, Annimated, Dynamic, Publishable, Market Ready, Focused, SEO Optimized, Unique, Publishable, and more!  </section>
+		<div id="about"></div>
+		 
+		<section class="module parallax parallax-1">
+		  <div class="midcontainer" id="para2">
+		  	<div class="wrappara2">
+		    	<div class="hidden" id="para2_1"></br></br></br> 
+		    		design with the world in mind. 
+		    	</div>
+		    	<div class="wrappara2_2">
+			    	<div class="hidden" id="para2_2"> 
+			    		Webdesign meets marketing training and business development.  Together we can create a user experience that keeps people wowed and coming back.  Check out some of the projects and companies below! 
+		    		</div>
+		    	</div>
+	    	</div>
+
+		     
+		  </div>
+		</section>
+		<script >
+
+		$(document).ready(function() {
+		    
+		    /* Every time the window is scrolled ... */
+		    $(window).scroll( function(){
+		    
+		        /* Check the location of each desired element */
+		        $('.hidden').each( function(i){
+		            
+		            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+		            var bottom_of_window = $(window).scrollTop() + $(window).height();
+		            
+		            /* If the object is completely visible in the window, fade it it */
+		            if( bottom_of_window > bottom_of_object ){
+		                $(this).stop().animate({
+		                    //left: '250px',
+		                    //right:'35%',
+		                    opacity: 1,
+		                },2000);
+		            }
+		    });
+		    }); 
+		    });
+		
+
+
+		</script>
+<!-- section 3 -->
+<div id="portfolio"> </div>
+
+<section class="module parallax parallax-3">
+		  <div class="midcontainer3">
+		    <div class="hidden" id="para3_1"></br></br></br> Design your dreams.  </div>
+		    <div class="wrappara3_2"> 
+		    	<div class="wrappara3_2_pt2"> 
+			    	<div id="para3_2"> 
+
+			    		<table> 
+							<th style="width: 20%;">
+								<div class="FixedHeightContainer">    
+									<ul id="colorlist" style="list-style-type:none"> 
+										<li id="yd1"> Products  </br> </li>
+										<li id="yd2"> Web </br></li>
+										<li id="yd3"> SEO +/- Marketing </br> </li>
+										<li id="yd4"> Programs </br> </li>
+										<li id="yd5"> Strategic Planning </br> </li>
+										<li id="yd6"> Wellness </br> </li> 
+										<li id="yd7"> Personal </br> </li>
+										<li id="yd8"> All </br></li> 
+									</ul>
+								</div>
+
+							</th>
+
+							<th style="width: 15%;">
+								<div class="FixedHeightContainer">
+				                <div class="ContentImgs mousescroll"> 
+									<img class="fadeInD" id="Da" src="images/p1.jpg"/>
+									<img class="fadeInD" id="Db" src="images/p2.jpg"/>
+									<img class="fadeInD" id="Dc" src="images/p12.jpg"/>
+									<img class="fadeInD" id="Dd" src="images/p4.jpg"/>
+									<img class="fadeInD" id="De" src="images/p5.jpg"/>
+									<img class="fadeInD" id="Df" src="images/p6.jpg"/>
+									<img class="fadeInD" id="Dg" src="images/p7.jpg"/>
+									<img class="fadeInD" id="Dh" src="images/p8.jpg"/> 
+									<img class="fadeInD" id="Di" src="images/p9.jpg"/> 
+									<img class="fadeInD" id="Dj" src="images/p10.jpg"/>
+									<img class="fadeInD" id="Dk" src="images/p11.jpg"/>
+									<img class="fadeInD" id="Dl" src="images/p3.jpg"/> 
+									<img class="fadeInD" id="Dm" src="images/p13.jpg"/>
+									<img class="fadeInD" id="Dn" src="images/p14.jpg"/>    
+									<img class="fadeInD" id="Do" src="images/p15.jpg"/>  
+									<img class="fadeInD" id="Dp" src="images/p16.jpg"/> 
+									<img class="fadeInD" id="Dq" src="images/p17.jpg"/> 
+									<img class="fadeInD" id="Dr" src="images/p18.jpg"/>
+									<img class="fadeInD" id="Ds" src="images/p19.jpg"/>
+									<img class="fadeInD" id="Dt" src="images/p20.jpg"/>
+									<img class="fadeInD" id="Du" src="images/p21.jpg"/> 
+								</div>
+            					</div>
+							</th>
+				<th style="width: 5%;"> </th>
+				<th style="width: 60%;"></th>
+
+			    		
+			    				
+
+
+			    		</table>
+			    	</div>
+		    	</div>
+		    </div>
+
+		    	
+
+		  </div>
+		</section>
+	<!--	<section class="module parallax parallax-5">
+		  <div class="midcontainer">
+		    <div class="hidden" id="para3_1"></br></br></br> Design your dreams.  </div>
+		  </div>
+		</section>-->
+		<script >
+
+		$(document).ready(function() {
+
+
+		    
+		    /* Every time the window is scrolled ... */
+		    $(window).scroll( function(){
+		    
+		        /* Check the location of each desired element */
+		        $('.wrappara3_2').each( function(i){
+		            
+		            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+		            var bottom_of_window = $(window).scrollTop() + $(window).height();
+		            /* If the object is completely visible in the window, fade it it */
+		            if( bottom_of_window > bottom_of_object ){
+		                $(this).stop().animate({
+		                    bottom: '50px',
+		                    //right: '500px',
+		                    opacity: 1,
+		                    height: '700px',
+		                },2000);
+		                //$("#container").animate({
+		                //    opacity:0.5,
+		                //},1000);
+		            }
+		        }); 
+		    });
+		    });
+		</script>
+<script type='text/javascript'>
+	$(function() {       
+        $("img.fadeInD").css("opacity","1.0");  
+		$('img.fadeInD').hover(function() {
+			$(this).stop().animate({'opacity': 1});
+		}, function(){ 
+			$(this).stop().animate({'opacity': .4}); 
+		
+		}); 
+
+        $("img.fadeInD").hover(function() {
+                var myID = $(this).attr("id");        
+                $("img.fadeInD:not(#"+myID+")").stop().animate({'opacity': 0.2});
+        },           
+        function() {       
+                $("img.fadeInD").stop().animate({'opacity': 1.0});        
+        });    
+    });
+/* Products */
+	$("#yd1").click(function() { 
+				$("#Da, #Db, #Df, #Dg, #Dj, #Dk, #Dl").stop().show({'opacity': 1});
+				$("#Dc,#Dd,#De,#Dh,#Di,#Dm, #Dn").stop().hide({'opacity': .2});
+			}); 
+	/* Web */
+
+	$("#yd2").click(function() {
+				$("#Da,#Dd,#De,#Dg,#Di,#Dk,#Dl").stop().show({'opacity': 1});
+				$("#Db,#Dc,#Df,#Dh,#Dj,#Df,#Dm, #Dn").stop().hide({'opacity': .2});
+			});
+	/*SEO and Marketing */ 
+	$("#yd3").click(function() {
+				$("#Da,#Db,#Dc,#Dd,#De,#Dh,#Dl,#Dm, #Dn").stop().show({'opacity': 1});
+				$("#Df,#Dg,#Di,#Dj,#Dk").stop().hide({'opacity': .2});
+			}); 
+	/* Program Development */
+	$("#yd4").click(function() {
+				$("#Dd, #Dg, #Dh, #Dl, #Dm, #Dn").stop().show({'opacity': 1});
+				$("#Da,#Db,#Dc,#De,#Df, #Di, #Dj,#Dk").stop().hide({'opacity': .2});
+			}); 
+	/*Strategic Planning */
+	$("#yd5").click(function() {
+				$("#Da,#De, #Dn").stop().show({'opacity': 1});
+				$("#Db,#Dc,#Dd,#Da,#Df").stop().hide({'opacity': .2});
+			}); 
+/*Wellness */
+	$("#yd6").click(function() {
+				$("#Db,#Dl,#Dm, #Dn").stop().show({'opacity': 1});
+				$(",#Dc,#Dd,#De,#Da").stop().hide({'opacity': .2});
+			}); 
+/*Personal */
+	$("#yd7").click(function() {
+				$("#Db,#Dl,#Dm, #Dn").stop().show({'opacity': 1});
+				$(",#Dc,#Dd,#De,#Da").stop().hide({'opacity': .2});
+			});
+/*All */
+	$("#yd6").click(function() {
+				$("#Da,#Db,#Dc,#Dd,#De,#Df,#Dg,#Dh,#Di,#Dj,#Dk,#Dl,#Dm,#Dn,#Do,#Dp,#Dq,#Dr,#Ds,#Dt,#Du").stop().show({'opacity': 1});
+				//$(",#Dc,#Dd,#De,#Da").stop().animate({'opacity': .2});
+			});
+
+
+</script> 
+
+	
+<!--
+		<section class="module content">
+		  <div class="midcontainer">
+		    <h2>Lorem Ipsum Dolor 1</h2>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+		  </div>
+		</section>
+
+		
+
+		<section class="module parallax parallax-2">
+		  <div class="container">
+		    <h1>Rise</h1>
+		  </div>
+		</section>
+
+		<section class="module content">
+		  <div class="midcontainer">
+		    <h2>Lorem Ipsum Dolor 2</h2>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+		  </div>
+		</section>
+
+		<section class="module content">
+		  <div class="midcontainer">
+		    <h2>Lorem Ipsum Dolor 1</h2>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+		  </div>
+		</section>
+
+		<section class="module parallax parallax-1">
+			<div class="midcontainer">
+		    <h1>Serene</h1>
+		  	</div>
+		</section>
+
+		<!--<div id="section2"></div> -->
+
+	<!--	
+		<section class="module content">
+		  <div class="midcontainer">
+		    <p>About</p>
+		    <p>Webdesign meets marketing training and business development.  Together we can create a user experience that keeps people wowed and coming back.  Check out some of the projects and companies below!  </p>
+		  </div>
+		</section> 
+	-->
+
+	<!--
+
+			<div id="containbot">
+
+	<div id="content"> 
+		<p> About Rose </br>
+
+			<i class="fa fa-heart-o"></i>
+
+
+
+		<h2> Services  </h2>
+
+		<div id="services"> </div> 
+
+		<table>
+ 		 <tr>
+ 		 	<th id="facon"><i class="fa fa-comments-o"> </i> </th>
+ 		 	<th id="tbltxt"> Branding, SEO & Marketing  </th>
+ 		 	<th id="facon"><i class="fa fa-cloud"> </i></th>
+		    <th id="tbltxt">  </th>
+		    <th id="facon"><i class="fa fa-bullseye"> </i></th>
+		    <th id="tbltxt"> Creatve Development </th>
+		  </tr>
+		  <tr>
+		  	<td id="facon"></td>
+		    <td id="tbltxt">Helping you to create yourself and your brand on the web. </td>
+		    <td id="facon"></td>
+		    <td id="tbltxt">Interested in publishing an e-book?  Let me know and   	</td>
+		    <td id="facon"></td>
+		    <td id="tbltxt">Web design, engineering and program development to meet your needs!  Design the world you've dreamed of with effective planning!  </td>
+		  </tr>
+		  
+		</table>
+
+	-->
+
+		<!-- <i class="fa fa-spinner fa-spin"></i>
+		 
+
+		<a class="book" > <i class="fa"></i> </a>
+		<i class="fa fa-spinner fa-spin"></i>
+
+	-->
+		
+
+		
+			<!--
+			<section class="portfoliobox">
+				<section class="portfoliobox0">
+				<section class="portfoliobox1">
+				<section class="portfoliobox2">
+				<section class="portfoliobox3">
+
+			<table> 
+				<th style="width: 20%;">
+					<div class="FixedHeightContainer">    
+						<ul id="colorlist" style="list-style-type:none"> 
+							<li id="yd1"> Products  </br> </li>
+							<li id="yd2"> Web </br></li>
+							<li id="yd3"> SEO +/- Marketing </br> </li>
+							<li id="yd4"> Programs </br> </li>
+							<li id="yd5"> Strategic Planning </br> </li>
+							<li id="yd6"> Wellness </br> </li> 
+							<li id="yd7"> Play </br> </li>
+							<li id="yd7"> All </br></li> 
+						</ul>
+					</div>
+
+				</th>
+				<th style="width: 15%;">
+				<div class="FixedHeightContainer">
+                <div class="ContentImgs mousescroll"> 
+					<img class="fadeInD" id="Da" src="images/p1.jpg"/>
+					<img class="fadeInD" id="Db" src="images/p2.jpg"/>
+					<img class="fadeInD" id="Dc" src="images/p12.jpg"/>
+					<img class="fadeInD" id="Dd" src="images/p4.jpg"/>
+					<img class="fadeInD" id="De" src="images/p5.jpg"/>
+					<img class="fadeInD" id="Df" src="images/p6.jpg"/>
+					<img class="fadeInD" id="Dg" src="images/p7.jpg"/>
+					<img class="fadeInD" id="Dh" src="images/p8.jpg"/> 
+					<img class="fadeInD" id="Di" src="images/p9.jpg"/> 
+					<img class="fadeInD" id="Dj" src="images/p10.jpg"/>
+					<img class="fadeInD" id="Dk" src="images/p11.jpg"/>
+					<img class="fadeInD" id="Dl" src="images/p3.jpg"/> 
+					<img class="fadeInD" id="Dm" src="images/p13.jpg"/>
+					<img class="fadeInD" id="Dn" src="images/p14.jpg"/>    
+					<img class="fadeInD" id="Do" src="images/p15.jpg"/>  
+					<img class="fadeInD" id="Dp" src="images/p16.jpg"/> 
+					<img class="fadeInD" id="Dq" src="images/p17.jpg"/> 
+					<img class="fadeInD" id="Dr" src="images/p18.jpg"/>
+					<img class="fadeInD" id="Ds" src="images/p19.jpg"/>
+					<img class="fadeInD" id="Dt" src="images/p20.jpg"/>
+					<img class="fadeInD" id="Du" src="images/p21.jpg"/> 
+					</div>
+            </div>
+				</th>
+				<th width: 5%;> </th
+				<th style="width: 60%;"></th>
+
+			</table> 
+			</section>
+			</section>
+			</section>
+			</section>
+		</section> -->
+
+			<!--<h1>Porfolio   </h1>
+
+<p>    <ul id="colorlist" style="list-style-type:none"> 
+	<li id="yd1"> Products   </li>
+	<li id="yd2"> Web</li>
+	<li id="yd3"> SEO +/- Marketing  </li>
+	<li id="yd4"> Programs </li>
+	<li id="yd5"> Strategic Planning  </li>
+	<li id="yd6"> Wellness </li> 
+	<li id="yd7"> Play </li> </ul>
+</p> </br> 
+	<img class="fadeInD" id="Da" src="images/p1.jpg"/>
+	<img class="fadeInD" id="Db" src="images/p2.jpg"/>
+	<img class="fadeInD" id="Dc" src="images/p12.jpg"/>
+	<img class="fadeInD" id="Dd" src="images/p4.jpg"/>
+	<img class="fadeInD" id="De" src="images/p5.jpg"/>
+	<img class="fadeInD" id="Df" src="images/p6.jpg"/>
+	<img class="fadeInD" id="Dg" src="images/p7.jpg"/>
+	<img class="fadeInD" id="Dh" src="images/p8.jpg"/> 
+	<img class="fadeInD" id="Di" src="images/p9.jpg"/> 
+	<img class="fadeInD" id="Dj" src="images/p10.jpg"/>
+	<img class="fadeInD" id="Dk" src="images/p11.jpg"/>
+	<img class="fadeInD" id="Dl" src="images/p3.jpg"/> 
+	<img class="fadeInD" id="Dm" src="images/p13.jpg"/>
+	<img class="fadeInD" id="Dn" src="images/p14.jpg"/>    
+	<img class="fadeInD" id="Do" src="images/p15.jpg"/>  
+	<img class="fadeInD" id="Dp" src="images/p16.jpg"/> 
+	<img class="fadeInD" id="Dq" src="images/p17.jpg"/> 
+	<img class="fadeInD" id="Dr" src="images/p18.jpg"/>
+	<img class="fadeInD" id="Ds" src="images/p19.jpg"/>
+	<img class="fadeInD" id="Dt" src="images/p20.jpg"/>
+	<img class="fadeInD" id="Du" src="images/p21.jpg"/> </br>
+</p>--> 
+
+
+
+<!--
+<p>
+	
+		content </br> content </br> content </br> content </br> content </br> 
+		content </br> content </br> content </br> content </br> content </br>
+		content </br> content </br> content </br> content </br> content </br> 
+		content </br> content </br> content </br> content </br> content </br> 
+
+	
+		
+  </p>-->
+
+
+  	</div>
+		<div id="contact" ></div>
+
+			<section class="contactbox">
+			</br>
+		</br>
+	</br> 		<div id="contactbox2">
+
+					<h1 > Contact Rose </h1>
+					<h2>
+						E-mail 
+					</h2>
+				</div>
+
+			</section>
+	</div>
+	</div>    
+</body>
+</html> 
