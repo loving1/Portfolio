@@ -496,10 +496,16 @@ body.large .article {
 	font-size: 150%; 
 }
 
-.midcontainer, #para2 {
+.midcontainer {
 	width: 83.3333333333%; 
   max-width: 1600px;
+  height: 100%;
   margin: 0 auto;
+}
+
+#para2 {
+	width: 100%;
+	height: 100%;
 }
 
 .midcontainer3 {
@@ -625,11 +631,13 @@ div.about {
 #para2_1, #para2_2  {
 	position: absolute;
 	width: 100%; 
+	height: 100%; 
 }
 
 .wrappara2 {
 	width: 85%;
 	max-width: 1200px;
+	height: 85%;
 }
 
 .wrappara2_2 {
@@ -637,6 +645,7 @@ div.about {
 	margin-left: auto; 
 	margin-right: auto;
 	width: 95%; 
+	height: 95%; 
 
 }
 
