@@ -275,8 +275,8 @@
 										<li id="yd4"> Programs </br> </li>
 										<li id="yd5"> Strategic Planning </br> </li>
 										<li id="yd6"> Wellness </br> </li> 
-										<li id="yd7"> Play </br> </li>
-										<li id="yd7"> All </br></li> 
+										<li id="yd7"> Personal </br> </li>
+										<li id="yd8"> All </br></li> 
 									</ul>
 								</div>
 
@@ -381,13 +381,13 @@
 /* Products */
 	$("#yd1").click(function() { 
 				$("#Da, #Db, #Df, #Dg, #Dj, #Dk, #Dl").stop().animate({'opacity': 1});
-				$("#Dc,#Dd,#De,#Dh,#Di,#Dm, #Dn").stop().animate({'opacity': .2});
+				$("#Dc,#Dd,#De,#Dh,#Di,#Dm, #Dn").stop().hide({'opacity': .2});
 			}); 
 	/* Web */
 
 	$("#yd2").click(function() {
 				$("#Da,#Dd,#De,#Dg,#Di,#Dk,#Dl").stop().animate({'opacity': 1});
-				$("#Db,#Dc,#Df,#Dh,#Dj,#Df,#Dm, #Dn").stop().animate({'opacity': .2});
+				$("#Db,#Dc,#Df,#Dh,#Dj,#Df,#Dm, #Dn").stop().hide({'opacity': .2});
 			});
 	/*SEO and Marketing */ 
 	$("#yd3").click(function() {
@@ -409,8 +409,16 @@
 				$("#Db,#Dl,#Dm, #Dn").stop().animate({'opacity': 1});
 				$(",#Dc,#Dd,#De,#Da").stop().animate({'opacity': .2});
 			}); 
-
-		
+/*Personal */
+	$("#yd7").click(function() {
+				$("#Db,#Dl,#Dm, #Dn").stop().animate({'opacity': 1});
+				$(",#Dc,#Dd,#De,#Da").stop().animate({'opacity': .2});
+			});
+/*All */
+	$("#yd6").click(function() {
+				$("#Da,#Db,#Dc,#Dd,#De,#Df,#Dg,#Dh,#Di,#Dj,#Dk,#Dl,#Dm,#Dn,#Do,#Dp,#Dq,#Dr,#Ds,#Dt,#Du").stop().animate({'opacity': 1});
+				//$(",#Dc,#Dd,#De,#Da").stop().animate({'opacity': .2});
+			});
 
 
 </script> 
