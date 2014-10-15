@@ -3,6 +3,8 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
 @import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
+
+
 @media screen and (min-width: 1px) and (max-width: 590px) {
 
 	.listtop, #ulheader, #menu-center, #menuH {
@@ -650,14 +652,14 @@ div.about {
 .FixedHeightContainer
 {
   float:right;
-  max-height: 500px;
+  height: 500px;
   width: 150px; 
   padding: 25px; 
     /*background:#f00;*/
 }
 .ContentImgs
 {
-  height:625px;
+  height:475px;
    overflow:hidden;
    
    /* background:#fff; */
