@@ -650,7 +650,7 @@ div.about {
 .FixedHeightContainer
 {
   float:right;
-  max-height: 500px;
+  max-height: 400px;
   width: 150px; 
   padding: 25px; 
     /*background:#f00;*/
