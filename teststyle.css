@@ -671,6 +671,16 @@ div.about {
   padding: 25px; 
     /*background:#f00;*/
 }
+
+.FixedHeightContainer4
+{
+  float: right;
+  height: 65%;
+  width: 33%; 
+  padding: 25px; 
+    /*background:#f00;*/
+}
+
 .ContentImgs
 {
   height:270px;
