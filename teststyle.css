@@ -683,7 +683,7 @@ div.about {
 
 .ContentImgs
 {
-  height:270px;
+  border-bottom: 10%;
    overflow:hidden;
    
    /* background:#fff; */
