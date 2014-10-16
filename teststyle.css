@@ -241,7 +241,7 @@ h1 {
     padding: 0;
 }
 
-img.fadeInD {
+.fadeInD {
 	height: auto; 
 	width: 80px; 
 	padding: 0em; 
@@ -250,7 +250,7 @@ img.fadeInD {
 	background-color: #EE0; 
 }
 
-img.imgA {
+.imgA {
 	width: 500px;
 }
 
@@ -683,7 +683,7 @@ div.about {
 
 .ContentImgs
 {
-  border-bottom: 10%;
+  border-bottom: 10%; 
    overflow:hidden;
    
    /* background:#fff; */
