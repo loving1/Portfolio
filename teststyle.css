@@ -667,8 +667,9 @@ div.about {
 {
   float: right;
   height: 250px; 
-  width: 250px; 
+  width: 550px; 
   padding: 25px; 
+  bottom: 10%; 
     /*background:#f00;*/
 }
 
