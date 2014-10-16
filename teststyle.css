@@ -674,9 +674,9 @@ div.about {
 
 .FixedHeightContainer4
 {
-  float: right;
-  height: 65%;
-  width: 33%; 
+  float: right;400
+  height: 400px;
+  width: 400px; 
   padding: 25px; 
     /*background:#f00;*/
 }
