@@ -666,7 +666,7 @@ div.about {
 .FixedHeightContainer
 {
   float: right;
-  height: 250px;
+  height: 250px; 
   width: 250px; 
   padding: 25px; 
     /*background:#f00;*/
@@ -674,8 +674,8 @@ div.about {
 
 .FixedHeightContainer4
 {
-  float: right;400
-  height: 400px;
+  float: right; 
+  height: 400px; 
   width: 400px; 
   padding: 25px; 
     /*background:#f00;*/
