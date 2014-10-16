@@ -716,7 +716,7 @@ div.mousescroll:hover {
 	color: #d8c6cb;
 }
 
-#colorlist li {
+#colorlist li .navport {
 	display: inline; 
 	padding-right: 05px;
 	text-align: left;  
