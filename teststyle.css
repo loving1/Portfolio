@@ -678,6 +678,7 @@ div.about {
   height: 400px; 
   width: 400px; 
   padding: 25px; 
+  overflow: hidden; 
     /*background:#f00;*/
 }
 
@@ -716,7 +717,7 @@ div.mousescroll:hover {
 }
 
 #colorlist li {
-	/*display: inline; */
+	display: inline; 
 	padding-right: 05px;
 	text-align: left;  
 }
