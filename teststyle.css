@@ -251,7 +251,7 @@ img.fadeInD {
 }
 
 img.imgA {
-	width: 300px;
+	width: 500px;
 }
 
 .menu {
@@ -667,7 +667,7 @@ div.about {
 {
   float: right;
   height: 500px;
-  width: 150px; 
+  width: 250px; 
   padding: 25px; 
     /*background:#f00;*/
 }
