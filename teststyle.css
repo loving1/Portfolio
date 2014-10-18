@@ -8,8 +8,10 @@
 @media screen and (min-width: 1px) and (max-width: 590px) {
 	.navtext {
 		display: none;
+
 	}
 	.listtop, #ulheader, #menu-center, #menuH {
+		font-size: .9em;
 		
 	}
 
