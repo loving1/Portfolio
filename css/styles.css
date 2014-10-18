@@ -10,7 +10,7 @@
 	}
 
 	.listtop, #ulheader, #menu-center, #menuH {
-		font-size: .9em; 
+		font-size: 1em; 
 		
 	}
 
@@ -52,7 +52,7 @@
 @media screen and (min-width: 590px) and (max-width: 640px) {
 
 	.navtext {
-		
+		display: none;
 	}
 	.listtop, #ulheader, #menu-center, #menuH {
 		font-size: .9em; 
