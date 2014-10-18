@@ -5,9 +5,12 @@
 
 @media screen and (min-width: 1px) and (max-width: 590px) {
 
+	.navtext {
+		display: none;
+	}
+
 	.listtop, #ulheader, #menu-center, #menuH {
-		font-size: .775em;
-		top: -10px; 
+		
 	}
 
 	a.s11, #ht1  {
@@ -26,8 +29,8 @@
 
 	a#atitle, a.hdr, a.h1header, a#headerh1 {
 		font-family: 'Montserrat Alternates', sans-serif;
-		font-size: .75em; 
-		color: #FF7F50; /*#B8860B; */
+		/*font-size: .75em; 
+		color: #FF7F50; #B8860B; */
 	}
 
 	a.s13, #ht3 {
@@ -46,8 +49,12 @@
 }
 
 @media screen and (min-width: 590px) and (max-width: 640px) {
+
+	.navtext {
+		display: none;
+	}
 	.listtop, #ulheader, #menu-center, #menuH {
-		font-size: .95em;
+		
 	}
 
 	a.s11, #ht1  {
