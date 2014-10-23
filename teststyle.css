@@ -18,6 +18,12 @@ body, h1, .navtext, a, p {
 		
 	}
 
+	a.s11, #ht1  {
+		font-size: 1.15em; 
+		top: -400px;
+		color: blue; /*#FF7F50; */
+	}
+
 }
 
 @media screen and (min-width: 400px) and (max-width: 590px) {
