@@ -685,8 +685,8 @@ div.about {
 .wrappara2 {
 	width: 85%;
 	max-width: 1200px;
-	float: left;
-	margin: 50px; 
+	position: absolute;
+	 
 }
 
 .wrappara2_2 {
@@ -694,6 +694,9 @@ div.about {
 	margin-left: auto; 
 	margin-right: auto;
 	width: 95%;
+	float: left;
+	margin: 50px;
+	position: absolute;
 }
 
 #para2_2 {
