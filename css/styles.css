@@ -9,19 +9,37 @@
 body, h1, .navtext, a, p {
 	min-width: 400px; 
 	}
+
 	.navtext {
 		display: none;
 	}
 
 	.listtop, #ulheader, #menu-center, #menuH {
 		font-size: .8em;
-		
 	}
 
 	a.s11, #ht1  {
 		font-size: 1.15em; 
 		top: -400px;
 		color: blue; /*#FF7F50; */
+	}
+
+	.midpics, #p1 {
+		font-size: .8em; 
+		max-height: 15%; 
+	}
+
+	a#atitle, a.hdr, a.h1header, a#headerh1 {
+		font-family: 'Montserrat Alternates', sans-serif;
+		/*font-size: .75em; 
+		color: #FF7F50; #B8860B; */
+	}
+
+	a.s13, #ht3 {
+		top: -250px;
+	}
+	.hidden {
+		right: 150px;
 	}
 
 }
