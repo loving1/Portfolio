@@ -3,7 +3,30 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
 @import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
-@media screen and (min-width: 1px) and (max-width: 590px) {
+
+@media screen and (min-width: 1px) and (max-width: 400px) { 
+
+body, h1, .navtext, a, p {
+	min-width: 400px; 
+	}
+	.navtext {
+		display: none;
+	}
+
+	.listtop, #ulheader, #menu-center, #menuH {
+		font-size: .8em;
+		
+	}
+
+	a.s11, #ht1  {
+		font-size: 1.15em; 
+		top: -400px;
+		color: blue; /*#FF7F50; */
+	}
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 590px) {
 
 	.navtext {
 		display: none;
