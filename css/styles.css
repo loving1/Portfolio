@@ -580,7 +580,7 @@ body.large .article {
 	background-color: rgba(19,13,34,.8);
 	color: #d8c6cb;
 	width: 95%;
-	height: 800px; 
+	height: 700px; 
 	border-radius: 10px;
 	margin-left: auto;
 	margin-right: auto;
@@ -770,7 +770,7 @@ section.divportfolio {
 	height: 100%;
 	width: 100%;
 	margin: 0 auto;
-	height: 100%;
+	
 	background-size: cover;
 
 }
