@@ -557,7 +557,7 @@ body.large .article {
 
 .midcontainer3 {
   max-width: 100%;
-  max-height: 75%; 
+  max-height: 100%; 
   margin-left: auto;
     margin-right: auto;
 }
@@ -567,13 +567,14 @@ body.large .article {
 	margin-left: auto;
 	margin-right: auto;
 	width: 95%;
-	/*
-		height: 90%;
-		*/
+	
+		height: 100%;
+		
 	position: relative;
 	opacity: 0; 
 	bottom: 00px; 
-	height: 1px;
+	/*
+	height: 1px; */
 }
 
 .wrappara3_2_pt2 {
@@ -590,6 +591,8 @@ body.large .article {
 #para3_2 {
 	 margin-top: 40px; 
 	 margin-left: 50px; 
+	 float: left; 
+	 position: relative; 
 }
 
 
@@ -708,17 +711,17 @@ div.about {
 }
 
 
-.FixedHeightContainer
-{
-  float:right;
+.FixedHeightContainer {
+  float: left;
   max-height: 400px;
   width: 150px; 
-  padding: 25px; 
+  margin: 25px; 
+  height: 100%; 
     /*background:#f00;*/
 }
 .ContentImgs
 {
-  height:625px;
+  height:405px;
    overflow:hidden;
    
    /* background:#fff; */
@@ -748,6 +751,9 @@ div.mousescroll:hover {
 	font-family: 'Homemade Apple', cursive;
 	font-size: 16px; 
 	color: #d8c6cb;
+	text-align: center;
+	float: left;
+	margin: 0 auto; 
 }
 
 #colorlist li {
@@ -770,9 +776,7 @@ section.divportfolio {
 	height: 100%;
 	width: 100%;
 	margin: 0 auto;
-	
 	background-size: cover;
-
 }
 
 section.ontopofhome {
