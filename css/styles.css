@@ -19,7 +19,7 @@ body, h1, .navtext, a, p {
 	}
 
 	a.s11, #ht1  {
-		font-size: 1.15em; 
+		/*font-size: 1.15em; */
 		top: -400px;
 		color: blue; /*#FF7F50; */
 	}
@@ -40,7 +40,7 @@ body, h1, .navtext, a, p {
 	}
 
 	a.s12, #ht2 {
-		font-size: 1.15em; 
+		/*font-size: 1.15em; */
 		top: -350px;
 	}
 	.hidden {
@@ -61,12 +61,12 @@ body, h1, .navtext, a, p {
 	}
 
 	a.s11, #ht1  {
-		font-size: 1.5em; 
+		/*font-size: 1.5em; */
 		top: -400px;
 		color: #B8860B; /*#FF7F50; */
 	}
 	a.s12, #ht2 {
-		font-size: 1.5em; 
+		/*font-size: 1.5em; */
 		top: -350px;
 	}
 	.midpics, #p1 {
@@ -106,12 +106,12 @@ body, h1, .navtext, a, p {
 	}
 
 	a.s11, #ht1  {
-		font-size: 2.0em; 
+		/*font-size: 2.0em; */
 		top: -400px;
 		color: red;
 	}
 	a.s12, #ht2 {
-		font-size: 2.0em; 
+		/*font-size: 2.0em; */
 		top: -350px;
 	}
 	.midpics, #p1 {
@@ -135,12 +135,12 @@ body, h1, .navtext, a, p {
 
 @media screen and (min-width: 640px) and (max-width: 740px) {
 	a.s11, #ht1  {
-		font-size: 2.0em; 
+		/*font-size: 2.0em; */
 		top: -400px;
 		color: blue;
 	}
 	 a.s12, #ht2 {
-		font-size: 2.0em; 
+		/*font-size: 2.0em; */
 		top: -350px;
 	}
 	.midpics, #p1 {
@@ -163,12 +163,12 @@ body, h1, .navtext, a, p {
 
 @media screen and (min-width: 740px) and (max-width: 940px) {
 	a.s11, #ht1  {
-		font-size: 2.25em; 
+		/*font-size: 2.25em; */
 		top: -400px;
 		color: orange;
 	}
 	 a.s12, #ht2 {
-		font-size: 2.25em; 
+		/*font-size: 2.25em; */
 		top: -350px;
 	}
 
@@ -192,12 +192,12 @@ body, h1, .navtext, a, p {
 
 @media screen and (min-width: 940px) and (max-width: 1140px) {
 	a.s11, #ht1  {
-		font-size: 2.75em; 
+		/*font-size: 2.75em; */
 		top: -400px;
 		color: aqua;
 	}
 	 a.s12, #ht2 {
-		font-size: 2.75em; 
+		/*font-size: 2.75em; */
 		top: -350px;
 	}
 
@@ -215,13 +215,13 @@ body, h1, .navtext, a, p {
 @media screen and (min-width: 1140px) and (max-width: 1340px) {
 
 	a.s11, #ht1  {
-		font-size: 3.75em; 
+		/*font-size: 3.75em; */
 		top: -425px;
 		color: green;
 	}
 
 	 a.s12, #ht2 {
-		font-size: 3.75em; 
+		/*font-size: 3.75em; */
 		top: -350px;
 	}
 
@@ -240,12 +240,12 @@ body, h1, .navtext, a, p {
 
 @media screen and (min-width: 1340px) and (max-width: 1540px ) {
 	a.s11, #ht1  {
-		font-size: 4.75em; 
+		/*font-size: 4.75em; */
 		top: -450px;
 		color: purple;
 	}
 	 a.s12, #ht2 {
-		font-size: 4.75em; 
+		/*font-size: 4.75em; */
 		top: -350px;
 	}
 	.midpics, #p1  {
@@ -256,15 +256,19 @@ body, h1, .navtext, a, p {
 
 @media screen and (min-width: 1540px) and (max-width: 1740px ) {
 	a.s11, #ht1  {
-		font-size: 5.25em; 
+		/*font-size: 5.25em; */
 		top: -475px;
 		color: yellow;
 	}
 	 a.s12, #ht2 {
-		font-size: 5.25em; 
+		/*font-size: 5.25em; */
 		top: -350px;
 	}
 
+}
+
+#ht0 {
+	font-size: 10vw;
 }
 
 html, body, p {
@@ -371,6 +375,10 @@ li {
 	top: -35px;
 }
 
+a.s11, a.s12 {
+	font-size: 5.3456vw;
+}
+
 a.s11{
 	font-family: 'Homemade Apple', cursive;
 	top: -500px; 
@@ -378,7 +386,7 @@ a.s11{
 	text-align: left;
 	padding: 0;
 	margin: 0; 
-	font-size: 6.25em;
+	 /*6.25em;*/
 
 }
 a.s12 {
@@ -388,7 +396,7 @@ a.s12 {
 	text-align: right;
 	padding: 0;
 	margin: 0; 
-	font-size: 6.25em;
+	/*  font-size:  6.3456vw; 6.25em;*/
 
 }
 
@@ -553,6 +561,7 @@ body.large .article {
 	width: 83.3333333333%; 
   max-width: 1600px;
   margin: 0 auto;
+  text-align: center; 
 }
 
 .midcontainer3 {
@@ -585,7 +594,7 @@ body.large .article {
 	border-radius: 10px;
 	margin-left: auto;
 	margin-right: auto;
-	position: relative;
+	position: absolute;
 }
 
 #para3_2 {
@@ -753,7 +762,7 @@ div.mousescroll:hover {
 	color: #d8c6cb;
 	text-align: center;
 	float: left;
-	margin: 0 auto; 
+	margin: auto; 
 }
 
 #colorlist li {
