@@ -4,13 +4,13 @@
 @import url('http://fonts.googleapis.com/css?family=Homemade+Apple');
 
 body, h1, .navtext, a, p {
-	
+	min-width: 400px; 
 }
 
 @media screen and (min-width: 1px) and (max-width: 590px) {
 	.navtext {
 		display: none;
-		font-size: .8em; 
+		font-size: .2em; 
 
 	}
 	.listtop, #ulheader, #menu-center, #menuH {
