@@ -670,8 +670,8 @@ section.module.parallax-4 {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  background-image: url("http://loving1.github.io/Portfolio/images/dandi3.jpg");
+  background-size: cover; /*cover;*/
+  background-image: url("http://loving1.github.io/Portfolio/images/dandi3.jpg") margin-left;
 }
 
 section.midpics {
