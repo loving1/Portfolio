@@ -655,18 +655,19 @@ section.module.parallax-3 {
   background-size: cover;
   background-image: url("http://loving1.github.io/Portfolio/images/para3.jpg");
 }
+
 section.module.parallax-4 {
-  top: -400px; 
+  /*top: -400px; 
   height: 100%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-image: url("http://loving1.github.io/Portfolio/images/para3.jpg");
+  background-image: url("http://loving1.github.io/Portfolio/images/para3.jpg");*/
 }
 
 section.module.parallax-4 {
-  height: 110%;
+  height: 100%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
