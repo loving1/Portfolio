@@ -18,7 +18,38 @@
 
 		<style type="text/css">
 
-		
+		header {
+			top: 0; 
+			padding-top: 0; 
+			margin-top: 0; 
+			margin-left: 0; 
+			height: 22.896vh; 
+			background-color: orange;
+			width: 100vw; 
+			display: block; 
+			background-size: cover;  
+		}
+
+		/*Down pointing*/
+		.triangle-down {
+		    width: 80vw;
+		    height: 0;
+		    padding-left:10vw;
+		    padding-top: 10vw;
+		    overflow: hidden;
+		}
+		.triangle-down:after {
+		    content: "";
+		    display: block;
+		    width: 0;
+		    height: 0;
+		    margin-left:-500px;
+		    margin-top:-500px;
+		    
+		    border-left: 500px solid transparent;
+		    border-right: 500px solid transparent;
+		    border-top: 500px solid green;
+		}
 
 		 .sectwrap  {
 			margin: 5vh 5vw;
@@ -52,6 +83,10 @@
 		}
 		/*Image style for section 2*/
 		.ic1  {
+			height: 62.483vh; 
+		}
+
+		.ic3 {
 			height: 62.483vh; 
 		}
 
@@ -110,32 +145,7 @@
 			/*height: auto;  Will change the size of the video  
 			width: 100%; */
 		}
-		/*
-		#s2 {
-			height: 62.438vh; 
-			width: 80vw; 
-
-			margin: 5vh 5vw; 
-			overflow: hidden; 
-			padding: 25px; 
-			display: inline;
-			overflow: hidden;
-		}
-
-		.h_iframe iframe {
-			position: absolute;
-			top: 0;
-			left: 0; 
-			width: 32vw;
-			height: 18vh; 
-		}
-
-		iframe {
-			display: inline; 
-		}
-
-		*/
-
+	
 
 		</style>
 	
@@ -151,6 +161,8 @@
 			I'm a web-developer and graphic-designer. 
 		</header>
 
+
+
 		<nav> 
 			<ul>
 				<li>Web Design </li>
@@ -160,7 +172,11 @@
 			</ul>
 		</nav>
 
+
+
 		<div class="content">
+
+			<div class="triangle-down"></div>
 			<section id="s0" class="sectwrap">
 
 				<div class="secthead" id="s0header"> Web Design
@@ -208,29 +224,7 @@
 			</section>
 
 
-			<!-- This is for Animations #s2 -->
-			<!-- This is going to be deleted....
-			<section id="s2" class="sectwrap">
-
-
-				<div id="s2header" class="secthead"> Animations
-					</br> Skills </br>
-						Training </br>
-						Resume 
-				</div>
-				<div id="s1content" class= "sectcont"> 
-				<img class="ic1" src="http://loving1.github.io/Portfolio/images/works/IIN_new_landing_page_optimized.png">
-				<img class="ic1" src="http://loving1.github.io/Portfolio/images/works/prof-desk_ux_new_homepage.PNG">
-				
-				</div>
-			</section>
-
-
-
-
-
-
-			-------------------- -->
+		
 			<section id="s2" class="sectwrap">
 				<div class="secthead">Animations</div>
 				<div class="sectcont"> 
@@ -259,7 +253,16 @@
 			<!-- This is for Art  -->
 			<section id="s3" class="sectwrap">
 				<div class="secthead">Art</div>
-				<div class="sectcont"> Images go here </div>
+				<div class="sectcont"> 
+					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/spiritoftheamazon.jpg">
+					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/food_and_movies_1.JPG">
+					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/food_and_movies_2.JPG">
+					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_flier2.JPG">
+					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_business_card.JPG">
+					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_flier.JPG">
+					
+
+				 </div>
 
 			</section>
 
