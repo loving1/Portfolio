@@ -21,33 +21,43 @@
 		
 
 		 .sectwrap  {
-			margin: 5vw;
-			overflow-y: hidden; 
-			overflow-x: auto;
+			margin: 5vh 5vw;
 			white-space: nowrap;
 			background-color: gray;
+			border-radius: 15px;
+			display: block;
+			margin: auto; 
+			overflow-y: hidden; 
+			overflow-x: auto;
 
 		}
-		#s0 {
-			 margin: 5vw;
+
+		.secthead {
+			margin: 2vh 2vw; 
+		}
+
+		#s1content, #s0content {
+			
+		
+		}
+		#s0, #s1, #s2, #s3 {
+			 margin: 5vh 5vw;
 		}
 		/* {
 			height: 10vh;
 		} */
-
+		/*Image Style for Section 1*/
 		.ic0 {
 			height: 12.643vh; 
-
 		}
-
+		/*Image style for section 2*/
 		.ic1  {
-			
 			height: 62.483vh; 
 		}
 
 		.sc1 {
-			
 		}
+
 
 		#s1header, #s1content, .secthead {
 			float: left;
@@ -56,9 +66,7 @@
 
 		#s1header, .secthead {
 			margin: auto; 
-			width: 35vw; 
-			 
-			
+			width: 38vw; 
 		}
 
 		#s0header {
@@ -74,7 +82,48 @@
 
 		#s1content {
 			margin: auto; 
-			width: 36vw; 
+			width: 38vw; 
+			height: 62.483vh;
+		}
+
+		.wrapiframe {
+			width: 16vw; 
+			height: 9vh; 
+			margin: 0 auto;
+			background-color: #ccc;  
+
+		}
+		.h_iframe {
+			position: relative;
+		}
+
+		.h_iframe .ratio {
+			display: block;
+			width: 100%; 
+			height: auto; 
+		}
+
+		#s2 {
+			height: 62.438vh; 
+			width: 80vw; 
+
+			margin: 5vh 5vw; 
+			overflow: hidden; 
+			padding: 25px; 
+			display: inline;
+			overflow: hidden;
+		}
+
+		.h_iframe iframe {
+			position: absolute;
+			top: 0;
+			left: 0; 
+			width: 32vw;
+			height: 18vh; 
+		}
+
+		iframe {
+			display: inline; 
 		}
 
 
@@ -115,6 +164,10 @@
 				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p9.jpg">
 				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p10.jpg">
 				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p11.jpg">
+				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p12.jpg">
+				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p13.jpg">
+				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p14.jpg">
+				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p15.jpg">
 				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p22.jpg">
 				</div>
 
@@ -140,16 +193,39 @@
 				<img class="ic1" src="http://loving1.github.io/Portfolio/images/colors/01.jpg" alt="" />
 				</div>
 			</section>
-			<!-- This is for Animations  -->
+			<!-- This is for Animations #s2 -->
 			<section id="s2" class="sectwrap">
 				<div class="secthead">Animations</div>
+				<div class="sectcont"> 
+					<div class="wrapiframe"> 
+						<div class="h_iframe">
+							<!-- This is the Living Branches Animation 
+							<img class="ratio" src="http://placehold.it/16x9"/>-->
+							<iframe  src="http://www.youtube.com/embed/y3w-3Jb3oYU" frameborder="0" allowfullscreen></iframe> 
+							<iframe  src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
+						</div>
+					</div>
+					<div class="wrapiframe"> 
+						<!-- This is the Living Legacies Video -->
+						<img class="ratio" src="http://placehold.it/16x9"/>
+						<iframe width="2" height="400" src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
+					</div>
+				</div>
+
+			</section>
+
+
+
+			<!-- This is for Art  -->
+			<section id="s3" class="sectwrap">
+				<div class="secthead">Art</div>
 				<div class="sectcont"> Images go here </div>
 
 			</section>
 
-			<!-- This is for  -->
+			<!-- This is for Marketing  -->
 			<section id="s3" class="sectwrap">
-				<div class="secthead">Animations</div>
+				<div class="secthead">SEO, Marketing & Design Consulting</div>
 				<div class="sectcont"> Images go here </div>
 
 			</section>
