@@ -87,22 +87,30 @@
 		}
 
 		.wrapiframe {
-			width: 16vw; 
-			height: 9vh; 
-			margin: 0 auto;
-			background-color: #ccc;  
+			width: 25vw; 
+			height: 45vh; 
+			margin: 1.25vh .1vw 1.25vh .1vw; /* This will change the area around the videos*/
+			/*			background-color: #ccc;  */ 
 
 		}
 		.h_iframe {
+			padding-top: .1vh;
 			position: relative;
+			height: 42vh; 
 		}
-
+		/*
 		.h_iframe .ratio {
 			display: block;
-			width: 100%; 
+			width: 5vw; 
 			height: auto; 
-		}
+		} */
 
+		.ifm {
+			margin: 1vh 1vw; 
+			/*height: auto;  Will change the size of the video  
+			width: 100%; */
+		}
+		/*
 		#s2 {
 			height: 62.438vh; 
 			width: 80vw; 
@@ -125,6 +133,8 @@
 		iframe {
 			display: inline; 
 		}
+
+		*/
 
 
 		</style>
@@ -193,8 +203,10 @@
 				<img class="ic1" src="http://loving1.github.io/Portfolio/images/colors/01.jpg" alt="" />
 				</div>
 			</section>
-			<!-- This is for Animations #s2 -->
 
+
+			<!-- This is for Animations #s2 -->
+			<!-- This is going to be deleted....
 			<section id="s2" class="sectwrap">
 
 
@@ -215,7 +227,7 @@
 
 
 
-			--------------------
+			-------------------- -->
 			<section id="s2" class="sectwrap">
 				<div class="secthead">Animations</div>
 				<div class="sectcont"> 
@@ -223,15 +235,18 @@
 						<div class="h_iframe">
 							<!-- This is the Living Branches Animation 
 							<img class="ratio" src="http://placehold.it/16x9"/>-->
-							<iframe  src="http://www.youtube.com/embed/y3w-3Jb3oYU" frameborder="0" allowfullscreen></iframe> 
-							<iframe  src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
+							<iframe class="ifm" width="100%" height="100%" src="http://www.youtube.com/embed/y3w-3Jb3oYU" frameborder="0" allowfullscreen></iframe> 
+							<iframe class="ifm" width="100%" height="100%" src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
 						</div>
 					</div>
-					<div class="wrapiframe"> 
-						<!-- This is the Living Legacies Video -->
+					<!-- This is the Living Legacies Video -->
+					<!--<div class="wrapiframe"> 
+						
+						
+
 						<img class="ratio" src="http://placehold.it/16x9"/>
 						<iframe width="2" height="400" src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
-					</div>
+					</div> -->
 				</div>
 
 			</section>
