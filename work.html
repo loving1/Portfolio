@@ -17,6 +17,9 @@
 		<link rel="stylesheet" href="animate.min.css">
 
 		<style type="text/css">
+		@import url(http://fonts.googleapis.com/css?family=Oswald);
+		@import url(http://fonts.googleapis.com/css?family=Pacifico);
+		@import url(http://fonts.googleapis.com/css?family=Lato);
 
 		html, body, body, div, span, header {
 			margin: 0;
@@ -29,7 +32,12 @@
 		}
 
 		header {
+			font-family: font-family: 'Pacifico', cursive;
 		
+		}
+
+		.intro {
+			font-family: font-family: 'Pacifico', cursive;
 		}
 
 		#prettytop, #s0, #s1, #s2, #s3, #sf {
@@ -237,23 +245,46 @@
 		}
 
 		.secthead {
+			border-radius: 5px 5px 0 0;
 			margin: 2vh 2vw; 
 			height: 62.483vh;
 			background-color: #7abf92;  /*Sea foam green*/
-			width: 10vw;
+			width: 15vw;
 			float: left;
 		}
 
+			.secthead_title {
+				font-family: 'Oswald', sans-serif;
+				font-size: 3vw;
+				margin: 2vh;
+
+			}
+
+			.secthead_other {
+				font-family: 'Lato', sans-serif;
+
+			}			
+
 		.sectcont {
 			margin: 2vh 1vw;
-			width: 74vw;
+			width: 69vw;
 			height: 60vh;
 			float: left;
-			background-color: transparent;  /*deep red: #b02207*/
+			background-color: transparent;  /*used to be deep red: #b02207*/
 			white-space: nowrap;
 			overflow-y: hidden; 
 			overflow-x: auto;
 			position: relative;
+		}
+
+		#s0cont {
+			margin: 2vh 1vw;
+			width: 74vw;
+			height: 60vh;
+			float: left;
+			background-color: transparent;
+
+
 		}
 
 		
@@ -279,12 +310,13 @@
 			/*			background-color: #ccc;  */ 
 
 		}
+		/*Wraps the video section*/
 		.h_iframe {
 			padding-top: .1vh;
 			position: relative;
 			height: 42vh; 
 		}
-
+		/*this is the class for the video content*/
 		.ifm {
 			margin: 1vh 1vw; 
 			/*height: auto;  Will change the size of the video  
@@ -316,10 +348,13 @@
 			    <div class="triangle7"></div>
 			    <div class="triangle8"></div>
 			    <div class="triangle9"></div>
+			    <div class="intro">
+
+			    	Hi there, my name is Rose. 
+			I'm a web-developer and graphic-designer.</div>
 			</div> 
 
-			Hi there, my name is Rose. 
-			I'm a web-developer and graphic-designer. 
+			 
 		</header>
 
 
@@ -341,9 +376,11 @@
 
 			<section id="s0" class="sectwrap">
 
-				<div class="secthead" id="s0header"> Web Design
+				<div class="secthead" id="s0header"> 
+					<div class="secthead_title"> Web Design</div>
+					<div class="secthead_other"></div>
 				 </div>
-				<div class= "sectcont">
+				<div class= "sectcont" id="s0cont">
 				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p1.jpg">
 				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p2.jpg">
 				<img class="ic0" src="http://loving1.github.io/Portfolio/images/p3.jpg">
@@ -370,10 +407,12 @@
 			<section id="s1" class="sectwrap">
 
 
-				<div id="s1header" class="secthead"> Web Design
+				<div id="s1header" class="secthead"> 
+					<div class="secthead_title">Web Design</div>
+					<div class="secthead_other">
 					</br> Skills </br>
 						Training </br>
-						Resume 
+						Resume </div>
 				</div>
 				<div id="s1content" class= "sectcont"> 
 				<img class="ic1" src="http://loving1.github.io/Portfolio/images/works/IIN_new_landing_page_optimized.png">
@@ -388,7 +427,7 @@
 
 		
 			<section id="s2" class="sectwrap">
-				<div class="secthead">Animations</div>
+				<div class="secthead"><div class="secthead_title">Animations</div></div><div class="sechead_other"></div>
 				<div class="sectcont"> 
 					<div class="wrapiframe"> 
 						<div class="h_iframe">
@@ -414,7 +453,7 @@
 
 			<!-- This is for Art  -->
 			<section id="s3" class="sectwrap">
-				<div class="secthead">Art</div>
+				<div class="secthead"> <div class="secthead_title">Art</div><div class="secthead_other"></div></div>
 				<div class="sectcont"> 
 					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/blog.png">
 					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/glass_beach.jpg">
@@ -453,7 +492,7 @@
 
 			<!-- This is for Marketing  -->
 			<section id="s3" class="sectwrap">
-				<div class="secthead">SEO, Marketing & Design Consulting</div>
+				<div class="secthead"> <div class="secthead_title">SEO, Marketing & Design Consulting</div><div class="secthead_other"></div></div>
 				<div class="sectcont"> Images go here </div>
 
 			</section>
