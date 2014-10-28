@@ -19,7 +19,7 @@
 		<style type="text/css">
 
 		header {
-			/*top: 0; 
+			top: 0; 
 			padding-top: 0; 
 			margin-top: 0; 
 			margin-left: 0; 
@@ -28,222 +28,27 @@
 			width: 100vw; 
 			display: block; 
 			background-size: cover;  
-
-			width: 0vw;
-		    height: 0vh; 
-		    border-left: 49vw solid transparent;
-		    border-right: 49vw solid transparent; 
-		    border-top: 40vh solid green; 
-		    background-color: green;
-		    border-bottom: 40vh solid transparent; 
-
-		    margin: 1vh auto; */
-		}
-
-		#prettytop, #s0 {
-			float: left;
-			clear: left;
 		}
 
 		/*Down pointing*/
 		.triangle-down {
-		    width: 0vw;
-		    height: 0vh; 
-		    border-left: 50vw solid transparent;
-		    border-right: 50vw solid transparent; 
-		    border-top: 20vh solid blue; 
-		    border-bottom: transparent; 
-		    margin: 10vh auto; 
+		    width: 80vw;
+		    height: 0;
+		    padding-left:10vw;
+		    padding-top: 10vw;
+		    overflow: hidden;
 		}
-
-		.contain {
-		    position: relative;
+		.triangle-down:after {
+		    content: "";
 		    display: block;
-		    margin: 1vh 1vw;
-		    height: 98vh; 
-		    width: 98vw; 
-		    background-color: rgba(16,233,81,.2); 
-
-		}
-		
-.circle1 {
-	border-radius: 50%; 
-	background-color: #f2b33d;
-	height: 30vh; 
-	width: 30vh;
-	margin-left: auto; 
-    margin-right: auto; 		
-    z-index: -18;
-    display: block;
-    position: absolute;     
-    left: 30vw; 
-		}
-
-.circle2 {
-			border-radius: 50%; 
-			background-color: #f2f2f2;
-			height: 26vh; 
-			width: 26vh;
-			margin-left: auto; 
-            margin-right: auto; 
-			
-			z-index: -9;
-    position: absolute; 
-    opacity: .2;
-    left: 31.5vw;
-    top: 5vh;
-        
-		}
-/*Orangish in the middle*/
-.triangle1 {
-			width: 0vw;
-		    height: 0vh; 
-		    border-left: 22vw solid transparent;
-		    border-right: 22vw solid transparent; 
-		    border-top: 20vh solid transparent; 
-		    border-bottom: 80vh solid #f28a2e ; 
-		    margin: 1vh auto;
-        position: absolute; 
-        opacity: .8;
-        float: left; 
-    left: 25.9vw;     
-        
-       margin-left: auto; 
-    margin-right: auto; 
-		}
-/*Turquoise to the right */
-.triangle2 {
-    float: left;
-			width: 0vw;
-		    height: 0vh; 
-		    border-left: 14vw solid transparent;
-		    border-right: 14vw solid transparent; 
-		    border-top: 50vh solid transparent; 
-		    border-bottom: 50vh solid  #058378; 
-		    margin: 1vh auto;
-    position: absolute; 
-    left: 48vw;
-
-    z-index:-1;
-    opacity: .8
-    
-		}
-
-/*Turquoise to the left */
-.triangle3 {
-    float: left;
-			width: 0vw;
-		    height: 0vh; 
-		    border-left: 18vw solid transparent;
-		    border-right: 18vw solid transparent; 
-		    border-top: 40vh solid transparent; 
-		    border-bottom: 60vh solid  #058378; 
-		    margin: 1vh auto;
-    position: absolute; 
-    left: 17vw;
-    
-    z-index:-1;
-    opacity: .8
-		}
-
-/*Tan to the right */
-.triangle4 {
-    float: left; 
-			width: 0vw;
-		    height: 0vh; 
-		    border-left: 18vw solid transparent;
-		    border-right: 18vw solid transparent; 
-		    border-top: 45vh solid transparent; 
-		    border-bottom: 55vh solid  #b9986a; 
-		    margin: 1vh auto;
-    position: absolute; 
-    left: 54vw;
-    
-    z-index:2;
-    opacity: .6;
-    
-		}
-/*Red to the right */
-.triangle5 {
-    float: left; 
-			width: 0vw;
-		    height: 0vh; 
-		    border-left: 12vw solid transparent;
-		    border-right: 12vw solid transparent; 
-		    border-top: 40vh solid transparent; 
-		    border-bottom: 40vh solid  #b02207; 
-		    margin: 1vh auto;
-    position: absolute; 
-    left: 12vw;
-    top: 20vh;
-    
-    z-index:4;
-    opacity: .8;
-    
-		}
-/*Greenish to the right */
-.triangle6 {
-    float: left; 
-			width: 0vw;
-		    height: 0vh; 
-		    border-left: 18vw solid transparent;
-		    border-right: 18vw solid transparent; 
-		    border-top: 40vh solid transparent; 
-		    border-bottom: 60vh solid  #393d0b; 
-		    margin: 1vh auto;
-    position: absolute; 
-    left: -12vw;
-   ;
-    
-    z-index:4;
-    opacity: .8;
-    
-		}
-
-.triangle7 {
-    float: left; 
-			width: 0vw;
-		    height: 0vh; 
-		    border-left: 8vw solid transparent;
-		    border-right: 8vw solid transparent; 
-		    border-top: 80vh solid transparent; 
-		    border-bottom: 20vh solid  #393d0b; 
-		    margin: 1vh auto;
-    position: absolute; 
-    left: 62.3vw;
-    z-index:4;
-    opacity: .8;
-		}
-/*Triangle to the right that is redish*/
-.triangle8 {
-    float: left; 
-			width: 0vw;
-		    height: 0vh; 
-		    border-left: 8vw solid transparent;
-		    border-right: 8vw solid transparent; 
-		    border-top: 65vh solid transparent; 
-		    border-bottom: 35vh solid  #d9501e; 
-		    margin: 1vh auto;
-    position: absolute; 
-    left: 78.3vw;
-    z-index: 14;
-    opacity: .8;
-		}
-
-/*Triangle to the right that is redish*/
-.triangle9 {
-    float: left; 
-			width: 0vw;
-		    height: 0vh; 
-		    border-left: 8vw solid transparent;
-		    border-right: 8vw solid transparent; 
-		    border-top: 35vh solid transparent; 
-		    border-bottom: 65vh solid  #7abf92; 
-		    margin: 1vh auto;
-    position: absolute; 
-    left: 84.3vw;
-    z-index: -14;
-    opacity: .8;
+		    width: 0;
+		    height: 0;
+		    margin-left:-500px;
+		    margin-top:-500px;
+		    
+		    border-left: 500px solid transparent;
+		    border-right: 500px solid transparent;
+		    border-top: 500px solid green	;
 		}
 
 		 .sectwrap  {
@@ -340,8 +145,6 @@
 			/*height: auto;  Will change the size of the video  
 			width: 100%; */
 		}
-
-
 	
 
 		</style>
@@ -353,17 +156,6 @@
 	<div class="container">
 
 		<header>
-
-			<div id="prettytop" class="contain">
-			    <div class="circle1"></div>
-			    <div class="circle2"></div>
-			    <div class="triangle1"></div>
-			    <div class="triangle2"></div>
-			    <div class="triangle3"></div>
-			    <div class="triangle4"></div>
-			    <div class="triangle5"></div>
-			    <div class="triangle6"></div>
-			</div> 
 
 			Hi there, my name is Rose. 
 			I'm a web-developer and graphic-designer. 
@@ -382,11 +174,11 @@
 
 
 
-		<div  class="content">
+		<div class="content">
 
-			
+			<div class="triangle-down"></div>
 
-			<section id="s0" class="sectwrap section1">
+			<section id="s0" class="sectwrap">
 
 				<div class="secthead" id="s0header"> Web Design
 				 </div>
@@ -466,12 +258,6 @@
 					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/blog.png">
 					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/glass_beach.jpg">
 					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/sunset.jpg">
-					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/flower_1.jpg">
-					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/mountain_1.jpg">
-					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/hawk.jpg">
-					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/closed_flowers.jpg">
-					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/sunset_2.jpg">
-					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/small_falls.jpg">
 					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/Livingthouse_questival.jpg">
 					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_equilibrium.JPG">
 					<img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_2.JPG">
