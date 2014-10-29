@@ -508,14 +508,16 @@
     h1 {
       font-family: 'Pacifico', cursive;
       font-size: 6vw;
-      color: rgba(16,233,81,.2)
+      color: rgba(16,233,81,.2);
+      text-align: center;
+
     }
 
-      form {
+    form {
       font-family: 'Oswald', sans-serif;
-      margin: 2vh 40vw 0 0;
-      text-align: left;
-      left: 65vw;
+      margin: 2vh 0 0 20vw;
+      
+      
     }
 /*The first line of the section headers */
       .secthead_title {
@@ -762,19 +764,19 @@
 
       </section>
       <!-- This will be the contact form -->
-      <section>
+      <section id="s4" class="sectwrap">
         <form name="awesomeForm" method="post" enctype="text/plain" 
         action="mailto:raconcilio@gmail.com">
         <h1>Contact me!</h1>
-        <label for="name">Name: <br/>
+        <label for="name">Name: 
           <input type="text" name="name" id="name" size="50"/> <!-- give both name and ID so that it doesn't matter which one gets sent --> 
           <br/>
           </label>
-        <label>Email: <br/> 
+        <label>Email: 
           <input type="text" name="email" id="email" size="50"/> <br/> 
           </label>
         <label>Industry:
-          <br/>
+          
           <select name="industry" id="industry"> 
             <option value="tech"> Technology</option>
             <option value="health"> Health</option>
@@ -787,10 +789,10 @@
         
         
 
-        <label> Would you like to receive our newsletter?  <br/>
+        <label> Would you like to receive my newsletter?  
           <input type="radio" name="newsletter" id="newsYes"/> Yes.
           
-        </label><br/>
+        </label>
         <label>
           <input type="radio" name="newsletter" id="newsNo"/> No.
         </label><br/>
