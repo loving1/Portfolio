@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="animate.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
 		<style type="text/css">
 		@import url(http://fonts.googleapis.com/css?family=Oswald);
@@ -32,34 +33,49 @@
 		}
 
 		header {
-			font-family: font-family: 'Pacifico', cursive;
+			font-family: 'Pacifico', cursive;
 		
 		}
 
 		.intro {
-			width: 20vw;
+			width: 23.22vw;
 			height: 8vh; 
 			margin: 0;
-			right: 16vw;
-			padding: 0;
+			right: 12vw;
+			padding: 0 0 0 0 ;
 			border: 0; 
 			outline: 0;
 			top: 12vh;
-			font-family: font-family: 'Pacifico', cursive;
+			font-family: 'Pacifico', cursive;
 			background-color: rgba(8,23,81,.2);
 			position: absolute;
+			font-size: 1.9vw;
+			margin-right: auto;
+			margin-left: auto; 
 		}
 
 		.intro_pt2 {
+			font-family: 'Oswald', sans-serif;
 			position: absolute;
 			padding: 0;
 			margin: 0;
-			width: 20vw;
+			width: 23.22vw;
 			height: 20vh;
 			top: 20vh; 
-			right: 16vw; 
+			right: 12vw; 
 			background-color: rgba(8,23,81,.1);
 
+		}
+
+		h1 {
+			font-family: 'Pacifico', cursive;
+			font-size: 6vw;
+
+		}
+
+		form {
+			font-family: 'Oswald', sans-serif;
+			margin: 2vh 40vw;
 		}
 
 		#prettytop, #s0, #s1, #s2, #s3, #sf {
@@ -378,7 +394,7 @@
 			    <div class="triangle9"></div>
 			    <div class="intro">
 
-			    	Hi there, my name is Rose.</div> <div class="intro_pt2">
+			    	Hi there! My name is Rose.</div> <div class="intro_pt2">
 
 			I'm a web-developer and graphic-designer.</div>
 			</div> 
@@ -539,6 +555,65 @@
 				 </div>
 
 			</section>
+			<!-- This will be the contact form -->
+			<section>
+				<form name="awesomeForm" method="post" enctype="text/plain" 
+				action="mailto:raconcilio@gmail.com">
+				<h1>Contact me!</h1>
+				<label for="name">Name: <br/>
+					<input type="text" name="name" id="name" size="50"/> <!-- give both name and ID so that it doesn't matter which one gets sent --> 
+					<br/>
+					</label>
+				<label>Email: <br/> 
+					<input type="text" name="email" id="email" size="50"/> <br/> 
+					</label>
+				<label>Industry:
+					<br/>
+					<select name="industry" id="industry"> 
+						<option value="tech"> Technology</option>
+						<option value="health"> Health</option>
+						<option value="sales"> Sales</option>
+						<option value="none" selected="selected"> Choose one...</option>
+					</select> 
+				</label>
+
+				<br/>
+				
+				
+
+				<label> Would you like to receive our newsletter?  <br/>
+					<input type="radio" name="newsletter" id="newsYes"/> Yes.
+					
+				</label><br/>
+				<label>
+					<input type="radio" name="newsletter" id="newsNo"/> No.
+				</label><br/>
+
+				<!--<p> Subject(s) of interest: </p> 
+				<label>
+					<input type="checkbox" name="rhinos" id="rhinos" value="yes"/>
+					Gir-hashes
+				</label> 
+				<label>
+					<input type="checkbox" name="ele" id="ele" value="yes"/>
+					Ele-fonts
+				</label> 
+				<label>
+					<input type="checkbox" name="camel" id="camel" value="yes"/>
+					Camel Type
+				</label> <br/><br/> -->
+
+				<label> Comments: </br> 
+					<textarea name="comments" id="comments" cols="50" rows="5"></textarea>
+				</label> <br/>
+
+			</br> 
+			<input type="submit" id="submit" "Send this thing"/>
+
+
+			</form>
+
+			</section>	
 
 
 		</div>
