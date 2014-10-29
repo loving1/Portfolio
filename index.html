@@ -1,640 +1,845 @@
-<!doctype html> 
-<html lang="en">
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Raconcilio | Design Porfolio by Rose Ann M. Haft | San Francisco, California | Washington, D.C. | Maryland </title>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+    @import url(http://fonts.googleapis.com/css?family=Pacifico);
+    @import url(http://fonts.googleapis.com/css?family=Lato);
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- for the Font Awesome-->
-	<link href="css/styles.css" rel="stylesheet" type="text/css">
-	<title> Raconcilio.com | Rose's Portfolio | Web Design & Development | San Francisco Bay Area | Washington D.C. | Maryland </title> 
+  /* Parallax base styles
+  --------------------------------------------- */
 
-	<script src="js/jquery.min.js" type="text/javascript"></script>
-		<script src="js/jquery.js" type="text/javascript"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
-		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-		<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
-		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="animate.min.css">
-	
-</head>
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+  }
+
+  .parallax2 {
+    height: 500px; /* fallback for older browsers */
+    height: 200vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+
+  }
+
+  .parallax_group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+    .parallax_group2 {
+    position: relative;
+    height: 3000px; /* fallback for older browsers */
+    height: 350vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .parallax_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax_layer-fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+
+  .parallax_layer-base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  .parallax_layer-back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+
+  .parallax_layer-deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
+
+
+  /* Debugger styles - used to show the effect
+  --------------------------------------------- */
+
+  .debug {
+    position: fixed;
+    top: 0;
+    left: .5em;
+    z-index: 999;
+    background: rgba(0,0,0,.85);
+    color: #fff;
+    padding: .5em;
+    border-radius: 0 0 5px 5px;
+  }
+  .debug-on .parallax_group {
+    -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+ }
+  .debug-on .parallax_layer {
+    box-shadow: 0 0 0 2px #000;
+    opacity: 0.9;
+  }
+  .parallax_group {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
+
+
+  /* demo styles
+  --------------------------------------------- */
+
+  body, html {
+    overflow: hidden;
+  }
+
+  body {
+    font: 100% / 1.5 Arial;
+  }
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  .parallax {
+    font-size: 190%;
+    overflow-x: hidden;
+  }
+  /*
+  .afterP {
+    background-color: red;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: relative;
+  } */
+
+   /* centre the content in the parallax layers */
+  .title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+    .title2 {
+    
+    position: absolute;
+    right: 5%;
+    
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  #intro1 {
+    font-family: 'Pacifico', cursive;
+    top: 16vh;
+    height: 8vh;
+    left: 74vw;
+    width: 26vw;
+  }
+
+  #intro2 {
+    font-family: 'Oswald', sans-serif;
+    top: 30vh;
+    left: 81.5vw;
+    width: 40vw;
+    height: 26vh; 
+  }
+
+
+
+  /* style the groups
+  --------------------------------------------- */
+
+  #group1 {
+    z-index: 5;  /*slide over group 2 */
+  }
+  #group1 .parallax_layer-base {
+    background: rgb(102,204,102);
+  }
+
+  /*#group2 {
+    z-index: 3;  slide under groups 1 and 3 
+  }
+  #group2 .parallax_layer-back {
+    background: rgb(123,210,102);
+  }*/
+
+  /*#group3 {
+    z-index: 4;  slide over group 2 and 4 
+  }
+  #group3 .parallax_layer-base {
+    background: rgb(153,216,101);
+  }*/
+
+  #group4 {
+    z-index: 2; /* slide under group 3 and 5 */
+  }
+  #group4 .parallax_layer-deep {
+    background: rgba(16,233,81,.2);
+  }
+
+  #group5 {
+    z-index: 3; /* slide over group 4 and 6 */
+  }
+  #group5 .parallax_layer-base {
+    background: white; /*rgb(214,229,100);*/
+  }
+
+  /* #group6 {
+    z-index: 2; slide under group 5 and 7 
+  }
+  #group6 .parallax_layer-back {
+    background: rgb(245,235,100);
+  }*/
+
+  /*#group7 {
+    z-index: 3;  slide over group 7 
+  }
+  #group7 .parallax_layer-base {
+    background: rgb(255,241,100);
+  }*/
+
+
+  /* misc
+  --------------------------------------------- */
+  .demo_info {
+    position: absolute;
+    z-index:100;
+    bottom: 1vh;
+    top: auto;
+    font-size:80%;
+    text-align:center;
+    width: 100%;
+  }
+
+/*Add shapes*/
+.circle1 {
+      border-radius: 50%; 
+      background-color: #f2b33d;
+      height: 30vh; 
+      width: 30vh;
+      margin-left: auto; 
+        margin-right: auto;     
+        z-index: -18;
+        display: block;
+        position: absolute;     
+        left: 30vw; 
+        }
+
+        .circle2 {
+      border-radius: 50%; 
+      background-color: #f2f2f2;
+      height: 26vh; 
+      width: 26vh;
+      margin-left: auto; 
+            margin-right: auto; 
+      
+      z-index: 9;
+        position: absolute; 
+        opacity: .2;
+        left: 31.5vw;
+        top: 5vh;
+            
+        }
+
+        /*Orangish in the middle*/
+    .triangle1 {
+      width: 0vw;
+        height: 0vh; 
+        border-left: 22vw solid transparent;
+        border-right: 22vw solid transparent; 
+        border-top: 0vh solid transparent; 
+        border-bottom: 120vh solid #f28a2e ; 
+        margin: 1vh auto;
+          position: absolute; 
+          opacity: .8;
+          float: left; 
+        left: 25.9vw;     
+        top: 20vh;
+            
+           margin-left: auto; 
+        margin-right: auto; 
+        }
+    /*Turquoise to the right */
+    .triangle2 {
+        float: left;
+      width: 0vw;
+        height: 0vh; 
+        border-left: 14vw solid transparent;
+        border-right: 14vw solid transparent; 
+        border-top: 50vh solid transparent; 
+        border-bottom: 50vh solid  #058378; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 48vw;
+        z-index:-1;
+        opacity: .8
+        }
+
+    /*Turquoise to the left */
+    .triangle3 {
+        float: left;
+      width: 0vw;
+        height: 0vh; 
+        border-left: 18vw solid transparent;
+        border-right: 18vw solid transparent; 
+        border-top: 40vh solid transparent; 
+        border-bottom: 60vh solid  #058378; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 17vw;
+        z-index:-1;
+        opacity: .8
+        }
+
+    /*Tan to the right */
+    .triangle4 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 18vw solid transparent;
+        border-right: 18vw solid transparent; 
+        border-top: 45vh solid transparent; 
+        border-bottom: 55vh solid  #b9986a; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 54vw;
+        z-index:2;
+        opacity: .6;
+        }
+    /*Red to the right */
+    .triangle5 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 12vw solid transparent;
+        border-right: 12vw solid transparent; 
+        border-top: 40vh solid transparent; 
+        border-bottom: 40vh solid  #b02207; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 12vw;
+        top: 20vh;
+        
+        z-index:4;
+        opacity: .8;
+        
+        }
+    /*Greenish to the right */
+    .triangle6 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 18vw solid transparent;
+        border-right: 18vw solid transparent; 
+        border-top: 40vh solid transparent; 
+        border-bottom: 60vh solid  #393d0b; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: -12vw;
+        z-index:4;
+        opacity: .8;
+        }
+    /* Green to the left*/
+    .triangle7 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 6vw solid transparent;
+        border-right: 6vw solid transparent; 
+        border-top: 80vh solid transparent; 
+        border-bottom: 20vh solid  #393d0b; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 62.3vw;
+        z-index:4;
+        opacity: .8;
+        }
+    /*Triangle to the right that is redish*/
+    .triangle8 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 8vw solid transparent;
+        border-right: 8vw solid transparent; 
+        border-top: 65vh solid transparent; 
+        border-bottom: 35vh solid  #d9501e; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 78.3vw;
+        z-index: 14;
+        opacity: .8;
+        }
+
+    /*Triangle to the right that is greenish-blue*/
+    .triangle9 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 12vw solid transparent;
+        border-right: 12vw solid transparent; 
+        border-top: 35vh solid transparent; 
+        border-bottom: 65vh solid  #7abf92; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 82.3vw;
+        z-index: -14;
+        opacity: .8;
+    }
+
+    .sectwrap {
+      margin: 5vh 5vw;
+      width: 90vw;
+      height: 82.483vh;
+      border-radius: 15px 15px 0 0 ;
+      background-color: rgba(16,233,81,.2); /*LightBlue*/ 
+      display: block;
+      overflow: hidden;
+      
+    }
+
+    .secthead {
+      border-radius: 5px 5px 0 0;
+      margin: 2vh 2vw; 
+      height: 82.483vh;
+      background-color: #7abf92;  /*Sea foam green*/
+      width: 15vw;
+      float: left;
+    }
+
+      .secthead_title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.789vw;
+        margin: 2vh;
+        color: #b02207; /*Deep red */
+
+      }
+
+      .secthead_other {
+        font-family: 'Lato', sans-serif;
+
+      }     
+
+    .sectcont {
+      margin: 8vh 1vw;
+      width: 69vw;
+      height: 68vh;
+      float: left;
+      background-color: transparent; 
+      white-space: nowrap;
+      overflow-y: hidden; 
+      overflow-x: auto;
+      position: relative;
+    }
+
+    /*Image Style for Section 1*/
+    .ic0 {
+      height: 12.643vh; 
+    }
+    /*Image style for section 2*/
+    .ic1  {
+      height: 62.483vh; 
+    }
+    /* Image style for secton 3 */
+    .ic3 {
+      height: 62.483vh; 
+    }
+
+    /* Start information for the videos */
+    .wrapiframe {
+      width: 25vw; 
+      height: 45vh; 
+      margin: 1.25vh .1vw 1.25vh .1vw; /* This will change the area around the videos*/
+      /*      background-color: #ccc;  */ 
+
+    }
+    /*Wraps the video section*/
+    .h_iframe {
+      padding-top: .1vh;
+      position: relative;
+      height: 42vh; 
+    }
+    /*this is the class for the video content*/
+    .ifm {
+      margin: 5vh 5vw 0 5vw; 
+      /*height: auto;  Will change the size of the video  
+      width: 100%; */
+    }
+
+    .intro {
+      width: 23.22vw;
+      height: 8vh; 
+      margin: 0;
+      right: 12vw;
+      padding: 0 0 0 0 ;
+      border: 0; 
+      outline: 0;
+      top: 12vh;
+      font-family: 'Pacifico', cursive;
+      background-color: rgba(8,23,81,.2);
+      position: absolute;
+      font-size: 1.9vw;
+      margin-right: auto;
+      margin-left: auto; 
+    }
+
+    .intro_pt2 {
+      font-family: 'Oswald', sans-serif;
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      width: 23.22vw;
+      height: 20vh;
+      top: 20vh; 
+      right: 12vw; 
+      background-color: rgba(8,23,81,.1);
+
+    }
+
+
+  
+</style>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
 
 <body>
-	
-    <div id="home">
-    	 
 
-    	<header> 
-			<a id="headerh1" class="h1header">&nbsp; &nbsp; <a id="atitle" class="hdr"> de Rosi </a> </a>
-
-			<div class="m1 menu">
-			<div id="menu-center"> 
-				
-				<ul class="listtop" id="ulheader"> 
-					<li>
-						
-						<a class="active" href="#home" id="menuH">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-			  				<i class="fa fa-home fa-stack-1x fa-inverse"></i>
-			  				</span> 
-			  				 <a class="navtext"> Home</a></a> 
-					</li>
-					<li>
-						<a href="#about"> 
-								<span class="fa-stack fa-lg">
-									<i class="fa fa-circle fa-stack-2x"></i>
-					  				<i class="fa fa-heart-o fa-stack-1x fa-inverse"></i>
-				  				</span> 
-			  				<a class="navtext"> About</a></a>
-					</li>
-					<li>
-						<a href="#portfolio">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-			  				<i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
-		  				</span> 
-		  				 <a class="navtext"> Portfolio </a></a> 
-					</li>
-					<li>
-						<a  href="#contact">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-				  				<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-			  				</span> 
-		  				<a class="navtext"> Contact </a></a>  <a>&nbsp; &nbsp; &nbsp;  </a>
-					</li>
-				</ul>
-
-				<script>
-						$(document).ready(function () {
-					    $(document).on("scroll", onScroll);
-					    
-					    //smoothscroll
-					    $("a[href^="#"]").on('click', function (e) {
-					        e.preventDefault();
-					        $(document).off("scroll");
-					        
-					        $("a").each(function () {
-					            $(this).removeClass("active");
-					        })
-					        $(this).addClass("active");
-					      
-					        var target = this.hash,
-					            menu = target;
-					        $target = $(target);
-					        $('html, body').stop().animate({
-					            'scrollTop': $target.offset().top+2
-					        }, 500, 'swing', function () {
-					            window.location.hash = target;
-					            $(document).on("scroll", onScroll);
-					        });
-					    });
-					});
-
-					function onScroll(event){
-					    var scrollPos = $(document).scrollTop();
-					    $("#menu-center a").each(function () {
-					        var currLink = $(this);
-					        var refElement = $(currLink.attr("href"));
-					        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-					            $("#menu-center ul li a").removeClass("active");
-					            currLink.addClass("active");
-					        }
-					        else{
-					            currLink.removeClass("active");
-					        }
-					    });
-					}
-
-				</script>
-				</div>
-			</div>
-
- 			</header>
-
- 		</div>
-
- 			<section class="module parallax parallax-4">
-				<div class="midcontainer">
-			    	<h1>&nbsp;</h1>
-			  	</div> <!-- -->
-			</section>
- 		
-
-			<section  class="ontopofhome"> 
-
-				<div class="wrapontopofhome"> 
-					<a class="s11" id="ht1">&nbsp; Design  </a>
-					<a class="s12" id="ht2"> For Your World. </br>  </a>
-					<a class="s13" id="ht3" align="right"> raconcilio.com  </a>
-				</div>
-
-
-			</section> 
-
-			<script >
-
-				$(document).ready(function() {
-				    
-				    /* Every time the window is scrolled ... */
-				    $(window).scroll( function(){
-				    
-				        /* Check the location of each desired element */
-				        $('.hidden').each( function(i){
-				            
-				            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-				            var bottom_of_window = $(window).scrollTop() + $(window).height();
-				            
-				            /* If the object is completely visible in the window, fade it it */
-				            if( bottom_of_window > bottom_of_object ){
-				                $(this).stop().animate({
-				                    //left: '250px',
-				                    right:'800px',
-				                    opacity: 1,
-				                },2000);
-				            }
-				    });
-				    }); 
-				    });
-
-		</script>
-
-			
-				
-			<!-- 
-			</h1> -->
-
-			<!--
-			<ul>
-				<a class="search" > <i class="fa"></i> </a>
-				<a class="pencil" > <i class="fa"></i> </a>
-				<a class="about" > <i class="fa"></i> </a>
-				<a class="archive" > <i class="fa"></i> </a>
-				<a class="contact" > <i class="fa"></i> </a>
-			    <li title="search"><a href="#" class="search"><i class="fa"></i> search</a>
-			    </li>
-			    <li title="pencil"><a href="#" class="pencil"><i class="fa"></i> pencil</a>
-			    </li>
-			    <li title="about"><a href="#" class="active about"><i class="fa"></i> about</a>
-			    </li>
-			    <li title="archive"><a href="#" class="archive"><i class="fa"></i> archive</a>
-			    </li>
-			    <li title="contact"><a href="#" class="contact"><i class="fa"></i> contact</a>
-			    </li>
-			</ul>
-
-		-->
-
-			<!--<li title="search">
-			     <a href="#" class="search">
-			          <i class="fa"></i>
-			          <i class="fa fa-camera-retro"></i> fa-camera-retro
-						<i class="fa fa-camera-retro fa-5x"></i> fa-5x 
-			          search
-			     </a>
-			</li>
-			<i class="fa fa-camera-retro"></i> fa-camera-retro
-			<i class="fa fa-camera-retro fa-5x"></i> fa-5x -->
-
-		
-		
-<!--
-		
-
-		<section class="module content">
-		  <div class="midcontainer">
-		    <h2>About Rose</h2>
-		    <p>Rose loves creative design and bringing together different fields to create great products, websites and customer   </br></br></br></br> </p>
-		  </div>
-		</section>
-	-->
-		<section class="midpics" id="p1">Just like you: Responsive, Annimated, Dynamic, Publishable, Market Ready, Focused, SEO Optimized, Unique, Publishable, and more!  </section>
-		<div id="about"></div>
-		 
-		<section class="module parallax parallax-1">
-		  <div class="midcontainer" id="para2">
-		  	<div class="wrappara2">
-		    	<div class="hidden" id="para2_1"></br></br></br> 
-		    		design with the world in mind. 
-		    	</div>
-		    	<div class="wrappara2_2">
-			    	<div class="hidden" id="para2_2"> 
-			    		Webdesign meets marketing training and business development.  Together we can create a user experience that keeps people wowed and coming back.  Check out some of the projects and companies below! 
-		    		</div>
-		    	</div>
-	    	</div>
-
-		     
-		  </div>
-		</section>
-		<script >
-
-		$(document).ready(function() {
-		    
-		    /* Every time the window is scrolled ... */
-		    $(window).scroll( function(){
-		    
-		        /* Check the location of each desired element */
-		        $('.hidden').each( function(i){
-		            
-		            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-		            var bottom_of_window = $(window).scrollTop() + $(window).height();
-		            
-		            /* If the object is completely visible in the window, fade it it */
-		            if( bottom_of_window > bottom_of_object ){
-		                $(this).stop().animate({
-		                    //left: '250px',
-		                    //right:'35%',
-		                    opacity: 1,
-		                },2000);
-		            }
-		    });
-		    }); 
-		    });
-		
-
-
-		</script>
-<!-- section 3 -->
-<div id="portfolio"> </div>
-
-<section class="module parallax parallax-3">
-		  <div class="midcontainer3">
-		    <div class="hidden" id="para3_1"></br></br></br> Design your dreams.  </div>
-		    <div class="wrappara3_2"> 
-		    	<div class="wrappara3_2_pt2"> 
-			    	<div id="para3_2"> 
-
-			    		<table> 
-							<th style="width: 20%;">
-								<div class="FixedHeightContainer">    
-									<ul id="colorlist" style="list-style-type:none"> 
-										<li id="yd1"> Products  </br> </li>
-										<li id="yd2"> Web </br></li>
-										<li id="yd3"> SEO +/- Marketing </br> </li>
-										<li id="yd4"> Programs </br> </li>
-										<li id="yd5"> Strategic Planning </br> </li>
-										<li id="yd6"> Wellness </br> </li> 
-										<li id="yd7"> Play </br> </li>
-										<li id="yd7"> All </br></li> 
-									</ul>
-								</div>
-
-							</th>
-
-							<th style="width: 15%;">
-								<div class="FixedHeightContainer">
-				                <div class="ContentImgs mousescroll"> 
-									<img class="fadeInD" id="Da" src="images/p1.jpg"/>
-									<img class="fadeInD" id="Db" src="images/p2.jpg"/>
-									<img class="fadeInD" id="Dc" src="images/p12.jpg"/>
-									<img class="fadeInD" id="Dd" src="images/p4.jpg"/>
-									<img class="fadeInD" id="De" src="images/p5.jpg"/>
-									<img class="fadeInD" id="Df" src="images/p6.jpg"/>
-									<img class="fadeInD" id="Dg" src="images/p7.jpg"/>
-									<img class="fadeInD" id="Dh" src="images/p8.jpg"/> 
-									<img class="fadeInD" id="Di" src="images/p9.jpg"/> 
-									<img class="fadeInD" id="Dj" src="images/p10.jpg"/>
-									<img class="fadeInD" id="Dk" src="images/p11.jpg"/>
-									<img class="fadeInD" id="Dl" src="images/p3.jpg"/> 
-									<img class="fadeInD" id="Dm" src="images/p13.jpg"/>
-									<img class="fadeInD" id="Dn" src="images/p14.jpg"/>    
-									<img class="fadeInD" id="Do" src="images/p15.jpg"/>  
-									<img class="fadeInD" id="Dp" src="images/p16.jpg"/> 
-									<img class="fadeInD" id="Dq" src="images/p17.jpg"/> 
-									<img class="fadeInD" id="Dr" src="images/p18.jpg"/>
-									<img class="fadeInD" id="Ds" src="images/p19.jpg"/>
-									<img class="fadeInD" id="Dt" src="images/p20.jpg"/>
-									<img class="fadeInD" id="Du" src="images/p21.jpg"/> 
-								</div>
-            					</div>
-							</th>
-				<th style="width: 5%;"> </th>
-				<th style="width: 60%;"></th>
-
-			    		
-			    				
-
-
-			    		</table>
-			    	</div>
-		    	</div>
-		    </div>
-
-		    	
-
-		  </div>
-		</section>
-	<!--	<section class="module parallax parallax-5">
-		  <div class="midcontainer">
-		    <div class="hidden" id="para3_1"></br></br></br> Design your dreams.  </div>
-		  </div>
-		</section>-->
-		<script >
-
-		$(document).ready(function() {
-
-
-		    
-		    /* Every time the window is scrolled ... */
-		    $(window).scroll( function(){
-		    
-		        /* Check the location of each desired element */
-		        $('.wrappara3_2').each( function(i){
-		            
-		            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-		            var bottom_of_window = $(window).scrollTop() + $(window).height();
-		            /* If the object is completely visible in the window, fade it it */
-		            if( bottom_of_window > bottom_of_object ){
-		                $(this).stop().animate({
-		                    bottom: '50px',
-		                    //right: '500px',
-		                    opacity: 1,
-		                    height: '700px',
-		                },2000);
-		                //$("#container").animate({
-		                //    opacity:0.5,
-		                //},1000);
-		            }
-		        }); 
-		    });
-		    });
-		</script>
-<script type='text/javascript'>
-	$(function() {       
-        $("img.fadeInD").css("opacity","1.0");  
-		$('img.fadeInD').hover(function() {
-			$(this).stop().animate({'opacity': 1});
-		}, function(){ 
-			$(this).stop().animate({'opacity': .4}); 
-		
-		}); 
-
-        $("img.fadeInD").hover(function() {
-                var myID = $(this).attr("id");        
-                $("img.fadeInD:not(#"+myID+")").stop().animate({'opacity': 0.2});
-        },           
-        function() {       
-                $("img.fadeInD").stop().animate({'opacity': 1.0});        
-        });    
-    });
-/* Products */
-	$("#yd1").click(function() { 
-				$("#Da, #Db, #Df, #Dg, #Dj, #Dk, #Dl").stop().animate({'opacity': 1});
-				$("#Dc,#Dd,#De,#Dh,#Di,#Dm, #Dn").stop().animate({'opacity': .2});
-			}); 
-	/* Web */
-
-	$("#yd2").click(function() {
-				$("#Da,#Dd,#De,#Dg,#Di,#Dk,#Dl").stop().animate({'opacity': 1});
-				$("#Db,#Dc,#Df,#Dh,#Dj,#Df,#Dm, #Dn").stop().animate({'opacity': .2});
-			});
-	/*SEO and Marketing */ 
-	$("#yd3").click(function() {
-				$("#Da,#Db,#Dc,#Dd,#De,#Dh,#Dl,#Dm, #Dn").stop().animate({'opacity': 1});
-				$("#Df,#Dg,#Di,#Dj,#Dk").stop().animate({'opacity': .2});
-			}); 
-	/* Program Development */
-	$("#yd4").click(function() {
-				$("#Dd, #Dg, #Dh, #Dl, #Dm, #Dn").stop().animate({'opacity': 1});
-				$("#Da,#Db,#Dc,#De,#Df, #Di, #Dj,#Dk").stop().animate({'opacity': .2});
-			}); 
-	/*Strategic Planning */
-	$("#yd5").click(function() {
-				$("#Da,#De, #Dn").stop().animate({'opacity': 1});
-				$("#Db,#Dc,#Dd,#Da,#Df").stop().animate({'opacity': .2});
-			}); 
-/*Wellness */
-	$("#yd6").click(function() {
-				$("#Db,#Dl,#Dm, #Dn").stop().animate({'opacity': 1});
-				$(",#Dc,#Dd,#De,#Da").stop().animate({'opacity': .2});
-			}); 
-
-		
-
-
-</script> 
-
-	
-<!--
-		<section class="module content">
-		  <div class="midcontainer">
-		    <h2>Lorem Ipsum Dolor 1</h2>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-		  </div>
-		</section>
-
-		
-
-		<section class="module parallax parallax-2">
-		  <div class="container">
-		    <h1>Rise</h1>
-		  </div>
-		</section>
-
-		<section class="module content">
-		  <div class="midcontainer">
-		    <h2>Lorem Ipsum Dolor 2</h2>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-		  </div>
-		</section>
-
-		<section class="module content">
-		  <div class="midcontainer">
-		    <h2>Lorem Ipsum Dolor 1</h2>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-		  </div>
-		</section>
-
-		<section class="module parallax parallax-1">
-			<div class="midcontainer">
-		    <h1>Serene</h1>
-		  	</div>
-		</section>
-
-		<!--<div id="section2"></div> -->
-
-	<!--	
-		<section class="module content">
-		  <div class="midcontainer">
-		    <p>About</p>
-		    <p>Webdesign meets marketing training and business development.  Together we can create a user experience that keeps people wowed and coming back.  Check out some of the projects and companies below!  </p>
-		  </div>
-		</section> 
-	-->
-
-	<!--
-
-			<div id="containbot">
-
-	<div id="content"> 
-		<p> About Rose </br>
-
-			<i class="fa fa-heart-o"></i>
-
-
-
-		<h2> Services  </h2>
-
-		<div id="services"> </div> 
-
-		<table>
- 		 <tr>
- 		 	<th id="facon"><i class="fa fa-comments-o"> </i> </th>
- 		 	<th id="tbltxt"> Branding, SEO & Marketing  </th>
- 		 	<th id="facon"><i class="fa fa-cloud"> </i></th>
-		    <th id="tbltxt">  </th>
-		    <th id="facon"><i class="fa fa-bullseye"> </i></th>
-		    <th id="tbltxt"> Creatve Development </th>
-		  </tr>
-		  <tr>
-		  	<td id="facon"></td>
-		    <td id="tbltxt">Helping you to create yourself and your brand on the web. </td>
-		    <td id="facon"></td>
-		    <td id="tbltxt">Interested in publishing an e-book?  Let me know and   	</td>
-		    <td id="facon"></td>
-		    <td id="tbltxt">Web design, engineering and program development to meet your needs!  Design the world you've dreamed of with effective planning!  </td>
-		  </tr>
-		  
-		</table>
-
-	-->
-
-		<!-- <i class="fa fa-spinner fa-spin"></i>
-		 
-
-		<a class="book" > <i class="fa"></i> </a>
-		<i class="fa fa-spinner fa-spin"></i>
-
-	-->
-		
-
-		
-			<!--
-			<section class="portfoliobox">
-				<section class="portfoliobox0">
-				<section class="portfoliobox1">
-				<section class="portfoliobox2">
-				<section class="portfoliobox3">
-
-			<table> 
-				<th style="width: 20%;">
-					<div class="FixedHeightContainer">    
-						<ul id="colorlist" style="list-style-type:none"> 
-							<li id="yd1"> Products  </br> </li>
-							<li id="yd2"> Web </br></li>
-							<li id="yd3"> SEO +/- Marketing </br> </li>
-							<li id="yd4"> Programs </br> </li>
-							<li id="yd5"> Strategic Planning </br> </li>
-							<li id="yd6"> Wellness </br> </li> 
-							<li id="yd7"> Play </br> </li>
-							<li id="yd7"> All </br></li> 
-						</ul>
-					</div>
-
-				</th>
-				<th style="width: 15%;">
-				<div class="FixedHeightContainer">
-                <div class="ContentImgs mousescroll"> 
-					<img class="fadeInD" id="Da" src="images/p1.jpg"/>
-					<img class="fadeInD" id="Db" src="images/p2.jpg"/>
-					<img class="fadeInD" id="Dc" src="images/p12.jpg"/>
-					<img class="fadeInD" id="Dd" src="images/p4.jpg"/>
-					<img class="fadeInD" id="De" src="images/p5.jpg"/>
-					<img class="fadeInD" id="Df" src="images/p6.jpg"/>
-					<img class="fadeInD" id="Dg" src="images/p7.jpg"/>
-					<img class="fadeInD" id="Dh" src="images/p8.jpg"/> 
-					<img class="fadeInD" id="Di" src="images/p9.jpg"/> 
-					<img class="fadeInD" id="Dj" src="images/p10.jpg"/>
-					<img class="fadeInD" id="Dk" src="images/p11.jpg"/>
-					<img class="fadeInD" id="Dl" src="images/p3.jpg"/> 
-					<img class="fadeInD" id="Dm" src="images/p13.jpg"/>
-					<img class="fadeInD" id="Dn" src="images/p14.jpg"/>    
-					<img class="fadeInD" id="Do" src="images/p15.jpg"/>  
-					<img class="fadeInD" id="Dp" src="images/p16.jpg"/> 
-					<img class="fadeInD" id="Dq" src="images/p17.jpg"/> 
-					<img class="fadeInD" id="Dr" src="images/p18.jpg"/>
-					<img class="fadeInD" id="Ds" src="images/p19.jpg"/>
-					<img class="fadeInD" id="Dt" src="images/p20.jpg"/>
-					<img class="fadeInD" id="Du" src="images/p21.jpg"/> 
-					</div>
+  <div class="debug">
+    <label><input type="checkbox"> Debug</label>
+  </div>
+  
+
+  <div class="parallax">
+   <!-- <div id="group1" class="parallax_group">
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>
+    <div id="group2" class="parallax_group">
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title">Base Layer</div>
+      </div>
+      <div class="parallax_layer parallax_layer-back">
+        <div class="title">Background Layer</div>
+      </div>
+    </div>
+    <div id="group3" class="parallax_group">
+      <div class="parallax_layer parallax_layer-fore">
+        <div class="title">Foreground Layer</div>
+      </div>
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div> -->
+    <div id="group4" class="parallax_group">
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title"><!--Base Layer--></div>
+        <div class="title2" id="intro1"><!--Hi there! My name is Rose --></div>
+         <div class="triangle1"></div>
+          
+          <div class="triangle8"></div>
+          <div class="triangle7"></div>
+          
+          
+        
+      </div>
+      <div class="parallax_layer parallax_layer-back">
+        <div class="title"><!--Background Layer--></div>
+        <div class="title2" id="intro1"> Hi there! My name is Rose.  <!----><!--Deep Background Layer--></div>
+        
+        <div class="circle2"> </div>
+        
+          <div class="triangle4"></div>
+          <div class="triangle6"></div>
+          <div class="triangle9"></div>
+      </div>
+      <div class="parallax_layer parallax_layer-deep">
+        <div class="title2" id="intro2"> I am a web developer & graphics designer.  <!--Deep Background Layer--></div>
+        
+        <div class="circle1"> </div>
+        <div class="triangle2"></div>
+        <div class="triangle3"></div>
+          
+          <div class="triangle5"></div>
+
+      </div>
+    </div>
+    
+    <div id="group5" class="parallax_group2">
+      <div class="parallax_layer parallax_layer-base">
+        <!--<div class="title">Foreground Layer</div>-->
+      </div>
+      <div class="parallax_layer parallax_layer-fore">
+        <div class="title"><!--Base Layer-->
+          <div  class="content">
+          <section id="s1" class="sectwrap">
+
+
+        <div id="s1header" class="secthead"> 
+          <div class="secthead_title">Web Design</div>
+          <div class="secthead_other">
+          </br> Skills </br>
+            Training </br>
+            Resume </div>
+        </div>
+        <div id="s1content" class= "sectcont"> 
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/IIN_new_landing_page_optimized.png">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/prof-desk_ux_new_homepage.PNG">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/robot_play_page.PNG">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/mad_libs_finished.PNG">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/bikecycles-front.png">
+        <!--<img class="ic1" src="http://loving1.github.io/Portfolio/images/colors/01.jpg" alt="" /> -->
+        </div>
+      </section>
+
+
+     <section id="s2" class="sectwrap">
+        <div class="secthead"><div class="secthead_title">Animations</div><div class="sechead_other">
+            </br> Skills </br>
+            Training </br>
+            Resume </div></div>
+        <div class="sectcont"> 
+          <div class="wrapiframe"> 
+            <div class="h_iframe">
+              <!-- This is the Living Branches Animation 
+              <img class="ratio" src="http://placehold.it/16x9"/>-->
+              <iframe class="ifm" width="100%" height="100%" src="http://www.youtube.com/embed/y3w-3Jb3oYU" frameborder="0" allowfullscreen></iframe> 
+              <iframe class="ifm" width="100%" height="100%" src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
             </div>
-				</th>
-				<th width: 5%;> </th
-				<th style="width: 60%;"></th>
+          </div>
+          <!-- This is the Living Legacies Video -->
+          <!--<div class="wrapiframe"> 
+            
+            
 
-			</table> 
-			</section>
-			</section>
-			</section>
-			</section>
-		</section> -->
+            <img class="ratio" src="http://placehold.it/16x9"/>
+            <iframe width="2" height="400" src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
+          </div> -->
+        </div>
 
-			<!--<h1>Porfolio   </h1>
-
-<p>    <ul id="colorlist" style="list-style-type:none"> 
-	<li id="yd1"> Products   </li>
-	<li id="yd2"> Web</li>
-	<li id="yd3"> SEO +/- Marketing  </li>
-	<li id="yd4"> Programs </li>
-	<li id="yd5"> Strategic Planning  </li>
-	<li id="yd6"> Wellness </li> 
-	<li id="yd7"> Play </li> </ul>
-</p> </br> 
-	<img class="fadeInD" id="Da" src="images/p1.jpg"/>
-	<img class="fadeInD" id="Db" src="images/p2.jpg"/>
-	<img class="fadeInD" id="Dc" src="images/p12.jpg"/>
-	<img class="fadeInD" id="Dd" src="images/p4.jpg"/>
-	<img class="fadeInD" id="De" src="images/p5.jpg"/>
-	<img class="fadeInD" id="Df" src="images/p6.jpg"/>
-	<img class="fadeInD" id="Dg" src="images/p7.jpg"/>
-	<img class="fadeInD" id="Dh" src="images/p8.jpg"/> 
-	<img class="fadeInD" id="Di" src="images/p9.jpg"/> 
-	<img class="fadeInD" id="Dj" src="images/p10.jpg"/>
-	<img class="fadeInD" id="Dk" src="images/p11.jpg"/>
-	<img class="fadeInD" id="Dl" src="images/p3.jpg"/> 
-	<img class="fadeInD" id="Dm" src="images/p13.jpg"/>
-	<img class="fadeInD" id="Dn" src="images/p14.jpg"/>    
-	<img class="fadeInD" id="Do" src="images/p15.jpg"/>  
-	<img class="fadeInD" id="Dp" src="images/p16.jpg"/> 
-	<img class="fadeInD" id="Dq" src="images/p17.jpg"/> 
-	<img class="fadeInD" id="Dr" src="images/p18.jpg"/>
-	<img class="fadeInD" id="Ds" src="images/p19.jpg"/>
-	<img class="fadeInD" id="Dt" src="images/p20.jpg"/>
-	<img class="fadeInD" id="Du" src="images/p21.jpg"/> </br>
-</p>--> 
+      </section>
 
 
 
-<!--
-<p>
-	
-		content </br> content </br> content </br> content </br> content </br> 
-		content </br> content </br> content </br> content </br> content </br>
-		content </br> content </br> content </br> content </br> content </br> 
-		content </br> content </br> content </br> content </br> content </br> 
+      <!-- This is for Art  -->
+      <section id="s3" class="sectwrap">
+        <div class="secthead"> <div class="secthead_title">Art</div><div class="secthead_other">
+            </br> Skills </br>
+            Training </br>
+            Resume </div>
 
-	
-		
-  </p>-->
+          </div>
+        <div class="sectcont"> 
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/blog.png">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/glass_beach.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/sunset.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/flower_1.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/mountain_1.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/hawk.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/closed_flowers.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/sunset_2.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/small_falls.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/Livingthouse_questival.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_equilibrium.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_2.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_3.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_4.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_5.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_6.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/city.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/tri_color.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/colors.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/boxes.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/split_compliment.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/owl_1.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/color_2.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/spiritoftheamazon.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/food_and_movies_1.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/food_and_movies_2.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_flier2.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_business_card.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_flier.JPG">
+          
+
+         </div>
+
+      </section>
+
+      <!-- This is for Marketing  -->
+      <section id="s3" class="sectwrap">
+        <div class="secthead"> <div class="secthead_title">SEO, Marketing & Design Consulting</div><div class="secthead_other"></div></div>
+        <div class="sectcont" id="sectcont_3"> 
+
+          <img class="ic0" src="http://loving1.github.io/Portfolio/images/p1.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p2.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p3.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p4.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p5.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p6.jpg"> </br>
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p7.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p8.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p9.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p10.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p11.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p12.jpg"> </br>
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p13.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p14.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p15.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p22.jpg">
 
 
-  	</div>
-		<div id="contact" ></div>
 
-			<section class="contactbox">
-			</br>
-		</br>
-	</br> 		<div id="contactbox2">
 
-					<h1 > Contact Rose </h1>
-					<h2>
-						E-mail 
-					</h2>
-				</div>
+         </div>
 
-			</section>
-	</div>
-	</div>    
-</body>
-</html> 
+      </section>
+      <!-- This will be the contact form -->
+      <section>
+        <form name="awesomeForm" method="post" enctype="text/plain" 
+        action="mailto:raconcilio@gmail.com">
+        <h1>Contact me!</h1>
+        <label for="name">Name: <br/>
+          <input type="text" name="name" id="name" size="50"/> <!-- give both name and ID so that it doesn't matter which one gets sent --> 
+          <br/>
+          </label>
+        <label>Email: <br/> 
+          <input type="text" name="email" id="email" size="50"/> <br/> 
+          </label>
+        <label>Industry:
+          <br/>
+          <select name="industry" id="industry"> 
+            <option value="tech"> Technology</option>
+            <option value="health"> Health</option>
+            <option value="sales"> Sales</option>
+            <option value="none" selected="selected"> Choose one...</option>
+          </select> 
+        </label>
+
+        <br/>
+        
+        
+
+        <label> Would you like to receive our newsletter?  <br/>
+          <input type="radio" name="newsletter" id="newsYes"/> Yes.
+          
+        </label><br/>
+        <label>
+          <input type="radio" name="newsletter" id="newsNo"/> No.
+        </label><br/>
+
+        <!--<p> Subject(s) of interest: </p> 
+        <label>
+          <input type="checkbox" name="rhinos" id="rhinos" value="yes"/>
+          Gir-hashes
+        </label> 
+        <label>
+          <input type="checkbox" name="ele" id="ele" value="yes"/>
+          Ele-fonts
+        </label> 
+        <label>
+          <input type="checkbox" name="camel" id="camel" value="yes"/>
+          Camel Type
+        </label> <br/><br/> -->
+
+        <label> Comments: </br> 
+          <textarea name="comments" id="comments" cols="50" rows="5"></textarea>
+        </label> <br/>
+
+      </br> 
+      <input type="submit" id="submit" "Send this thing"/>
+
+
+      </form>
+
+      </section>  
+    </div>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <!--<div id="group6" class="parallax_group">
+      <div class="parallax_layer parallax_layer-back">
+        <div class="title">Background Layer</div>
+      </div>
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>
+    <div id="group7" class="parallax_group">
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>-->
+  </div>
+
+  <div class="afterPF">
+  </div>
+
+  
+
+  <!--
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10812217-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+-->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-10812217-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body></html>
