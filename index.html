@@ -46,7 +46,8 @@
 
     .parallax_group2 {
     position: relative;
-    height: 3000px; /* fallback for older browsers */
+    overflow: hidden;
+    height: 2500px; /* fallback for older browsers */
     height: 350vh;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -159,6 +160,11 @@
     
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+  }
+
+  #intro2, #intro2 {
+    clear: right;
+    float: right;
   }
 
   #intro1 {
@@ -560,7 +566,7 @@
 
   
 </style>
-<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+<!--<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
 .en-markup-crop-options {
     top: 18px !important;
     left: 50% !important;
@@ -573,7 +579,7 @@
 .en-markup-crop-options div div:first-of-type {
     margin-left: 0px !important;
 }
-</style></head>
+</style> --></head>
 
 <body>
 
@@ -606,8 +612,8 @@
     </div> -->
     <div id="group4" class="parallax_group">
       <div class="parallax_layer parallax_layer-base">
-        <div class="title"><!--Base Layer--></div>
-        <div class="title2" id="intro1"><!--Hi there! My name is Rose --></div>
+        <!--Base Layer <div class="title"></div>-->
+        <div class="title" ><!--Hi there! My name is Rose --></div>
          <div class="triangle1"></div>
           
           <div class="triangle8"></div>
@@ -640,28 +646,28 @@
     
     <div id="group5" class="parallax_group2">
       <div class="parallax_layer parallax_layer-base">
-        <!--<div class="title">Foreground Layer</div>-->
+        <div class="title"><!--Foreground Layer--></div>
       </div>
       <div class="parallax_layer parallax_layer-fore">
-        <div class="title"><!--Base Layer-->
+        <div class="title"><!--Base Layer--> </div>
           <div  class="content">
           <section id="s1" class="sectwrap">
 
 
         <div id="s1header" class="secthead"> 
-          <div class="secthead_title">Web Design</div>
+          <div class="secthead_title"> <h2>Web Design </h2></div>
           <div class="secthead_other">
-          </br> Adobe Photoshop, Illustrator, Dreamweaver, Edge, HTML5, CSS3, Tumolt, PHP, MySQL, jQuery, Java </br>
-             </br>
+          <br/> <h3> Adobe Photoshop, Illustrator, Dreamweaver, Edge, HTML5, CSS3, Tumolt, PHP, MySQL, jQuery, Java, Websites, Apps, UX </h3> <br/>
+             <br/>
             </div>
         </div>
         <div id="s1content" class= "sectcont"> 
-        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/IIN_new_landing_page_optimized.png">
-        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/prof-desk_ux_new_homepage.PNG">
-        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/rawveganparadise.jpg">
-        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/robot_play_page.PNG">
-        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/mad_libs_finished.PNG">
-        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/bikecycles-front.png">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/IIN_new_landing_page_optimized.png" alt="IIN Landing Page">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/prof-desk_ux_new_homepage.PNG" alt="Prof-desk">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/rawveganparadise.jpg" alt="Raw Vegan Paradise">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/robot_play_page.PNG" alt="Robot Website">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/mad_libs_finished.PNG" alt="Mad Libs">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/bikecycles-front.png" alt="Bike Cycles App">
         
         <!--<img class="ic1" src="http://loving1.github.io/Portfolio/images/colors/01.jpg" alt="" /> -->
         </div> <!-- End of s1content -->
@@ -669,17 +675,17 @@
 
 
      <section id="s2" class="sectwrap">
-        <div class="secthead"><div class="secthead_title">Animations</div><div class="secthead_other">
-            </br> Edge, Tumolt</br>
-             </br>
+        <div class="secthead"><div class="secthead_title"><h2>Animations</h2></div><div class="secthead_other">
+             <h3> Edge, Tumolt </h3><br>
+             <br>
              </div></div> <!--Ends secthead -->
         <div class="sectcont"> 
           <div class="wrapiframe"> 
             <div class="h_iframe">
               <!-- This is the Living Branches Animation 
               <img class="ratio" src="http://placehold.it/16x9"/>-->
-              <iframe class="ifm" width="100%" height="100%" src="http://www.youtube.com/embed/y3w-3Jb3oYU" frameborder="0" allowfullscreen></iframe> 
-              <iframe class="ifm" width="100%" height="100%" src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
+              <iframe class="ifm" width="160" height="90" src="http://www.youtube.com/embed/y3w-3Jb3oYU"  allowfullscreen></iframe> 
+              <iframe class="ifm" width="160" height="90" src="http://www.youtube.com/embed/Y408wq9Ve04" allowfullscreen></iframe> 
             </div> <!-- Ends the h_iframe around the movie -->
           </div>  <!-- Ends the wrap -->
           <!-- This is the Living Legacies Video -->
@@ -698,42 +704,42 @@
 
       <!-- This is for Art  -->
       <section id="s3" class="sectwrap">
-        <div class="secthead"> <div class="secthead_title">Art</div><div class="secthead_other">
-            </br> Composition, Photoshop, Illustrator, E-Pubs, Fabric, Gestalt, Writing, Curating </br>
-             </br>
+        <div class="secthead"> <div class="secthead_title"><h2>Art</h2></div><div class="secthead_other">
+            <br><h3> Composition, Photoshop, Illustrator, E-Pubs, Fabric, Gestalt, Writing, Curating </h3> <br>
+             <br>
              </div>  <!--  Ends the content-->
 
           </div>  <!-- Ends the secthead -->
         <div class="sectcont"> 
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/blog.png">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/glass_beach.jpg">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/sunset.jpg">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/flower_1.jpg">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/mountain_1.jpg">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/hawk.jpg">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/closed_flowers.jpg">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/sunset_2.jpg">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/small_falls.jpg">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/ligthouse_questival.jpg">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_equilibrium.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_2.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_3.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_4.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_5.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_6.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/city.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/tri_color.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/colors.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/boxes.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/split_compliment.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/owl_1.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/color_2.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/spiritoftheamazon.jpg">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/food_and_movies_1.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/food_and_movies_2.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_flier2.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_business_card.JPG">
-          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_flier.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/blog.png" alt="magazine">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/glass_beach.jpg" alt="Glass beach">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/sunset.jpg" alt="Sunset at Glass Beach">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/flower_1.jpg" alt="Flower 1">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/mountain_1.jpg" alt="Mountain 1">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/hawk.jpg" alt="Hawk over Sutro Baths">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/closed_flowers.jpg" alt="Lots of flowers">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/sunset_2.jpg" alt="Sunset at Mt. Tamalpais">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/small_falls.jpg" alt="Waterfalls">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/ligthouse_questival.jpg" alt="Lighthouse in Marin">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_equilibrium.JPG" alt="Gestalt">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_2.JPG" alt="Gestalt">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_3.JPG" alt="Gestalt">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_4.JPG" alt="Gestalt">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_5.JPG" alt="Gestalt">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_6.JPG" alt="Gestalt">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/city.JPG" alt="City">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/tri_color.JPG" alt="magazine">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/colors.JPG" alt="Colors">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/boxes.JPG" alt="Boxes">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/split_compliment.JPG" alt="Split Compliment">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/owl_1.JPG" alt="Owl">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/color_2.JPG" alt="Colors 2">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/spiritoftheamazon.jpg" alt="Spirit of the Amazon Book Cover">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/food_and_movies_1.JPG" alt="Food and Movies 1 ">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/food_and_movies_2.JPG" alt="Food and Movies 2">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_flier2.JPG" alt="Groov Yoga Flier">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_business_card.JPG" alt="Business Card from GroovYoga">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_flier.JPG" alt="GroovYoga flier 2">
           
 
          </div> <!-- Ends sectcont for this section 3 -->
@@ -742,35 +748,35 @@
 
       <!-- This is for Marketing  -->
       <section id="s4" class="sectwrap">
-        <div class="secthead"> <div class="secthead_title"> Consulting</div><div class="secthead_other">Marketing, SEO, Writing, Business Plan Development, Product Development, Program Development and more!</div></div> <!-- This ends the secthead for section 4-->
+        <div class="secthead"> <div class="secthead_title"> <h2> Consulting </h2></div><div class="secthead_other"> <h3> Marketing, SEO, Writing, Business Plan Development, Product Development, Program Development and more! </h3></div></div> <!-- This ends the secthead for section 4-->
         <div class="sectcont" id="sectcont_4"> 
 
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p1.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p2.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p3.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p4.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p5.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p6.jpg"> </br>
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p7.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p8.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p9.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p10.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p11.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p12.jpg"> </br>
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p13.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p14.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p15.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p16.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p17.jpg">
-        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p22.jpg">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p1.jpg" alt="logo 1">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p2.jpg" alt="logo 2">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p3.jpg" alt="logo 3">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p4.jpg" alt="logo 4">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p5.jpg" alt="logo 5">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p6.jpg" alt="logo 6"> <br>
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p7.jpg" alt="logo 7">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p8.jpg" alt="logo 8">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p9.jpg" alt="logo 9">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p10.jpg" alt="logo 10">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p11.jpg" alt="logo 11">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p12.jpg" alt="logo 12"> <br>
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p13.jpg" alt="logo 13">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p14.jpg" alt="logo 14">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p15.jpg" alt="logo 15">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p16.jpg" alt="logo 16">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p17.jpg" alt="logo 17">
+        <img class="ic0 fadeInD" src="http://loving1.github.io/Portfolio/images/p22.jpg" alt="logo 22">
 
 
 
 
          </div> <!-- This ends section 4 content  -->
-
-         <!--  This starts the jquery script for Section 4 
 </section>
+         <!--  This starts the jquery script for Section 4 
+
          <script type='text/javascript'>
             $(function() {       
                   $("img.fadeInD").css("opacity","1.0");  
@@ -856,13 +862,13 @@
         
         
 
-        <label> Would you like to receive my newsletter?  </br>
+        <label> Would you like to receive my newsletter?  <br>
           <input type="radio" name="newsletter" id="newsYes"/> Yes.
           
         </label>
         <label>
           <input type="radio" name="newsletter" id="newsNo"/> No.
-        </label><br/>
+        </label><br>
 
         <!--<p> Subject(s) of interest: </p> 
         <label>
@@ -878,18 +884,18 @@
           Camel Type
         </label> <br/><br/> -->
 
-        <label> Comments: </br> 
+        <label> Comments: <br> 
           <textarea name="comments" id="comments" cols="50" rows="5"></textarea>
-        </label> <br/>
+        </label> <br>
 
-      </br> 
-      <input type="submit" id="submit" "Send this thing"/>
+      <br> 
+      <input type="submit" id="submit" />
 
 
       </form> 
 
       </section>  
-    </div>
+  
 
 
 
@@ -911,7 +917,7 @@
         <div class="title">Base Layer</div>
       </div>
     </div>-->
-  </div>
+  
 
   <div class="afterPF">
   </div>
