@@ -3,13 +3,99 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- for the Font Awesome-->
 <title>Raconcilio | Design Porfolio by Rose Ann M. Haft | San Francisco, California | Washington, D.C. | Maryland </title>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 <style>
 @import url(http://fonts.googleapis.com/css?family=Oswald);
     @import url(http://fonts.googleapis.com/css?family=Pacifico);
     @import url(http://fonts.googleapis.com/css?family=Lato);
+    @import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
+ /*CSS For Navigation*/
+
+ .menu {
+    width: 100vw;
+    height: 8vh;
+    /*background-color:  rgba(0, 0, 0, 1); */
+    position: fixed;
+    /*background-color: rgba(16,233,81,.2);*/
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    z-index: 20;
+}
+
+ul.listtop {
+  display: inline;
+  float: left;
+  margin: 0;
+  padding:0;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+li {
+  display: inline;
+  text-decoration: none;
+}
+
+#menu-center {
+  list-style: none;
+  margin: 0 30px 0 0;
+  display: inline;
+
+}
+
+
+.active {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5vw; 
+  color: #d9501e;
+  text-decoration: none;
+  line-height: 8vh;
+}
+
+.menuL {
+  font-size: 1.5vw;
+    color: #d9501e;
+    text-decoration: none;
+    line-height: 8vh;
+}
+
+.faIcon {
+  position: absolute;
+}
+
+.textcontent {
+  opacity: 0;
+  position: absolute;
+  float: left;
+  text-align: left;
+  left: 20vw;
+  color: black;
+}
+
+.iconT {
+  float: left;
+  position: relative;
+  clear: both;
+}
+
+
+
+
+.iconT:hover > .textcontent {
+  -webkit-transition:opacity .5s linear;
+  
+  opacity: 1;
+}
+
   /* Parallax base styles
   --------------------------------------------- */
+
   .parallax {
     height: 500px; /* fallback for older browsers */
     height: 100vh;
@@ -18,6 +104,7 @@
     -webkit-perspective: 300px;
     perspective: 300px;
   }
+
   .parallax2 {
     height: 500px; /* fallback for older browsers */
     height: 200vh;
@@ -25,7 +112,9 @@
     overflow-y: auto;
     -webkit-perspective: 300px;
     perspective: 300px;
+
   }
+
   .parallax_group {
     position: relative;
     height: 500px; /* fallback for older browsers */
@@ -33,6 +122,7 @@
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
   }
+
     .parallax_group2 {
     position: relative;
     height: 3000px; /* fallback for older browsers */
@@ -40,6 +130,7 @@
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
   }
+
   .parallax_layer {
     position: absolute;
     top: 0;
@@ -47,28 +138,35 @@
     right: 0;
     bottom: 0;
   }
+
   .parallax_layer-fore {
     -webkit-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
     z-index: 1;
   }
+
   .parallax_layer-base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
   }
+
   .parallax_layer-back {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
     z-index: 3;
   }
+
   .parallax_layer-deep {
     -webkit-transform: translateZ(-600px) scale(3);
     transform: translateZ(-600px) scale(3);
     z-index: 2;
   }
+
+
   /* Debugger styles - used to show the effect
   --------------------------------------------- */
+
   .debug {
     position: fixed;
     top: 0;
@@ -91,18 +189,24 @@
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
   }
+
+
   /* demo styles
   --------------------------------------------- */
+
   body, html {
     overflow: hidden;
   }
+
   body {
     font: 100% / 1.5 Arial;
   }
+
   * {
     margin:0;
     padding:0;
   }
+
   .parallax {
     font-size: 190%;
     overflow-x: hidden;
@@ -116,6 +220,7 @@
     display: block;
     position: relative;
   } */
+
    /* centre the content in the parallax layers */
   .title {
     text-align: center;
@@ -125,6 +230,7 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+
     .title2 {
     
     position: absolute;
@@ -133,70 +239,85 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+
   #intro1, #intro2 {
     float: left;
     clear: left;
   }
+
   #intro1 {
     font-family: 'Pacifico', cursive;
     top: 16vh;
     height: 8vh;
-    left: 74vw;
+    left: 64vw;
     width: 26vw;
-    font-size: 2.15vw;
+    font-size: 2.65vw;
   }
+
   #intro2 {
     font-family: 'Oswald', sans-serif;
-    top: 30.95vh;
-    left: 81.5vw;
+    top: 32.95vh;
+    left: 71.5vw;
     width: 40vw;
     height: 26vh; 
-    font-size: 1.5vw;
+    font-size: 2.1vw;
   }
+
+
+
   /* style the groups
   --------------------------------------------- */
+
   #group1 {
     z-index: 5;  /*slide over group 2 */
   }
   #group1 .parallax_layer-base {
     background: rgb(102,204,102);
   }
+
   /*#group2 {
     z-index: 3;  slide under groups 1 and 3 
   }
   #group2 .parallax_layer-back {
     background: rgb(123,210,102);
   }*/
+
   /*#group3 {
     z-index: 4;  slide over group 2 and 4 
   }
   #group3 .parallax_layer-base {
     background: rgb(153,216,101);
   }*/
+
   #group4 {
-    z-index: 2; /* slide under group 3 and 5 */
+    z-index: 28; /* slide under group 3 and 5 */
   }
   #group4 .parallax_layer-deep {
     background: rgba(16,233,81,.2);
   }
+
   #group5 {
-    z-index: 3; /* slide over group 4 and 6 */
+    z-index: 30; /* slide over group 4 and 6 */
   }
   #group5 .parallax_layer-base {
     background: white; /*rgb(214,229,100);*/
   }
+
   /* #group6 {
     z-index: 2; slide under group 5 and 7 
   }
   #group6 .parallax_layer-back {
     background: rgb(245,235,100);
   }*/
+
   /*#group7 {
     z-index: 3;  slide over group 7 
   }
   #group7 .parallax_layer-base {
     background: rgb(255,241,100);
   }*/
+
+
   /* misc
   --------------------------------------------- */
   .demo_info {
@@ -208,6 +329,7 @@
     text-align:center;
     width: 100%;
   }
+
 /*Add shapes*/
 .circle1 {
       border-radius: 50%; 
@@ -216,11 +338,12 @@
       width: 30vh;
       margin-left: auto; 
         margin-right: auto;     
-        z-index: -18;
+        z-index: 28;
         display: block;
         position: absolute;     
         left: 30vw; 
         }
+
         .circle2 {
       border-radius: 50%; 
       background-color: #f2f2f2;
@@ -229,13 +352,14 @@
       margin-left: auto; 
             margin-right: auto; 
       
-      z-index: 9;
+      z-index: 29;
         position: absolute; 
         opacity: .2;
         left: 31.5vw;
         top: 5vh;
             
         }
+
         /*Orangish in the middle*/
     .triangle1 {
       width: 0vw;
@@ -269,6 +393,7 @@
         z-index:-1;
         opacity: .8
         }
+
     /*Turquoise to the left */
     .triangle3 {
         float: left;
@@ -284,6 +409,7 @@
         z-index:-1;
         opacity: .8
         }
+
     /*Tan to the right */
     .triangle4 {
         float: left; 
@@ -320,7 +446,7 @@
     /*Greenish to the right */
     .triangle6 {
         float: left; 
-      width: 0vw;
+        width: 0vw;
         height: 0vh; 
         border-left: 18vw solid transparent;
         border-right: 18vw solid transparent; 
@@ -335,7 +461,7 @@
     /* Green to the left*/
     .triangle7 {
         float: left; 
-      width: 0vw;
+        width: 0vw;
         height: 0vh; 
         border-left: 6vw solid transparent;
         border-right: 6vw solid transparent; 
@@ -362,6 +488,7 @@
         z-index: 14;
         opacity: .8;
         }
+
     /*Triangle to the right that is greenish-blue*/
     .triangle9 {
         float: left; 
@@ -377,6 +504,7 @@
         z-index: -14;
         opacity: .8;
     }
+
     .sectwrap {
       margin: 5vh 5vw;
       width: 90vw;
@@ -388,6 +516,8 @@
       
     }
     /*This is for the section heads */
+
+
     .secthead {
       border-radius: 5px 5px 0 0;
       margin: 2vh 2vw; 
@@ -396,6 +526,8 @@
       width: 15vw;
       float: left;
     }
+
+
     /*Image Style for Section 1*/
     .ic0 {
       height: 12.643vh; 
@@ -408,12 +540,14 @@
     .ic3 {
       height: 62.483vh; 
     }
+
     /* Start information for the videos */
     .wrapiframe {
       width: 25vw; 
       height: 45vh; 
       margin: 1.25vh .1vw 1.25vh .1vw; /* This will change the area around the videos*/
       /*      background-color: #ccc;  */ 
+
     }
     /*Wraps the video section*/
     .h_iframe {
@@ -427,6 +561,7 @@
       /*height: auto;  Will change the size of the video  
       width: 100%; */
     }
+
     .intro {
       width: 23.22vw;
       height: 8vh; 
@@ -443,6 +578,7 @@
       margin-right: auto;
       margin-left: auto; 
     }
+
     .intro_pt2 {
       font-family: 'Oswald', sans-serif;
       position: absolute;
@@ -453,14 +589,19 @@
       top: 20vh; 
       right: 12vw; 
       background-color: rgba(8,23,81,.1);
+
     }
+
     /* This is the information for the form */
+
     h1 {
       font-family: 'Pacifico', cursive;
       font-size: 6vw;
       color: rgba(16,233,81,.2);
       text-align: center;
+
     }
+
     form {
       font-family: 'Oswald', sans-serif;
       margin: 2vh 0 0 1vw;
@@ -473,14 +614,19 @@
         font-size: 2.789vw;
         margin: 2vh;
         color: #b02207; /*Deep red */
+
       }
+
       /*The rest of the text */
+
       .secthead_other {
         font-family: 'Lato', sans-serif;
         font-size: 1.7vh;
         text-align: left;
         margin: 2vh 2vw; 
+
       }     
+
     .sectcont {
       margin: 8vh 1vw;
       width: 69vw;
@@ -492,6 +638,9 @@
       overflow-x: auto;
       position: relative;
     }
+
+
+
   
 </style>
 <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
@@ -503,12 +652,121 @@
     border: 2px rgba(255,255,255,.38) solid !important;
     border-radius: 4px !important;
 }
+
 .en-markup-crop-options div div:first-of-type {
     margin-left: 0px !important;
 }
 </style></head>
 
 <body>
+
+  <header>
+
+    <div id="home">
+
+    <div class="m1 menu">
+      <div id="menu-center"> 
+        
+        <ul class="listtop" id="ulheader"> 
+          <li>
+            
+            <a class="active menuL" href="#home" id="menuH">
+            <span class="fa-stack fa-lg iconT">
+              <i class="fa fa-circle fa-stack-2x faIcon"></i>
+                <i class="fa fa-heart-o fa-stack-1x fa-inverse"></i> <!-- fa-home also works here -->
+                </span> 
+                 <a class="navtext textcontent" href="#home"> Home</a></a> 
+          </li>
+          <li>
+            <a class="menuL" href="#WebDesign"> 
+                <span class="fa-stack fa-lg iconT">
+                  <i class="fa fa-circle fa-stack-2x faIcon"></i>
+                    <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                  </span> 
+                <a class="navtext textcontent"> Web Design </a></a>
+          </li>
+          <li>
+            <a class="menuL" href="#Animations">
+            <span class="fa-stack fa-lg iconT">
+              <i class="fa fa-circle fa-stack-2x faIcon"></i>
+                <i class="fa fa-play-circle-o  fa-stack-1x fa-inverse"></i>
+              </span> 
+               <a class="navtext textcontent"> Anmations </a></a> 
+          </li>
+          <li>
+            <li>
+            <a class="menuL" href="#Art">
+            <span class="fa-stack fa-lg iconT">
+              <i class="fa fa-circle fa-stack-2x faIcon"></i>
+                <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
+              </span> 
+               <a class="navtext textcontent"> Art </a></a> 
+          </li>
+          <li>
+            <li>
+            <a class="menuL" href="#Consulting">
+            <span class="fa-stack fa-lg iconT">
+              <i class="fa fa-circle fa-stack-2x faIcon"></i>
+                <i class="fa fa-key fa-stack-1x fa-inverse"></i>
+              </span> 
+               <a class="navtext textcontent"> Consulting </a></a> 
+          </li>
+          <li>
+            <a class="menuL" href="#Contact">
+              <span class="fa-stack fa-lg iconT">
+                <i class="fa fa-circle fa-stack-2x faIcon"></i>
+                  <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                </span> 
+              <a class="navtext textcontent"> Contact </a></a>  <a>&nbsp; &nbsp; &nbsp;  </a>
+          </li>
+        </ul>
+
+        <script>
+            $(document).ready(function () {
+              $(document).on("scroll", onScroll);
+              
+              //smoothscroll
+              $("a[href^="#"]").on('click', function (e) {
+                  e.preventDefault();
+                  $(document).off("scroll");
+                  
+                  $("a").each(function () {
+                      $(this).removeClass("active");
+                  })
+                  $(this).addClass("active");
+                
+                  var target = this.hash,
+                      menu = target;
+                  $target = $(target);
+                  $('html, body').stop().animate({
+                      'scrollTop': $target.offset().top+2
+                  }, 500, 'swing', function () {
+                      window.location.hash = target;
+                      $(document).on("scroll", onScroll);
+                  });
+              });
+          });
+
+          function onScroll(event){
+              var scrollPos = $(document).scrollTop();
+              $("#menu-center a").each(function () {
+                  var currLink = $(this);
+                  var refElement = $(currLink.attr("href"));
+                  if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                      $("#menu-center ul li a").removeClass("active");
+                      currLink.addClass("active");
+                  }
+                  else{
+                      currLink.removeClass("active");
+                  }
+              });
+          }
+
+        </script>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <!--<div class="debug">
     <label><input type="checkbox"> Debug</label>
@@ -555,7 +813,7 @@
         
         <div class="circle2"> </div>
         
-          <div class="triangle4"></div>
+          <!--<div class="triangle4"></div>-->
           <div class="triangle6"></div>
           <div class="triangle9"></div>
       </div>
@@ -578,7 +836,10 @@
       <div class="parallax_layer parallax_layer-fore">
         <div class="title"><!--Base Layer-->
           <div  class="content">
-          <section id="s1" class="sectwrap">
+
+
+            <div id="WebDesign">
+          <section id="s1" class="sectwrap" >
 
 
         <div id="s1header" class="secthead"> 
@@ -599,10 +860,11 @@
         <!--<img class="ic1" src="http://loving1.github.io/Portfolio/images/colors/01.jpg" alt="" /> -->
         </div> <!-- End of s1content -->
       </section>
+    </div>
 
-
+    <div id="Animations">
      <section id="s2" class="sectwrap">
-        <div class="secthead"><div class="secthead_title">Animations</div><div class="secthead_other">
+        <div class="secthead"><div class="secthead_title" >Animations</div><div class="secthead_other">
             </br> Edge, Tumolt, Unity </br>
              </br>
              </div></div> <!--Ends secthead -->
@@ -619,16 +881,19 @@
           <!--<div class="wrapiframe"> 
             
             
+
             <img class="ratio" src="http://placehold.it/16x9"/>
             <iframe width="2" height="400" src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
           </div> -->
         </div>  <!-- Ends the section content  -->
 
       </section>
+      </div>
 
 
 
       <!-- This is for Art  -->
+      <div id="Art"> 
       <section id="s3" class="sectwrap">
         <div class="secthead"> <div class="secthead_title">Art</div><div class="secthead_other">
             </br> Composition, Photoshop, Illustrator, E-Pubs, Fabric, Gestalt, Writing, Curating </br>
@@ -671,8 +936,11 @@
          </div> <!-- Ends sectcont for this section 3 -->
 
       </section>
+    </div>
 
-      <!-- This is for Marketing  -->
+      <!-- This is for Consulting Information  -->
+
+      <div id="Consulting">
       <section id="s4" class="sectwrap">
         <div class="secthead"> <div class="secthead_title"> Consulting</div><div class="secthead_other">Marketing, SEO, Writing, Business Plan Development, Product Development, Program Development and more!</div></div> <!-- This ends the secthead for section 4-->
         <div class="sectcont" id="sectcont_4"> 
@@ -702,7 +970,9 @@
          </div> <!-- This ends section 4 content  -->
 
       </section>
+      </div>
       <!-- This will be the contact form -->
+      <div id="Contact">
       <section id="s5" class="sectwrap">
         <form name="awesomeForm" method="post" enctype="text/plain" 
         action="mailto:raconcilio@gmail.com">
@@ -761,6 +1031,7 @@
       </form>
 
       </section>  
+      </div>
     </div>
 
 
