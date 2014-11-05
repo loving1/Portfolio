@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/ -->
+<html>
+
+<head>
+
+<script type="text/javascript">
+  <!--
+  if (screen.width <= 800) {
+    window.location = "http://raconcilio.com/mobile";
+  }
+  //-->
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Raconcilio | Design Porfolio by Rose Ann M. Haft | San Francisco, California | Washington, D.C. | Maryland </title>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+    @import url(http://fonts.googleapis.com/css?family=Pacifico);
+    @import url(http://fonts.googleapis.com/css?family=Lato);
+  /* Parallax base styles
+  --------------------------------------------- */
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+  }
+  .parallax2 {
+    height: 500px; /* fallback for older browsers */
+    height: 200vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+  }
+  .parallax_group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+    .parallax_group2 {
+    position: relative;
+    height: 3000px; /* fallback for older browsers */
+    height: 350vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .parallax_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .parallax_layer-fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+  .parallax_layer-base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+  .parallax_layer-back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+  .parallax_layer-deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
+  /* Debugger styles - used to show the effect
+  --------------------------------------------- */
+  .debug {
+    position: fixed;
+    top: 0;
+    left: .5em;
+    z-index: 999;
+    background: rgba(0,0,0,.85);
+    color: #fff;
+    padding: .5em;
+    border-radius: 0 0 5px 5px;
+  }
+  .debug-on .parallax_group {
+    -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+ }
+  .debug-on .parallax_layer {
+    box-shadow: 0 0 0 2px #000;
+    opacity: 0.9;
+  }
+  .parallax_group {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
+  /* demo styles
+  --------------------------------------------- */
+  body, html {
+    overflow: hidden;
+  }
+  body {
+    font: 100% / 1.5 Arial;
+  }
+  * {
+    margin:0;
+    padding:0;
+  }
+  .parallax {
+    font-size: 190%;
+    overflow-x: hidden;
+  }
+  /*
+  .afterP {
+    background-color: red;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: relative;
+  } */
+   /* centre the content in the parallax layers */
+  .title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+    .title2 {
+    
+    position: absolute;
+    right: 5%;
+    
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  #intro1, #intro2 {
+    float: left;
+    clear: left;
+  }
+  #intro1 {
+    font-family: 'Pacifico', cursive;
+    top: 16vh;
+    height: 8vh;
+    left: 74vw;
+    width: 26vw;
+    font-size: 2.15vw;
+  }
+  #intro2 {
+    font-family: 'Oswald', sans-serif;
+    top: 30.95vh;
+    left: 81.5vw;
+    width: 40vw;
+    height: 26vh; 
+    font-size: 1.5vw;
+  }
+  /* style the groups
+  --------------------------------------------- */
+  #group1 {
+    z-index: 5;  /*slide over group 2 */
+  }
+  #group1 .parallax_layer-base {
+    background: rgb(102,204,102);
+  }
+  /*#group2 {
+    z-index: 3;  slide under groups 1 and 3 
+  }
+  #group2 .parallax_layer-back {
+    background: rgb(123,210,102);
+  }*/
+  /*#group3 {
+    z-index: 4;  slide over group 2 and 4 
+  }
+  #group3 .parallax_layer-base {
+    background: rgb(153,216,101);
+  }*/
+  #group4 {
+    z-index: 2; /* slide under group 3 and 5 */
+  }
+  #group4 .parallax_layer-deep {
+    background: rgba(16,233,81,.2);
+  }
+  #group5 {
+    z-index: 3; /* slide over group 4 and 6 */
+  }
+  #group5 .parallax_layer-base {
+    background: white; /*rgb(214,229,100);*/
+  }
+  /* #group6 {
+    z-index: 2; slide under group 5 and 7 
+  }
+  #group6 .parallax_layer-back {
+    background: rgb(245,235,100);
+  }*/
+  /*#group7 {
+    z-index: 3;  slide over group 7 
+  }
+  #group7 .parallax_layer-base {
+    background: rgb(255,241,100);
+  }*/
+  /* misc
+  --------------------------------------------- */
+  .demo_info {
+    position: absolute;
+    z-index:100;
+    bottom: 1vh;
+    top: auto;
+    font-size:80%;
+    text-align:center;
+    width: 100%;
+  }
+/*Add shapes*/
+.circle1 {
+      border-radius: 50%; 
+      background-color: #f2b33d;
+      height: 30vh; 
+      width: 30vh;
+      margin-left: auto; 
+        margin-right: auto;     
+        z-index: -18;
+        display: block;
+        position: absolute;     
+        left: 30vw; 
+        }
+        .circle2 {
+      border-radius: 50%; 
+      background-color: #f2f2f2;
+      height: 26vh; 
+      width: 26vh;
+      margin-left: auto; 
+            margin-right: auto; 
+      
+      z-index: 9;
+        position: absolute; 
+        opacity: .2;
+        left: 31.5vw;
+        top: 5vh;
+            
+        }
+        /*Orangish in the middle*/
+    .triangle1 {
+      width: 0vw;
+        height: 0vh; 
+        border-left: 22vw solid transparent;
+        border-right: 22vw solid transparent; 
+        border-top: 0vh solid transparent; 
+        border-bottom: 120vh solid #f28a2e ; 
+        margin: 1vh auto;
+          position: absolute; 
+          opacity: .8;
+          float: left; 
+        left: 5.9vw;     
+        top: 20vh;
+            
+           margin-left: auto; 
+        margin-right: auto; 
+        }
+    /*Turquoise to the right */
+    .triangle2 {
+        float: left;
+      width: 0vw;
+        height: 0vh; 
+        border-left: 14vw solid transparent;
+        border-right: 14vw solid transparent; 
+        border-top: 50vh solid transparent; 
+        border-bottom: 50vh solid  #058378; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 48vw;
+        z-index:-1;
+        opacity: .8
+        }
+    /*Turquoise to the left */
+    .triangle3 {
+        float: left;
+      width: 0vw;
+        height: 0vh; 
+        border-left: 18vw solid transparent;
+        border-right: 18vw solid transparent; 
+        border-top: 40vh solid transparent; 
+        border-bottom: 60vh solid  #058378; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 17vw;
+        z-index:-1;
+        opacity: .8
+        }
+    /*Tan to the right */
+    .triangle4 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 18vw solid transparent;
+        border-right: 18vw solid transparent; 
+        border-top: 45vh solid transparent; 
+        border-bottom: 55vh solid  #b9986a; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 84vw;
+        z-index:2;
+        opacity: .6;
+        }
+    /*Red to the right */
+    .triangle5 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 12vw solid transparent;
+        border-right: 12vw solid transparent; 
+        border-top: 40vh solid transparent; 
+        border-bottom: 40vh solid  #b02207; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 12vw;
+        top: 20vh;
+        
+        z-index:4;
+        opacity: .8;
+        
+        }
+    /*Greenish to the right */
+    .triangle6 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 18vw solid transparent;
+        border-right: 18vw solid transparent; 
+        border-top: 40vh solid transparent; 
+        border-bottom: 60vh solid  #393d0b; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: -12vw;
+        z-index:4;
+        opacity: .8;
+        }
+    /* Green to the left*/
+    .triangle7 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 6vw solid transparent;
+        border-right: 6vw solid transparent; 
+        border-top: 80vh solid transparent; 
+        border-bottom: 20vh solid  #393d0b; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 62.3vw;
+        z-index:4;
+        opacity: .8;
+        }
+    /*Triangle to the right that is redish*/
+    .triangle8 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 8vw solid transparent;
+        border-right: 8vw solid transparent; 
+        border-top: 65vh solid transparent; 
+        border-bottom: 35vh solid  #d9501e; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 78.3vw;
+        z-index: 14;
+        opacity: .8;
+        }
+    /*Triangle to the right that is greenish-blue*/
+    .triangle9 {
+        float: left; 
+      width: 0vw;
+        height: 0vh; 
+        border-left: 12vw solid transparent;
+        border-right: 12vw solid transparent; 
+        border-top: 35vh solid transparent; 
+        border-bottom: 65vh solid  #7abf92; 
+        margin: 1vh auto;
+        position: absolute; 
+        left: 82.3vw;
+        z-index: -14;
+        opacity: .8;
+    }
+    .sectwrap {
+      margin: 5vh 5vw;
+      width: 90vw;
+      height: 82.483vh;
+      border-radius: 15px 15px 0 0 ;
+      background-color: rgba(16,233,81,.2); /*LightBlue*/ 
+      display: block;
+      overflow: hidden;
+      
+    }
+    /*This is for the section heads */
+    .secthead {
+      border-radius: 5px 5px 0 0;
+      margin: 2vh 2vw; 
+      height: 82.483vh;
+      background-color: #7abf92;  /*Sea foam green*/
+      width: 15vw;
+      float: left;
+    }
+    /*Image Style for Section 1*/
+    .ic0 {
+      height: 12.643vh; 
+    }
+    /*Image style for section 2*/
+    .ic1  {
+      height: 62.483vh; 
+    }
+    /* Image style for secton 3 */
+    .ic3 {
+      height: 62.483vh; 
+    }
+    /* Start information for the videos */
+    .wrapiframe {
+      width: 25vw; 
+      height: 45vh; 
+      margin: 1.25vh .1vw 1.25vh .1vw; /* This will change the area around the videos*/
+      /*      background-color: #ccc;  */ 
+    }
+    /*Wraps the video section*/
+    .h_iframe {
+      padding-top: .1vh;
+      position: relative;
+      height: 42vh; 
+    }
+    /*this is the class for the video content*/
+    .ifm {
+      margin: 5vh 2.5vw 0 2.5vw; 
+      /*height: auto;  Will change the size of the video  
+      width: 100%; */
+    }
+    .intro {
+      width: 23.22vw;
+      height: 8vh; 
+      margin: 0;
+      right: 12vw;
+      padding: 0 0 0 0 ;
+      border: 0; 
+      outline: 0;
+      top: 12vh;
+      font-family: 'Pacifico', cursive;
+      background-color: rgba(8,23,81,.2);
+      position: absolute;
+      font-size: 1.9vw;
+      margin-right: auto;
+      margin-left: auto; 
+    }
+    .intro_pt2 {
+      font-family: 'Oswald', sans-serif;
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      width: 23.22vw;
+      height: 20vh;
+      top: 20vh; 
+      right: 12vw; 
+      background-color: rgba(8,23,81,.1);
+    }
+    /* This is the information for the form */
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 6vw;
+      color: rgba(16,233,81,.2);
+      text-align: center;
+    }
+    form {
+      font-family: 'Oswald', sans-serif;
+      margin: 2vh 0 0 1vw;
+      
+      
+    }
+/*The first line of the section headers */
+      .secthead_title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.789vw;
+        margin: 2vh;
+        color: #b02207; /*Deep red */
+      }
+      /*The rest of the text */
+      .secthead_other {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.7vh;
+        text-align: left;
+        margin: 2vh 2vw; 
+      }     
+    .sectcont {
+      margin: 8vh 1vw;
+      width: 69vw;
+      height: 68vh;
+      float: left;
+      background-color: transparent; 
+      white-space: nowrap;
+      overflow-y: hidden; 
+      overflow-x: auto;
+      position: relative;
+    }
+  
+</style>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+<body>
+
+  <!--<div class="debug">
+    <label><input type="checkbox"> Debug</label>
+  </div> -->
+  
+
+  <div class="parallax">
+   <!-- <div id="group1" class="parallax_group">
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>
+    <div id="group2" class="parallax_group">
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title">Base Layer</div>
+      </div>
+      <div class="parallax_layer parallax_layer-back">
+        <div class="title">Background Layer</div>
+      </div>
+    </div>
+    <div id="group3" class="parallax_group">
+      <div class="parallax_layer parallax_layer-fore">
+        <div class="title">Foreground Layer</div>
+      </div>
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div> -->
+    <div id="group4" class="parallax_group">
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title"><!--Base Layer--></div>
+        <div class="title2" id="intro1"><!--Hi there! My name is Rose --></div>
+         <div class="triangle1"></div>
+          
+          <div class="triangle8"></div>
+          <div class="triangle7"></div>
+          
+          
+        
+      </div>
+      <div class="parallax_layer parallax_layer-back">
+        <div class="title"><!--Background Layer--></div>
+        <div class="title2" id="intro1"> Hi there! My name is Rose.  <!----><!--Deep Background Layer--></div>
+        
+        <div class="circle2"> </div>
+        
+          <div class="triangle4"></div>
+          <div class="triangle6"></div>
+          <div class="triangle9"></div>
+      </div>
+      <div class="parallax_layer parallax_layer-deep">
+        <div class="title2" id="intro2"> I am a web developer & graphics designer.  <!--Deep Background Layer--></div>
+        
+        <div class="circle1"> </div>
+        <div class="triangle2"></div>
+        <div class="triangle3"></div>
+          
+          <div class="triangle5"></div>
+
+      </div>
+    </div>
+    
+    <div id="group5" class="parallax_group2">
+      <div class="parallax_layer parallax_layer-base">
+        <!--<div class="title">Foreground Layer</div>-->
+      </div>
+      <div class="parallax_layer parallax_layer-fore">
+        <div class="title"><!--Base Layer-->
+          <div  class="content">
+          <section id="s1" class="sectwrap">
+
+
+        <div id="s1header" class="secthead"> 
+          <div class="secthead_title">Web Design</div>
+          <div class="secthead_other">
+          </br> Adobe Photoshop, Illustrator, Dreamweaver, Edge, HTML5, CSS3, Tumolt, PHP, MySQL </br>
+             </br>
+            </div>
+        </div>
+        <div id="s1content" class= "sectcont"> 
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/IIN_new_landing_page_optimized.png">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/prof-desk_ux_new_homepage.PNG">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/rawveganparadise.jpg">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/robot_play_page.PNG">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/mad_libs_finished.PNG">
+        <img class="ic1" src="http://loving1.github.io/Portfolio/images/works/bikecycles-front.png">
+        
+        <!--<img class="ic1" src="http://loving1.github.io/Portfolio/images/colors/01.jpg" alt="" /> -->
+        </div> <!-- End of s1content -->
+      </section>
+
+
+     <section id="s2" class="sectwrap">
+        <div class="secthead"><div class="secthead_title">Animations</div><div class="secthead_other">
+            </br> Edge, Tumolt, Canvas </br>
+             </br>
+             </div></div> <!--Ends secthead -->
+        <div class="sectcont"> 
+          <div class="wrapiframe"> 
+            <div class="h_iframe">
+              <!-- This is the Living Branches Animation 
+              <img class="ratio" src="http://placehold.it/16x9"/>-->
+              <iframe class="ifm" width="100%" height="100%" src="http://www.youtube.com/embed/y3w-3Jb3oYU" frameborder="0" allowfullscreen></iframe> 
+              <iframe class="ifm" width="100%" height="100%" src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
+            </div> <!-- Ends the h_iframe around the movie -->
+          </div>  <!-- Ends the wrap -->
+          <!-- This is the Living Legacies Video -->
+          <!--<div class="wrapiframe"> 
+            
+            
+            <img class="ratio" src="http://placehold.it/16x9"/>
+            <iframe width="2" height="400" src="http://www.youtube.com/embed/Y408wq9Ve04" frameborder="0" allowfullscreen></iframe> 
+          </div> -->
+        </div>  <!-- Ends the section content  -->
+
+      </section>
+
+
+
+      <!-- This is for Art  -->
+      <section id="s3" class="sectwrap">
+        <div class="secthead"> <div class="secthead_title">Art</div><div class="secthead_other">
+            </br> Composition, Photoshop, Illustrator, E-Pubs, Fabric, Gestalt, Writing, Curating </br>
+             </br>
+             </div>  <!--  Ends the content-->
+
+          </div>  <!-- Ends the secthead -->
+        <div class="sectcont"> 
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/blog.png">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/glass_beach.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/sunset.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/flower_1.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/mountain_1.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/hawk.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/closed_flowers.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/sunset_2.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/small_falls.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/ligthouse_questival.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_equilibrium.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_2.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_3.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_4.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_5.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/gestalt_6.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/city.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/tri_color.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/colors.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/boxes.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/split_compliment.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/owl_1.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/color_2.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/spiritoftheamazon.jpg">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/food_and_movies_1.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/food_and_movies_2.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_flier2.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_business_card.JPG">
+          <img class="ic3" src="http://loving1.github.io/Portfolio/images/art/groovyoga_flier.JPG">
+          
+
+         </div> <!-- Ends sectcont for this section 3 -->
+
+      </section>
+
+      <!-- This is for Marketing  -->
+      <section id="s4" class="sectwrap">
+        <div class="secthead"> <div class="secthead_title"> Consulting</div><div class="secthead_other">Marketing, SEO, Writing, Business Plan Development, Product Development, Program Development and more!</div></div> <!-- This ends the secthead for section 4-->
+        <div class="sectcont" id="sectcont_4"> 
+
+          <img class="ic0" src="http://loving1.github.io/Portfolio/images/p1.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p2.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p3.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p4.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p5.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p6.jpg"> </br>
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p7.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p8.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p9.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p10.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p11.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p12.jpg"> </br>
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p13.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p14.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p15.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p16.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p17.jpg">
+        <img class="ic0" src="http://loving1.github.io/Portfolio/images/p22.jpg">
+
+
+
+
+         </div> <!-- This ends section 4 content  -->
+
+      </section>
+      <!-- This will be the contact form -->
+      <section id="s5" class="sectwrap">
+        <form name="awesomeForm" method="post" enctype="text/plain" 
+        action="mailto:raconcilio@gmail.com">
+        <h1>Contact me!</h1>
+        <label for="name">Name: 
+          <input type="text" name="name" id="name" size="50"/> <!-- give both name and ID so that it doesn't matter which one gets sent --> 
+          <br/>
+          </label>
+        <label>Email: 
+          <input type="text" name="email" id="email" size="50"/> <br/> 
+          </label>
+        <label>Industry:
+          
+          <select name="industry" id="industry"> 
+            <option value="tech"> Technology</option>
+            <option value="health"> Health</option>
+            <option value="sales"> Sales</option>
+            <option value="none" selected="selected"> Choose one...</option>
+          </select> 
+        </label>
+
+        <br/>
+        
+        
+
+        <label> Would you like to receive my newsletter?  
+          <input type="radio" name="newsletter" id="newsYes"/> Yes.
+          
+        </label>
+        <label>
+          <input type="radio" name="newsletter" id="newsNo"/> No.
+        </label><br/>
+
+        <!--<p> Subject(s) of interest: </p> 
+        <label>
+          <input type="checkbox" name="rhinos" id="rhinos" value="yes"/>
+          Gir-hashes
+        </label> 
+        <label>
+          <input type="checkbox" name="ele" id="ele" value="yes"/>
+          Ele-fonts
+        </label> 
+        <label>
+          <input type="checkbox" name="camel" id="camel" value="yes"/>
+          Camel Type
+        </label> <br/><br/> -->
+
+        <label> Comments: </br> 
+          <textarea name="comments" id="comments" cols="50" rows="5"></textarea>
+        </label> <br/>
+
+      </br> 
+      <input type="submit" id="submit" "Send this thing"/>
+
+
+      </form>
+
+      </section>  
+    </div>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <!--<div id="group6" class="parallax_group">
+      <div class="parallax_layer parallax_layer-back">
+        <div class="title">Background Layer</div>
+      </div>
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>
+    <div id="group7" class="parallax_group">
+      <div class="parallax_layer parallax_layer-base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>-->
+  </div>
+
+  <div class="afterPF">
+  </div>
+
+  
+
+  <!--
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10812217-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+-->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-10812217-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body></html>
