@@ -59,15 +59,18 @@
     right: 0;
     bottom: 0;
   }
+
   .parallax_layer-fore {
     -webkit-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
     z-index: 1;
-  }
+    /*background-color: rgba(0,0,0,.2);*/
+  } 
   .parallax_layer-base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
+    background-color: rgba(255,0,0,.2); 
   }
   .parallax_layer-back {
     -webkit-transform: translateZ(-300px) scale(2);
@@ -171,7 +174,7 @@
     z-index: 5;  /*slide over group 2 */
   }
   #group1 .parallax_layer-base {
-    background: transparent; /*rgb(102,204,102,0.01)*/
+    background: rgb(102,204,102);
   }
   /*#group2 {
     z-index: 3;  slide under groups 1 and 3 
@@ -195,7 +198,7 @@
     z-index: 3; /* slide over group 4 and 6 */
   }
   #group5 .parallax_layer-base {
-    background: white; /*rgb(214,229,100);*/
+    background: rgba(0,255,0,.01); /*rgb(214,229,100);*/
   }
   /* #group6 {
     z-index: 2; slide under group 5 and 7 
@@ -260,7 +263,7 @@
           position: absolute; 
           opacity: .8;
           float: left; 
-        left: 25.9vw;     
+        left: 5.9vw;     
         top: 20vh;
             
            margin-left: auto; 
@@ -277,7 +280,7 @@
         border-bottom: 50vh solid  #058378; 
         margin: 1vh auto;
         position: absolute; 
-        left: 48vw;
+        left: 98vw;
         z-index:-1;
         opacity: .8
         }
@@ -292,7 +295,7 @@
         border-bottom: 60vh solid  #058378; 
         margin: 1vh auto;
         position: absolute; 
-        left: 17vw;
+        left: 7vw;
         z-index:-1;
         opacity: .8
         }
@@ -307,7 +310,7 @@
         border-bottom: 55vh solid  #b9986a; 
         margin: 1vh auto;
         position: absolute; 
-        left: 54vw;
+        left: 84vw;
         z-index:2;
         opacity: .6;
         }
@@ -506,7 +509,7 @@
     }
   
 </style>
-<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. 
 .en-markup-crop-options {
     top: 18px !important;
     left: 50% !important;
@@ -517,7 +520,7 @@
 }
 .en-markup-crop-options div div:first-of-type {
     margin-left: 0px !important;
-}
+}*/
 </style></head>
 
 <body>
@@ -551,8 +554,8 @@
     </div> -->
     <div id="group4" class="parallax_group">
       <div class="parallax_layer parallax_layer-base">
-        <div class="title"><!--Base Layer--></div>
-        <div class="title2" id="intro1"><!--Hi there! My name is Rose --></div>
+        <div class="title" id="test_title">doo dah<!--Base Layer--></div>
+        <div class="title3" id="intro3">lee lah<!--Hi there! My name is Rose --></div>
          <div class="triangle1"></div>
           
           <div class="triangle8"></div>
