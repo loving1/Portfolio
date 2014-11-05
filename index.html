@@ -29,6 +29,7 @@
     overflow-y: auto;
     -webkit-perspective: 300px;
     perspective: 300px;
+
   }
   .parallax2 {
     height: 500px; /* fallback for older browsers */
@@ -190,12 +191,15 @@
   }
   #group4 .parallax_layer-deep {
     background: rgba(16,233,81,.2);
+   
   }
   #group5 {
     z-index: 3; /* slide over group 4 and 6 */
   }
   #group5 .parallax_layer-base {
     background: white; /*rgb(214,229,100);*/
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   /* #group6 {
     z-index: 2; slide under group 5 and 7 
